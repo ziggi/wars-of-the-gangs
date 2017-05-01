@@ -1,0 +1,4 @@
+Coords=2168.199951,-1718.900024,15.100000
+Owner=Unknown
+Name=Idlewood 9
+Cost=1500000

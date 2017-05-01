@@ -1,0 +1,4 @@
+Coords=2094.831054,2188.717529,10.820300
+Owner=Unknown
+Name=Redsands East 2
+Cost=25000

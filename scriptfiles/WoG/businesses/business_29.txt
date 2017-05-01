@@ -1,0 +1,5 @@
+Coords=1350.123657,-1757.784912,13.507800
+Owner=Unknown
+Name=24-7 - (LS)Commerce
+Cost=100000
+Income=50

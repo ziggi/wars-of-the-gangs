@@ -1,0 +1,4 @@
+Coords=2594.800048,748.700012,11.000000
+Owner=Unknown
+Name=Rockshore East 1
+Cost=125000

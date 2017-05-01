@@ -1,0 +1,4 @@
+Coords=-1696.900024,1035.500000,45.200000
+Owner=Unknown
+Name=Downtown 6
+Cost=250000

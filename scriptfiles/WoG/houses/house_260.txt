@@ -1,0 +1,4 @@
+Coords=2638.199951,1882.199951,11.000000
+Owner=Unknown
+Name=Starfish Casino 2
+Cost=500000

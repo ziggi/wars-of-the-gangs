@@ -1,0 +1,4 @@
+Coords=-2054.563476,1194.037597,45.457199
+Owner=Unknown
+Name=Calton Heights 10
+Cost=1000000

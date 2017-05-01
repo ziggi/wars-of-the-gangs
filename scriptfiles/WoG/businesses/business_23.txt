@@ -1,0 +1,5 @@
+Coords=459.815093,-1506.087158,31.003799
+Owner=Unknown
+Name=Clothes - Victim - (LS)Rodeo
+Cost=50000
+Income=500

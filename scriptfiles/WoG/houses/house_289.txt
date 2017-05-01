@@ -1,0 +1,4 @@
+Coords=1663.500000,-1862.900024,13.500000
+Owner=Unknown
+Name=Verdant Bluffs 4
+Cost=250000

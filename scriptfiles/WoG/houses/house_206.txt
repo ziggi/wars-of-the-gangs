@@ -1,0 +1,4 @@
+Coords=1266.000000,-1861.199951,13.500000
+Owner=Unknown
+Name=Verdant Bluffs 2
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=-2043.951171,1262.003540,9.135800
+Owner=Unknown
+Name=Calton Heights 24
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=-2126.590576,1050.998168,80.007797
+Owner=Unknown
+Name=Calton Heights 40
+Cost=100000

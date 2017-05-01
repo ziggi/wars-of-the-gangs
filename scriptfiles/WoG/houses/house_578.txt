@@ -1,0 +1,4 @@
+Coords=-1593.545654,716.234985,-5.242197
+Owner=Unknown
+Name=Downtown 12
+Cost=125000

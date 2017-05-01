@@ -1,0 +1,4 @@
+Coords=305.435485,-1748.813476,4.546895
+Owner=Unknown
+Name=Santa Maria Beach 2
+Cost=250000

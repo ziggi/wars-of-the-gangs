@@ -1,0 +1,4 @@
+Coords=-2208.034667,1106.234375,80.007797
+Owner=Unknown
+Name=Calton Heights 8
+Cost=50000

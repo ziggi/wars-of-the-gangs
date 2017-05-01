@@ -1,0 +1,4 @@
+Coords=280.911804,-1768.104492,4.531795
+Owner=Unknown
+Name=Santa Maria Beach 4
+Cost=1000000

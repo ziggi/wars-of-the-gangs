@@ -1,0 +1,4 @@
+Coords=-2406.961669,1135.845703,55.726562
+Owner=Unknown
+Name=Juniper Hollow 9
+Cost=75000

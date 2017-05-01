@@ -1,0 +1,4 @@
+Coords=1414.560058,-1601.699951,13.539999
+Owner=Unknown
+Name=Commerce 13
+Cost=500000

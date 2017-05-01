@@ -1,0 +1,4 @@
+Coords=-1915.139892,1189.848632,45.445301
+Owner=Unknown
+Name=Downtown 9
+Cost=1500000

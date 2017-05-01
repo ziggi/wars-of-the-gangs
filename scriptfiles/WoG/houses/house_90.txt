@@ -1,0 +1,4 @@
+Coords=-2437.510009,2353.909912,4.960000
+Owner=Unknown
+Name=Bayside 4
+Cost=75000

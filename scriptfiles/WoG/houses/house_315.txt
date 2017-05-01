@@ -1,0 +1,4 @@
+Coords=-2620.600097,114.699996,5.000000
+Owner=Unknown
+Name=Ocean Flats 8
+Cost=125000

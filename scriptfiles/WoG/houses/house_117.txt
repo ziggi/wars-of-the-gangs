@@ -1,0 +1,4 @@
+Coords=2490.510986,-1011.907714,65.398399
+Owner=Unknown
+Name=Las Colinas 4
+Cost=75000

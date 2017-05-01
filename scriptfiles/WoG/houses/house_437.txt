@@ -1,0 +1,4 @@
+Coords=-2314.236572,33.992801,35.320301
+Owner=Unknown
+Name=Garcia 9
+Cost=75000

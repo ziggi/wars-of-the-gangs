@@ -1,0 +1,5 @@
+Coords=-1545.400024,-439.899963,6.000000
+Owner=Unknown
+Name=SkyDive place in (SF)Easter Basin
+Cost=100000
+Income=1000

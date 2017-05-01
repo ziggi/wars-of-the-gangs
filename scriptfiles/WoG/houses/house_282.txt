@@ -1,0 +1,4 @@
+Coords=2446.899902,689.799987,11.399993
+Owner=Unknown
+Name=Rockshore West 12
+Cost=125000

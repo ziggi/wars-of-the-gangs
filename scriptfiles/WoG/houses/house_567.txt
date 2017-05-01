@@ -1,0 +1,4 @@
+Coords=298.122314,-1337.450195,53.441501
+Owner=Unknown
+Name=Richman 7
+Cost=100000

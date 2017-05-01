@@ -1,0 +1,4 @@
+Coords=1527.459960,-772.719970,80.569999
+Owner=Unknown
+Name=Mulholland Intersection 5
+Cost=75000

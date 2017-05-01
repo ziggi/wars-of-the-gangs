@@ -1,0 +1,4 @@
+Coords=1284.688842,385.475799,19.554700
+Owner=Unknown
+Name=Montgomery 1
+Cost=25000

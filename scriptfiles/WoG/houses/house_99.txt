@@ -1,0 +1,4 @@
+Coords=-2659.860107,878.429992,79.770004
+Owner=Unknown
+Name=Paradiso 8
+Cost=250000

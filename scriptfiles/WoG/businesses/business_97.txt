@@ -1,0 +1,5 @@
+Coords=-773.037902,2423.499023,157.085601
+Owner=Unknown
+Name=SkyDive place in Arco Del Oestre
+Cost=100000
+Income=1000

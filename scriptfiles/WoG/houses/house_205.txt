@@ -1,0 +1,4 @@
+Coords=1161.099975,-1656.300048,14.000000
+Owner=Unknown
+Name=Verona Beach 5
+Cost=25000

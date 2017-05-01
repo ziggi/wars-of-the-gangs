@@ -1,0 +1,4 @@
+Coords=768.302429,-504.034790,18.012899
+Owner=Unknown
+Name=Dillimore 4
+Cost=75000

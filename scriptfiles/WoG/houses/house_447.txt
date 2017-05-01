@@ -1,0 +1,4 @@
+Coords=-1770.719482,948.525024,24.312700
+Owner=Unknown
+Name=Financial 5
+Cost=250000

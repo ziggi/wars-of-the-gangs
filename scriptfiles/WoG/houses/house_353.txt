@@ -1,0 +1,4 @@
+Coords=-2720.676757,-318.122985,7.843800
+Owner=Unknown
+Name=Avispa Country Club 1
+Cost=125000

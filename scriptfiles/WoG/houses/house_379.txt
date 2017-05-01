@@ -1,0 +1,4 @@
+Coords=743.098876,-509.953887,18.012899
+Owner=Unknown
+Name=Dillimore 1
+Cost=25000

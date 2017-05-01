@@ -1,0 +1,4 @@
+Coords=-2383.746093,1128.120971,55.726562
+Owner=Unknown
+Name=Juniper Hollow 8
+Cost=75000

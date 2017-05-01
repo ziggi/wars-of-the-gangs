@@ -1,0 +1,4 @@
+Coords=2132.433105,-1281.283569,25.880300
+Owner=Unknown
+Name=Jefferson 2
+Cost=75000

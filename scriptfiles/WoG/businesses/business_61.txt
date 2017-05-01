@@ -1,0 +1,5 @@
+Coords=1366.981079,251.222396,19.566900
+Owner=Unknown
+Name=Well Stacked Pizza - Montgomery
+Cost=50000
+Income=15

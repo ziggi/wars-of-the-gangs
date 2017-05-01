@@ -1,0 +1,4 @@
+Coords=-2864.993408,681.539489,23.460918
+Owner=Unknown
+Name=Palisades 12
+Cost=75000

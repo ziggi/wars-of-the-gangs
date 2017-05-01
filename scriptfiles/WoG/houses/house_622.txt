@@ -1,0 +1,4 @@
+Coords=-2018.060424,999.844299,50.804298
+Owner=Unknown
+Name=Calton Heights 49
+Cost=125000

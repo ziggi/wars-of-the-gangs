@@ -1,0 +1,4 @@
+Coords=-89.603424,-1565.121826,3.004307
+Owner=Unknown
+Name=Flint Intersection 1
+Cost=50000

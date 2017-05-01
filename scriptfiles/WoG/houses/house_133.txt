@@ -1,0 +1,4 @@
+Coords=1715.163330,-2123.651855,13.708800
+Owner=Unknown
+Name=El Corona 2
+Cost=500000

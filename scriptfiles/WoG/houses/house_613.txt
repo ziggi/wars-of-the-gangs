@@ -1,0 +1,4 @@
+Coords=-2576.512451,-82.896797,6.645298
+Owner=Unknown
+Name=Hashbury 15
+Cost=125000

@@ -1,0 +1,5 @@
+Coords=2780.196533,2450.094238,11.062500
+Owner=Unknown
+Name=Clothes - Suburban - (LV)Creek
+Cost=50000
+Income=400

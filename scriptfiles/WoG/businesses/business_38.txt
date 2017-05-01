@@ -1,0 +1,5 @@
+Coords=2245.965087,2398.499023,10.820300
+Owner=Unknown
+Name=24-7 - (LV)Roca Escalante
+Cost=100000
+Income=50

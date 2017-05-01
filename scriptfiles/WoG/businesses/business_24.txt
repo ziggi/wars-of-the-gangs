@@ -1,0 +1,5 @@
+Coords=2826.906982,2404.139648,11.062500
+Owner=Unknown
+Name=Clothes - ProLaps - (LV)Creek
+Cost=50000
+Income=600

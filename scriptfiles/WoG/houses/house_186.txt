@@ -1,0 +1,4 @@
+Coords=-2510.000000,25.399999,25.600000
+Owner=Unknown
+Name=Hashbury 3
+Cost=125000

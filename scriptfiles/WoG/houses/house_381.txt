@@ -1,0 +1,4 @@
+Coords=313.683593,-92.272003,3.535398
+Owner=Unknown
+Name=Blueberry 1
+Cost=25000

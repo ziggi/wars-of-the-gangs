@@ -1,0 +1,4 @@
+Coords=2144.199951,-1663.599975,15.000000
+Owner=Unknown
+Name=Idlewood 5
+Cost=1000000

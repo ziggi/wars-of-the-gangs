@@ -1,0 +1,4 @@
+Coords=-1500.068481,1960.421142,49.023399
+Owner=Unknown
+Name=Tierra Robada 5
+Cost=75000

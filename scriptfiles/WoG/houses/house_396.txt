@@ -1,0 +1,4 @@
+Coords=-242.815597,2710.478515,62.687500
+Owner=Unknown
+Name=Las Payasadas 3
+Cost=125000

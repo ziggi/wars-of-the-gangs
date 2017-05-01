@@ -1,0 +1,4 @@
+Coords=851.000000,-1587.300048,13.500000
+Owner=Unknown
+Name=Marina 8
+Cost=75000

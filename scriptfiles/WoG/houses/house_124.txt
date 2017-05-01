@@ -1,0 +1,4 @@
+Coords=2522.199218,-1678.483764,15.496994
+Owner=Unknown
+Name=Ganton 2
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=2628.414550,2348.319091,10.820300
+Owner=Unknown
+Name=Julius Thruway East 1
+Cost=1000000

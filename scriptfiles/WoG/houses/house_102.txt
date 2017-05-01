@@ -1,0 +1,4 @@
+Coords=-2843.649902,921.380004,44.059997
+Owner=Unknown
+Name=Palisades 1
+Cost=1000000

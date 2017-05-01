@@ -1,0 +1,4 @@
+Coords=-2230.600097,-79.199996,35.299999
+Owner=Unknown
+Name=Garcia 5
+Cost=250000

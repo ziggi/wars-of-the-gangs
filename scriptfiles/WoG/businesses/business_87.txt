@@ -1,0 +1,5 @@
+Coords=2650.074218,-2035.641113,13.553999
+Owner=Unknown
+Name=Mine Shop - (LS)Willowfield
+Cost=100000
+Income=250

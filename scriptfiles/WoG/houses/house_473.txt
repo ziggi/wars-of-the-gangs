@@ -1,0 +1,4 @@
+Coords=2022.761962,-1121.005371,26.420999
+Owner=Unknown
+Name=Glen Park 4
+Cost=125000

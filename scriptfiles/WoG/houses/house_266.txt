@@ -1,0 +1,4 @@
+Coords=1754.000000,-1593.599975,13.500000
+Owner=Unknown
+Name=Commerce 7
+Cost=1000000

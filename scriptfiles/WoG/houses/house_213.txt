@@ -1,0 +1,4 @@
+Coords=2153.899902,1484.000000,10.800000
+Owner=Unknown
+Name=Royal Casino 2
+Cost=125000

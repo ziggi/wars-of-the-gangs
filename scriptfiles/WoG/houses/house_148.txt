@@ -1,0 +1,4 @@
+Coords=2178.057617,655.700073,11.460900
+Owner=Unknown
+Name=Rockshore West 6
+Cost=75000

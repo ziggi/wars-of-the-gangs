@@ -1,0 +1,4 @@
+Coords=1086.618652,2000.996215,11.460900
+Owner=Unknown
+Name=Whitewood Estates 6
+Cost=1000000

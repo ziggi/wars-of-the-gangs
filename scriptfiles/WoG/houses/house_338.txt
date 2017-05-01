@@ -1,0 +1,4 @@
+Coords=2389.378906,-1346.241455,25.076999
+Owner=Unknown
+Name=East Los Santos 8
+Cost=75000

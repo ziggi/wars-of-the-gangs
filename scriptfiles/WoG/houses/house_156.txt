@@ -1,0 +1,4 @@
+Coords=1678.386352,2691.563964,10.820300
+Owner=Unknown
+Name=Prickle Pine 15
+Cost=125000

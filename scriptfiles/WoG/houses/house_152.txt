@@ -1,0 +1,4 @@
+Coords=1928.871582,2774.405517,10.820300
+Owner=Unknown
+Name=Prickle Pine 11
+Cost=125000

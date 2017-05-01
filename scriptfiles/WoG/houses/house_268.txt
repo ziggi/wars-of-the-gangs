@@ -1,0 +1,4 @@
+Coords=2364.199951,1064.699951,10.800000
+Owner=Unknown
+Name=Come-A-Lot 4
+Cost=25000

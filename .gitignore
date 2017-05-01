@@ -1,0 +1,11 @@
+announce
+samp03svr
+filterscripts/
+plugins/
+/*.exe
+/*.dll
+/*.so
+/*.cfg
+/*.txt
+/*.amx
+/*.lst

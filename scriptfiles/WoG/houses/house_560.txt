@@ -1,0 +1,4 @@
+Coords=187.652404,-1803.219970,4.718400
+Owner=Unknown
+Name=Santa Maria Beach 5
+Cost=500000

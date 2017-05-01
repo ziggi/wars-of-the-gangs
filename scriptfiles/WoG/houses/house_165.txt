@@ -1,0 +1,4 @@
+Coords=2481.947265,1526.136718,11.593997
+Owner=Unknown
+Name=Pilgrim 2
+Cost=1000000

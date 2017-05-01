@@ -1,0 +1,4 @@
+Coords=-1955.449951,1187.839965,45.450000
+Owner=Unknown
+Name=Downtown 1
+Cost=125000

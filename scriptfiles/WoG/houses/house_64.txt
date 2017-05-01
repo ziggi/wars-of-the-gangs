@@ -1,0 +1,4 @@
+Coords=1225.552490,2584.797851,10.820300
+Owner=Unknown
+Name=Prickle Pine 10
+Cost=1000000

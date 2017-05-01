@@ -1,0 +1,4 @@
+Coords=-2904.461181,1101.077880,27.070312
+Owner=Unknown
+Name=Palisades 4
+Cost=75000

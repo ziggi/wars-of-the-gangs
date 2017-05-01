@@ -1,0 +1,4 @@
+Coords=1550.852539,2844.549316,10.820300
+Owner=Unknown
+Name=Prickle Pine 26
+Cost=125000

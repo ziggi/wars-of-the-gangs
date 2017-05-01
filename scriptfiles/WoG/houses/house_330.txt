@@ -1,0 +1,4 @@
+Coords=1465.000000,1895.099975,11.399993
+Owner=Unknown
+Name=Redsands West 8
+Cost=1000000

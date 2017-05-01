@@ -1,0 +1,4 @@
+Coords=2386.199951,1681.900024,11.000000
+Owner=Unknown
+Name=Caligula's Palace 3
+Cost=125000

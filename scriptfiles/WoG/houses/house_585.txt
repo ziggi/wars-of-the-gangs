@@ -1,0 +1,4 @@
+Coords=-2282.185546,873.150573,66.898399
+Owner=Unknown
+Name=Juniper Hill 11
+Cost=75000

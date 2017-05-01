@@ -1,0 +1,4 @@
+Coords=-1799.900024,1200.300048,25.100000
+Owner=Unknown
+Name=Downtown 7
+Cost=500000

@@ -1,0 +1,4 @@
+Coords=2628.566162,1191.999755,12.371891
+Owner=Unknown
+Name=Las Venturas 1
+Cost=125000

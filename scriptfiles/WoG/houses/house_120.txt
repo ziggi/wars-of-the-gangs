@@ -1,0 +1,4 @@
+Coords=1182.106933,-1075.509033,31.671899
+Owner=Unknown
+Name=Temple 5
+Cost=125000

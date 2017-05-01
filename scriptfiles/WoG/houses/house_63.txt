@@ -1,0 +1,4 @@
+Coords=1846.808593,661.299011,11.460900
+Owner=Unknown
+Name=Last Dime Motel 1
+Cost=1000000

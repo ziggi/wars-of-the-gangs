@@ -1,0 +1,4 @@
+Coords=2370.013427,-1035.048217,54.410598
+Owner=Unknown
+Name=Las Colinas 3
+Cost=75000

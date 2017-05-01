@@ -1,0 +1,5 @@
+Coords=657.816711,-559.650695,16.062999
+Owner=Unknown
+Name=Fuelstation - Dillimore
+Cost=50000
+Income=2000

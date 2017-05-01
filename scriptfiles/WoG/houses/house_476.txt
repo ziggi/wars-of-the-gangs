@@ -1,0 +1,4 @@
+Coords=2853.401855,-1366.355346,14.164093
+Owner=Unknown
+Name=East Beach 9
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=979.599975,-676.000000,121.900001
+Owner=Unknown
+Name=Red County 1
+Cost=500000

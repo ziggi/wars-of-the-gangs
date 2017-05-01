@@ -1,0 +1,5 @@
+Coords=2204.960205,2480.349365,10.527799
+Owner=Unknown
+Name=Fuelstation - (LV)The Emerald Isle
+Cost=50000
+Income=2000

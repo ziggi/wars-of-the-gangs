@@ -1,0 +1,4 @@
+Coords=2223.304931,2786.208007,10.820302
+Owner=Unknown
+Name=Spinybed 2
+Cost=125000

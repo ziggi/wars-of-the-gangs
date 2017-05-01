@@ -1,0 +1,4 @@
+Coords=886.545288,2047.227783,11.460900
+Owner=Unknown
+Name=Whitewood Estates 4
+Cost=1500000

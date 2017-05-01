@@ -1,0 +1,4 @@
+Coords=-2641.144287,935.170288,71.953102
+Owner=Unknown
+Name=Paradiso 3
+Cost=125000

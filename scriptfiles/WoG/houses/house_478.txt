@@ -1,0 +1,4 @@
+Coords=983.240051,-1830.219726,13.331130
+Owner=Unknown
+Name=Verona Beach 10
+Cost=75000

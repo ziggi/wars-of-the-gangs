@@ -1,0 +1,4 @@
+Coords=755.535278,1958.273559,5.335896
+Owner=Unknown
+Name=Bone County 5
+Cost=25000

@@ -1,0 +1,5 @@
+Coords=2147.305419,2744.937744,10.526300
+Owner=Unknown
+Name=Fuelstation - (LV)Spinybed
+Cost=50000
+Income=2000

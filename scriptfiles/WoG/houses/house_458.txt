@@ -1,0 +1,4 @@
+Coords=252.101394,-121.425796,3.535398
+Owner=Unknown
+Name=Blueberry 5
+Cost=25000

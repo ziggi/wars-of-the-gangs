@@ -1,0 +1,4 @@
+Coords=-1950.900024,1343.699951,7.099997
+Owner=Unknown
+Name=Esplanade North 1
+Cost=500000

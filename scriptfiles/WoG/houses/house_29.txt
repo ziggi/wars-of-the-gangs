@@ -1,0 +1,4 @@
+Coords=1124.400024,-2036.900024,69.800003
+Owner=Unknown
+Name=Verdant Bluffs 1
+Cost=1000000

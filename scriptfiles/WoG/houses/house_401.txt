@@ -1,0 +1,4 @@
+Coords=-310.766296,1303.475708,53.664299
+Owner=Unknown
+Name=Bone County 7
+Cost=125000

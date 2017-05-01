@@ -1,0 +1,5 @@
+Coords=453.191406,-1481.562255,30.905799
+Owner=009
+Name=Clothes - Didier Sach -
+Cost=100000
+Income=1000

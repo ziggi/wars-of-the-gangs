@@ -1,0 +1,4 @@
+Coords=-2688.637939,137.059997,4.342597
+Owner=Unknown
+Name=Ocean Flats 2
+Cost=125000

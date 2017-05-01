@@ -1,0 +1,4 @@
+Coords=2017.400024,-1630.000000,13.699995
+Owner=Unknown
+Name=Idlewood 8
+Cost=100000

@@ -1,0 +1,4 @@
+Coords=1720.199951,-1740.599975,13.500000
+Owner=Unknown
+Name=Little Mexico 1
+Cost=250000

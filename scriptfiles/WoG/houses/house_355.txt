@@ -1,0 +1,4 @@
+Coords=-2621.156494,-198.236892,4.335896
+Owner=Unknown
+Name=Ocean Flats 11
+Cost=75000

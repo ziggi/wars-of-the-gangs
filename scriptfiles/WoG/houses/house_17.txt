@@ -1,0 +1,4 @@
+Coords=2144.399902,-1803.099975,16.100000
+Owner=Unknown
+Name=Idlewood 3
+Cost=125000

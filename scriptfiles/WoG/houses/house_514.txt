@@ -1,0 +1,4 @@
+Coords=-2067.855224,1745.904907,2.166615
+Owner=Unknown
+Name=Tierra Robada 9
+Cost=500000

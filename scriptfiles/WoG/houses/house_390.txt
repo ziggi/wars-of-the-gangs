@@ -1,0 +1,4 @@
+Coords=-773.838500,1425.833740,13.945300
+Owner=Unknown
+Name=Las Barrancas 2
+Cost=50000

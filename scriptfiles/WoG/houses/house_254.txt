@@ -1,0 +1,4 @@
+Coords=1299.900024,-1464.000000,10.000000
+Owner=Unknown
+Name=Market 4
+Cost=250000

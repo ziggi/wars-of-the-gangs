@@ -1,0 +1,4 @@
+Coords=1921.873413,2664.086669,10.820300
+Owner=Unknown
+Name=Prickle Pine 12
+Cost=125000

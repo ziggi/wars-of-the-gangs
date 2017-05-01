@@ -1,0 +1,4 @@
+Coords=745.342102,-591.308776,18.012899
+Owner=Unknown
+Name=Dillimore 6
+Cost=125000

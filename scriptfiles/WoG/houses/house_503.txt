@@ -1,0 +1,4 @@
+Coords=-2863.708496,829.720336,39.540443
+Owner=Unknown
+Name=Palisades 9
+Cost=75000

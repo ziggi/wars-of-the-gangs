@@ -1,0 +1,4 @@
+Coords=1685.300048,-1463.800048,13.500000
+Owner=Unknown
+Name=Commerce 1
+Cost=125000

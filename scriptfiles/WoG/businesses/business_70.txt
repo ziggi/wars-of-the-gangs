@@ -1,0 +1,5 @@
+Coords=2109.212646,917.584472,10.820300
+Owner=009
+Name=Fuelstation - LV 1
+Cost=50000
+Income=2000

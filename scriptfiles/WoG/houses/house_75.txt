@@ -1,0 +1,4 @@
+Coords=-2523.704345,2239.173828,5.398396
+Owner=Unknown
+Name=Bayside 1
+Cost=1000000

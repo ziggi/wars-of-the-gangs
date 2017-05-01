@@ -1,0 +1,4 @@
+Coords=2195.600097,1686.300048,12.300000
+Owner=Unknown
+Name=Caligula's Palace 5
+Cost=125000

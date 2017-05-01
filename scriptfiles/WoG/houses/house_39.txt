@@ -1,0 +1,4 @@
+Coords=1600.566650,2608.962158,10.820300
+Owner=Unknown
+Name=Prickle Pine 1
+Cost=50000

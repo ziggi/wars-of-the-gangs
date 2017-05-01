@@ -1,0 +1,4 @@
+Coords=-2137.459960,-247.879226,36.515625
+Owner=Unknown
+Name=Doherty 8
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=-2791.820068,104.050010,10.050000
+Owner=Unknown
+Name=Ocean Flats 4
+Cost=25000

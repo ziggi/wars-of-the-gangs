@@ -1,0 +1,4 @@
+Coords=-2555.899902,896.599975,64.900001
+Owner=Unknown
+Name=Paradiso 12
+Cost=75000

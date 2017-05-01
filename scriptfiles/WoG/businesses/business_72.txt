@@ -1,0 +1,5 @@
+Coords=611.893371,1694.792114,6.719299
+Owner=Unknown
+Name=Fuelstation - Bone County
+Cost=50000
+Income=2000

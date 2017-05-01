@@ -1,0 +1,4 @@
+Coords=985.002014,1879.312744,11.468297
+Owner=Unknown
+Name=Whitewood Estates 2
+Cost=125000

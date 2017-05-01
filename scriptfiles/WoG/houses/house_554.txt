@@ -1,0 +1,4 @@
+Coords=1420.579956,-1607.400024,13.539999
+Owner=Unknown
+Name=Commerce 12
+Cost=125000

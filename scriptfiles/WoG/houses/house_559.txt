@@ -1,0 +1,4 @@
+Coords=1442.670043,-629.190002,95.709999
+Owner=Unknown
+Name=Mulholland 10
+Cost=125000

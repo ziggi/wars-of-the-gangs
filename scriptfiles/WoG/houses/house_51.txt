@@ -1,0 +1,4 @@
+Coords=1745.999023,2767.773925,11.343791
+Owner=ZiGGi
+Name=Prickle Pine 4
+Cost=125000

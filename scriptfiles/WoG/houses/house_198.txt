@@ -1,0 +1,4 @@
+Coords=2244.300048,-1637.699951,15.899991
+Owner=Unknown
+Name=Ganton 9
+Cost=1000000

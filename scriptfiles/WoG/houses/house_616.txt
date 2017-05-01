@@ -1,0 +1,4 @@
+Coords=-2590.527343,-158.595397,4.328400
+Owner=Unknown
+Name=Hashbury 17
+Cost=250000

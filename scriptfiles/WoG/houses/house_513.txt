@@ -1,0 +1,4 @@
+Coords=-1970.476806,1222.805664,31.773231
+Owner=Unknown
+Name=Downtown 10
+Cost=500000

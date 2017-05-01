@@ -1,0 +1,4 @@
+Coords=2216.162109,2714.770019,10.812970
+Owner=Unknown
+Name=Spinybed 1
+Cost=125000

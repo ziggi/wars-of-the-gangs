@@ -1,0 +1,4 @@
+Coords=1627.231323,2711.320068,10.820300
+Owner=Unknown
+Name=Prickle Pine 16
+Cost=250000

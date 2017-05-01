@@ -1,0 +1,4 @@
+Coords=2327.500000,-1681.800048,14.899991
+Owner=Unknown
+Name=Ganton 6
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=-2789.554687,-181.164108,10.062500
+Owner=Unknown
+Name=Ocean Flats 26
+Cost=125000

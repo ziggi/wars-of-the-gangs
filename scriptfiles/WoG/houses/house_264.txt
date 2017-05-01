@@ -1,0 +1,4 @@
+Coords=2416.000000,1064.599975,10.800000
+Owner=Unknown
+Name=Come-A-Lot 3
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=1610.466064,2648.081298,10.820300
+Owner=Unknown
+Name=Prickle Pine 7
+Cost=500000

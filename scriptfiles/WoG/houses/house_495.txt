@@ -1,0 +1,4 @@
+Coords=-2454.360595,503.960632,30.078754
+Owner=Unknown
+Name=Queens 3
+Cost=500000

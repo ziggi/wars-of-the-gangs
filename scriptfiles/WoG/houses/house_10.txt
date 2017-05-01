@@ -1,0 +1,4 @@
+Coords=768.099975,-1696.500000,5.099997
+Owner=Unknown
+Name=Marina 1
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=-2590.529785,-95.527603,4.324398
+Owner=Unknown
+Name=Hashbury 12
+Cost=75000

@@ -1,0 +1,4 @@
+Coords=2243.800048,-1408.199951,24.000000
+Owner=Unknown
+Name=Jefferson 7
+Cost=75000

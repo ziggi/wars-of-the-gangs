@@ -1,0 +1,4 @@
+Coords=2021.300048,1008.099975,10.800000
+Owner=Unknown
+Name=The Four Dragons Casino 1
+Cost=125000

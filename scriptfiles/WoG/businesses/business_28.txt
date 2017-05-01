@@ -1,0 +1,5 @@
+Coords=2192.864501,1992.971679,12.296898
+Owner=009
+Name=24-7 - (LV)Starfish Cas
+Cost=100000
+Income=50

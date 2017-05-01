@@ -1,0 +1,4 @@
+Coords=2186.000000,1113.699951,12.600000
+Owner=Unknown
+Name=Come-A-Lot 6
+Cost=75000

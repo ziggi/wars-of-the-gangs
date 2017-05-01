@@ -1,0 +1,4 @@
+Coords=2312.800048,-1370.400024,24.000000
+Owner=Unknown
+Name=East Los Santos 4
+Cost=75000

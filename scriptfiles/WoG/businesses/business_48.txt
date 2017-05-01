@@ -1,0 +1,5 @@
+Coords=2636.804443,1674.437866,11.023400
+Owner=ZiGGi
+Name=Cluckin Bell - (LV)Pilg
+Cost=50000
+Income=15

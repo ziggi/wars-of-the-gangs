@@ -1,0 +1,4 @@
+Coords=-2015.900024,522.500000,35.099998
+Owner=Unknown
+Name=King's 6
+Cost=75000

@@ -1,0 +1,4 @@
+Coords=-2065.990966,1160.170288,46.648399
+Owner=Unknown
+Name=Calton Heights 50
+Cost=250000

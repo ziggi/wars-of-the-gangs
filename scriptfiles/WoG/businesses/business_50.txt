@@ -1,0 +1,5 @@
+Coords=1161.802490,2069.379150,10.820300
+Owner=Unknown
+Name=Burger Shot - (LV)Whitewood Estates
+Cost=50000
+Income=15

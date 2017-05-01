@@ -1,0 +1,4 @@
+Coords=-2789.304687,183.912734,10.062500
+Owner=Unknown
+Name=Ocean Flats 19
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=1639.556884,2075.853027,11.312500
+Owner=Unknown
+Name=Redsands West 7
+Cost=1500000

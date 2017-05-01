@@ -1,0 +1,5 @@
+Coords=1965.183837,2158.524414,10.820300
+Owner=Unknown
+Name=PayNSpray - (LV) Redsands East
+Cost=100000
+Income=100

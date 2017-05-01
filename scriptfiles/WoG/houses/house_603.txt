@@ -1,0 +1,4 @@
+Coords=-2160.106445,1066.876708,80.007797
+Owner=Unknown
+Name=Calton Heights 41
+Cost=1500000

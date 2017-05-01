@@ -1,0 +1,4 @@
+Coords=2446.265625,2376.072753,12.163496
+Owner=Unknown
+Name=Roca Escalante 3
+Cost=1500000

@@ -1,0 +1,5 @@
+Coords=-1694.798339,945.156311,24.890600
+Owner=Unknown
+Name=Clothes - Victim - (SF)Downtown
+Cost=50000
+Income=500

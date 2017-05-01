@@ -1,0 +1,4 @@
+Coords=1241.946166,-1077.327392,31.554700
+Owner=Unknown
+Name=Temple 10
+Cost=250000

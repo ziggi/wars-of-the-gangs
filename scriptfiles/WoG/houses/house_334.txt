@@ -1,0 +1,4 @@
+Coords=2686.699951,-1428.300048,30.500000
+Owner=Unknown
+Name=East Beach 6
+Cost=1500000

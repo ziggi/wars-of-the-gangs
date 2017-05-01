@@ -1,0 +1,5 @@
+Coords=-2431.267089,1030.691772,50.390598
+Owner=Unknown
+Name=PayNSpray - (SF) Juniper Hollow
+Cost=100000
+Income=100

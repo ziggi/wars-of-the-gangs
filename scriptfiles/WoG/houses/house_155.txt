@@ -1,0 +1,4 @@
+Coords=2108.415283,2653.067138,10.812994
+Owner=Unknown
+Name=Prickle Pine 14
+Cost=125000

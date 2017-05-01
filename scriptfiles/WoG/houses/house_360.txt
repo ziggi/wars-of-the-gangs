@@ -1,0 +1,4 @@
+Coords=933.944580,-1805.234497,13.843297
+Owner=Unknown
+Name=Verona Beach 8
+Cost=250000

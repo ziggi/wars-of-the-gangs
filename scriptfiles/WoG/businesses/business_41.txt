@@ -1,0 +1,5 @@
+Coords=173.728500,1173.562255,14.757800
+Owner=Unknown
+Name=Cluckin Bell - Bone County
+Cost=50000
+Income=15

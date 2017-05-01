@@ -1,0 +1,5 @@
+Coords=-1566.155395,-2734.453369,48.544799
+Owner=Unknown
+Name=24-7 - Whetstone
+Cost=100000
+Income=50

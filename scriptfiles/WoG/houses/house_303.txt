@@ -1,0 +1,4 @@
+Coords=2850.199951,-1478.900024,10.899993
+Owner=Unknown
+Name=East Beach 4
+Cost=25000

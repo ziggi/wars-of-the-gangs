@@ -1,0 +1,4 @@
+Coords=-1872.500000,1024.199951,42.099998
+Owner=Unknown
+Name=Downtown 5
+Cost=250000

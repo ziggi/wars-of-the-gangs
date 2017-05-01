@@ -1,0 +1,4 @@
+Coords=1845.242797,690.334411,11.453100
+Owner=Unknown
+Name=Last Dime Motel 2
+Cost=75000

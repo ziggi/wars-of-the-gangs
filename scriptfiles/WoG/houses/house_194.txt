@@ -1,0 +1,4 @@
+Coords=2315.899902,1800.599975,10.800000
+Owner=Unknown
+Name=The Clown's Pocket 1
+Cost=500000

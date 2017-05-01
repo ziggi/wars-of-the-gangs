@@ -1,0 +1,5 @@
+Coords=2335.691406,78.245903,26.482299
+Owner=Unknown
+Name=Well Stacked Pizza - Palomino Creek
+Cost=50000
+Income=15

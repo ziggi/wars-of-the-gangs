@@ -1,0 +1,5 @@
+Coords=2466.134521,2034.350341,11.062500
+Owner=009
+Name=Burger Shot - (LV)Old V
+Cost=50000
+Income=15

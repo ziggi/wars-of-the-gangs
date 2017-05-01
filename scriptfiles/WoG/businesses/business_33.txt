@@ -1,0 +1,5 @@
+Coords=2888.305175,2454.582031,11.069000
+Owner=Unknown
+Name=24-7 - (LV)Creek
+Cost=100000
+Income=50

@@ -1,0 +1,4 @@
+Coords=672.263488,-647.038208,16.335899
+Owner=Unknown
+Name=Dillimore 7
+Cost=125000

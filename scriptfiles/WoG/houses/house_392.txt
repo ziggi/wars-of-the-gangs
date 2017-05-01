@@ -1,0 +1,4 @@
+Coords=-1465.651855,2611.176757,56.019599
+Owner=Unknown
+Name=El Quebrados 2
+Cost=75000

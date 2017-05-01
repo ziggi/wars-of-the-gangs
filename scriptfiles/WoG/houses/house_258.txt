@@ -1,0 +1,4 @@
+Coords=2464.000000,1761.800048,10.800000
+Owner=Unknown
+Name=Pilgrim 3
+Cost=500000

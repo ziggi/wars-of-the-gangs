@@ -1,0 +1,4 @@
+Coords=300.232299,-1154.440551,81.390701
+Owner=Unknown
+Name=Richman 3
+Cost=300000

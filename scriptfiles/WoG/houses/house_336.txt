@@ -1,0 +1,4 @@
+Coords=2457.287597,-1054.422119,59.742198
+Owner=Unknown
+Name=Las Colinas 5
+Cost=25000

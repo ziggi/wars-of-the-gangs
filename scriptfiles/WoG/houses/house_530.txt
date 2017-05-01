@@ -1,0 +1,4 @@
+Coords=-2203.283935,1043.080566,80.013061
+Owner=Unknown
+Name=Calton Heights 19
+Cost=250000

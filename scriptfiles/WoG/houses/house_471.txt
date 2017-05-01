@@ -1,0 +1,4 @@
+Coords=161.253494,-112.676200,4.896500
+Owner=Unknown
+Name=Blueberry 9
+Cost=250000

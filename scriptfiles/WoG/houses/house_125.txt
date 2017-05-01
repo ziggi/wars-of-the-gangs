@@ -1,0 +1,4 @@
+Coords=206.805999,-1769.768310,4.353199
+Owner=Unknown
+Name=Santa Maria Beach 1
+Cost=125000

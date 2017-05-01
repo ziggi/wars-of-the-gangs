@@ -1,0 +1,4 @@
+Coords=1102.687500,-1093.566772,28.468799
+Owner=Unknown
+Name=Temple 4
+Cost=125000

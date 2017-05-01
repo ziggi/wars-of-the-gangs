@@ -1,0 +1,4 @@
+Coords=1439.841918,-926.988281,39.640598
+Owner=Unknown
+Name=Downtown Los Santos 1
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=2455.059082,1500.025024,11.617400
+Owner=Unknown
+Name=Pilgrim 5
+Cost=125000

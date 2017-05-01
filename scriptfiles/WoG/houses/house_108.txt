@@ -1,0 +1,4 @@
+Coords=-2421.939941,2491.459960,13.119991
+Owner=Unknown
+Name=Bayside 8
+Cost=1000000

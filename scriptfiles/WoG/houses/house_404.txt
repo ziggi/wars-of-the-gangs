@@ -1,0 +1,4 @@
+Coords=-39.175701,1074.090332,20.939899
+Owner=Unknown
+Name=Fort Carson 5
+Cost=250000

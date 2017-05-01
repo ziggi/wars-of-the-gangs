@@ -1,0 +1,5 @@
+Coords=-1899.124633,274.128509,41.039100
+Owner=Unknown
+Name=PayNSpray - (SF) Downtown
+Cost=100000
+Income=100

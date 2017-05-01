@@ -1,0 +1,4 @@
+Coords=2232.500000,-1470.900024,23.899999
+Owner=Unknown
+Name=Jefferson 6
+Cost=1000000

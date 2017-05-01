@@ -1,0 +1,4 @@
+Coords=-2590.540771,-186.031600,4.328000
+Owner=Unknown
+Name=Hashbury 16
+Cost=250000

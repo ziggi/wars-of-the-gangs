@@ -1,0 +1,4 @@
+Coords=700.337524,-1060.164428,49.421699
+Owner=Unknown
+Name=Richman 4
+Cost=1000000

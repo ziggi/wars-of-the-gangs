@@ -1,0 +1,4 @@
+Coords=-767.953796,2764.743896,48.255599
+Owner=Unknown
+Name=Valle Ocultado 2
+Cost=75000

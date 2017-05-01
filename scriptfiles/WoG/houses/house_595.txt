@@ -1,0 +1,4 @@
+Coords=-2159.925781,965.382812,80.000000
+Owner=Unknown
+Name=Calton Heights 33
+Cost=250000

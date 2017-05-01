@@ -1,0 +1,4 @@
+Coords=2283.621826,-1046.843872,49.887100
+Owner=Unknown
+Name=Las Colinas 2
+Cost=75000

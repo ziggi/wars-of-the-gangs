@@ -1,0 +1,4 @@
+Coords=2454.600097,1183.900024,10.800000
+Owner=ZiGGi
+Name=Come-A-Lot 2
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=-2689.672363,-101.602699,7.203100
+Owner=Unknown
+Name=Ocean Flats 18
+Cost=1000000

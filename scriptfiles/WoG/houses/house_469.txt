@@ -1,0 +1,4 @@
+Coords=166.287796,-95.215400,1.554900
+Owner=Unknown
+Name=Red County 3
+Cost=125000

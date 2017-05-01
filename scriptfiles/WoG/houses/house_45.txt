@@ -1,0 +1,4 @@
+Coords=2224.932617,2521.689208,10.820300
+Owner=Unknown
+Name=Julius Thruway North 1
+Cost=125000

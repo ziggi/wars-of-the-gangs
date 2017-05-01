@@ -1,0 +1,5 @@
+Coords=2115.667236,-1212.725219,23.964700
+Owner=Unknown
+Name=Clothes - Suburban - (LS)Jefferson
+Cost=50000
+Income=400

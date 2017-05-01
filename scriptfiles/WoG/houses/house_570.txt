@@ -1,0 +1,4 @@
+Coords=1363.193969,2525.604003,10.820300
+Owner=Unknown
+Name=Prickle Pine 22
+Cost=125000

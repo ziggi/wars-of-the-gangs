@@ -1,0 +1,4 @@
+Coords=1359.570922,2566.292968,10.820300
+Owner=Unknown
+Name=Prickle Pine 23
+Cost=125000

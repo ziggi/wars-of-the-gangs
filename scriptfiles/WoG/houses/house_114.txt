@@ -1,0 +1,4 @@
+Coords=822.295715,-1503.592285,13.593791
+Owner=Unknown
+Name=Marina 6
+Cost=50000

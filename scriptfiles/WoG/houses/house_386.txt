@@ -1,0 +1,4 @@
+Coords=17.877098,909.908020,23.903600
+Owner=Unknown
+Name=Fort Carson 1
+Cost=25000

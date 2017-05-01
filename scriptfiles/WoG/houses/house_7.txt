@@ -1,0 +1,4 @@
+Coords=1905.900024,-1113.699951,26.600000
+Owner=Unknown
+Name=Glen Park 1
+Cost=75000

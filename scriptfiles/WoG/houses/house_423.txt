@@ -1,0 +1,4 @@
+Coords=2440.697998,1224.433959,14.342570
+Owner=ZiGGi
+Name=The Camel's Toe 8
+Cost=75000

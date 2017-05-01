@@ -1,0 +1,4 @@
+Coords=-2095.907714,1865.387573,5.247732
+Owner=Unknown
+Name=Tierra Robada 16
+Cost=500000

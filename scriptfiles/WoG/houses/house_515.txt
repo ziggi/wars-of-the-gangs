@@ -1,0 +1,4 @@
+Coords=-2689.559326,-152.827926,5.000000
+Owner=Unknown
+Name=Ocean Flats 28
+Cost=1000000

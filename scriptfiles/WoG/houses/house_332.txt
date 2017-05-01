@@ -1,0 +1,4 @@
+Coords=1085.000000,2031.800048,11.399993
+Owner=Unknown
+Name=Whitewood Estates 7
+Cost=1000000

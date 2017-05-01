@@ -1,0 +1,4 @@
+Coords=-1667.176513,2486.487304,87.167396
+Owner=Unknown
+Name=Tierra Robada 6
+Cost=1000000

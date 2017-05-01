@@ -1,0 +1,4 @@
+Coords=2652.800048,727.500000,10.800000
+Owner=Unknown
+Name=Rockshore East 2
+Cost=125000

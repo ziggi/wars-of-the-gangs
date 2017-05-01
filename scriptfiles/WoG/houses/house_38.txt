@@ -1,0 +1,4 @@
+Coords=1673.347778,1967.531860,10.820300
+Owner=Unknown
+Name=Redsands West 1
+Cost=25000

@@ -1,0 +1,5 @@
+Coords=-94.765098,-1174.807861,1.997900
+Owner=Unknown
+Name=Fuelstation - Flint County
+Cost=50000
+Income=2000

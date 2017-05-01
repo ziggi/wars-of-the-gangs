@@ -1,0 +1,4 @@
+Coords=416.118011,-1155.164428,76.687599
+Owner=Unknown
+Name=Richman 6
+Cost=500000

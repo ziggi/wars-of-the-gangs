@@ -1,0 +1,4 @@
+Coords=1285.263671,-1089.241943,28.257799
+Owner=Unknown
+Name=Temple 9
+Cost=125000

@@ -1,0 +1,5 @@
+Coords=2103.604248,-1809.245849,13.554699
+Owner=Unknown
+Name=Well Stacked Pizza - (LS)Idlewood
+Cost=50000
+Income=15

@@ -1,0 +1,4 @@
+Coords=252.183105,-92.442703,3.535398
+Owner=Unknown
+Name=Blueberry 2
+Cost=25000

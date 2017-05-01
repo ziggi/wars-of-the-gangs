@@ -1,0 +1,4 @@
+Coords=2395.800048,-1796.000000,13.500000
+Owner=Unknown
+Name=Ganton 8
+Cost=50000

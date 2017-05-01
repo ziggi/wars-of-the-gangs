@@ -1,0 +1,4 @@
+Coords=-2472.100097,2450.300048,17.320001
+Owner=Unknown
+Name=Bayside 5
+Cost=250000

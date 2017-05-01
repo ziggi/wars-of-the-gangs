@@ -1,0 +1,4 @@
+Coords=-2711.250000,968.979980,54.469997
+Owner=Unknown
+Name=Paradiso 10
+Cost=1500000

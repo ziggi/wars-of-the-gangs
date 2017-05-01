@@ -1,0 +1,4 @@
+Coords=-2139.806640,1190.142944,55.726562
+Owner=Unknown
+Name=Calton Heights 12
+Cost=250000

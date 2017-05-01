@@ -1,0 +1,5 @@
+Coords=1206.955200,-918.483398,43.071399
+Owner=Unknown
+Name=Burger Shot - (LS)Temple
+Cost=50000
+Income=15

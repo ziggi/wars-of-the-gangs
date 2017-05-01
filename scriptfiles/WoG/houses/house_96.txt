@@ -1,0 +1,4 @@
+Coords=-2565.819824,819.179992,49.990001
+Owner=Unknown
+Name=Paradiso 7
+Cost=125000

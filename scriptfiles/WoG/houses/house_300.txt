@@ -1,0 +1,4 @@
+Coords=2735.800048,-1952.300048,13.500000
+Owner=Unknown
+Name=Playa del Seville 3
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=1703.599975,1529.300048,10.699995
+Owner=Unknown
+Name=Las Venturas Airport 3
+Cost=250000

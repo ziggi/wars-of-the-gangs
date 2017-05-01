@@ -1,0 +1,4 @@
+Coords=-2058.929931,891.880004,61.869995
+Owner=Unknown
+Name=Calton Heights 3
+Cost=125000

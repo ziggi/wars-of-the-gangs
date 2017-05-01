@@ -1,0 +1,4 @@
+Coords=2376.699951,1409.400024,10.800000
+Owner=Unknown
+Name=Royal Casino 3
+Cost=125000

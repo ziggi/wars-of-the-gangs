@@ -1,0 +1,4 @@
+Coords=-2471.770019,897.299987,63.169998
+Owner=Unknown
+Name=Juniper Hill 2
+Cost=125000

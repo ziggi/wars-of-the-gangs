@@ -1,0 +1,4 @@
+Coords=2232.261718,-1785.359497,13.560400
+Owner=Unknown
+Name=Ganton 3
+Cost=1000000

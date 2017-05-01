@@ -1,0 +1,4 @@
+Coords=2044.640502,-965.673706,44.032001
+Owner=Unknown
+Name=Las Colinas 9
+Cost=25000

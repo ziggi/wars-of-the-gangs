@@ -1,0 +1,4 @@
+Coords=-2551.979980,2266.743408,5.475500
+Owner=Unknown
+Name=Bayside 2
+Cost=1000000

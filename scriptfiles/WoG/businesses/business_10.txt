@@ -1,0 +1,5 @@
+Coords=1654.840820,1732.037231,10.820349
+Owner=Unknown
+Name=Clothes - Binco - (LV)Airport
+Cost=50000
+Income=100

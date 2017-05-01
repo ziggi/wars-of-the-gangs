@@ -1,0 +1,5 @@
+Coords=2365.215087,2073.343017,10.820300
+Owner=Unknown
+Name=Burger Shot - (LV)Old Venturas Strip 2
+Cost=50000
+Income=15

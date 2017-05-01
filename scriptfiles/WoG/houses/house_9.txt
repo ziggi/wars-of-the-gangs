@@ -1,0 +1,4 @@
+Coords=2142.699951,-1605.500000,14.300000
+Owner=Unknown
+Name=Idlewood 2
+Cost=75000

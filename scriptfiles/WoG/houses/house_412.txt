@@ -1,0 +1,4 @@
+Coords=-1353.492431,2057.732177,53.117198
+Owner=Unknown
+Name=Tierra Robada 8
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=1309.243408,1932.497436,11.460900
+Owner=Unknown
+Name=Redsands West 2
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=-2199.229980,-2512.129882,31.819999
+Owner=Unknown
+Name=Angel Pine 3
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=789.931579,1974.555175,5.738698
+Owner=Unknown
+Name=Bone County 1
+Cost=25000

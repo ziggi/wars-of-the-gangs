@@ -1,0 +1,4 @@
+Coords=1804.056640,-2123.248779,13.588994
+Owner=Unknown
+Name=El Corona 3
+Cost=1000000

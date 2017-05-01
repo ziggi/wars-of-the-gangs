@@ -1,0 +1,4 @@
+Coords=2560.800048,1561.800048,10.800000
+Owner=Unknown
+Name=Pilgrim 4
+Cost=1500000

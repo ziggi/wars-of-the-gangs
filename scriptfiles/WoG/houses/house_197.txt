@@ -1,0 +1,4 @@
+Coords=2001.099975,1520.000000,17.000000
+Owner=Unknown
+Name=Pirates in Men's Pants 2
+Cost=1000000

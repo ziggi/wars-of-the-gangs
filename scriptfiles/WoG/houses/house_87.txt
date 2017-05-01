@@ -1,0 +1,4 @@
+Coords=-2277.559814,916.429992,66.659996
+Owner=Unknown
+Name=Juniper Hill 1
+Cost=75000

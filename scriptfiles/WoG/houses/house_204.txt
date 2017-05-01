@@ -1,0 +1,4 @@
+Coords=1183.199951,-1584.199951,13.500000
+Owner=Unknown
+Name=Verona Beach 4
+Cost=25000

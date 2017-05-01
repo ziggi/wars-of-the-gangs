@@ -1,0 +1,4 @@
+Coords=1406.970581,2524.436035,10.820300
+Owner=Unknown
+Name=Prickle Pine 21
+Cost=125000

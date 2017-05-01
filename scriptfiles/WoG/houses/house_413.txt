@@ -1,0 +1,4 @@
+Coords=-711.504272,2384.770996,128.248001
+Owner=Unknown
+Name=Arco del Oeste 1
+Cost=1000000

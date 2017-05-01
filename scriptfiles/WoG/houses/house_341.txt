@@ -1,0 +1,4 @@
+Coords=2782.700683,-1306.301757,38.754199
+Owner=Unknown
+Name=East Beach 7
+Cost=125000

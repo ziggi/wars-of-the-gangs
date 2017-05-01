@@ -1,0 +1,4 @@
+Coords=2449.381103,1284.571044,11.182538
+Owner=Unknown
+Name=The Camel's Toe 10
+Cost=125000

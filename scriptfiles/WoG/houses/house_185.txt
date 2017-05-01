@@ -1,0 +1,4 @@
+Coords=-2430.199951,10.100000,35.299999
+Owner=Unknown
+Name=Hashbury 2
+Cost=125000

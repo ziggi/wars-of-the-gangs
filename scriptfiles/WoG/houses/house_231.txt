@@ -1,0 +1,4 @@
+Coords=-2524.000000,-79.900001,21.700000
+Owner=Unknown
+Name=Hashbury 7
+Cost=1000000

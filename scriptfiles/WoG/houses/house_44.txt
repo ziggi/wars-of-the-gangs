@@ -1,0 +1,4 @@
+Coords=2363.586181,2377.574707,10.820300
+Owner=Unknown
+Name=Roca Escalante 2
+Cost=125000

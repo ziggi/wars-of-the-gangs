@@ -1,0 +1,4 @@
+Coords=-2061.507324,1857.697998,4.913372
+Owner=Unknown
+Name=Tierra Robada 15
+Cost=500000

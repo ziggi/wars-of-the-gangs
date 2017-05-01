@@ -1,0 +1,4 @@
+Coords=-2431.113769,-27.556699,35.320301
+Owner=Unknown
+Name=Hashbury 8
+Cost=1000000

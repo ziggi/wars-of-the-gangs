@@ -1,0 +1,4 @@
+Coords=-1997.171508,1273.346313,7.512895
+Owner=Unknown
+Name=Calton Heights 14
+Cost=500000

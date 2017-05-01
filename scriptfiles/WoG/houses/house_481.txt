@@ -1,0 +1,4 @@
+Coords=-2125.603515,303.262298,34.542022
+Owner=Unknown
+Name=King's 8
+Cost=25000

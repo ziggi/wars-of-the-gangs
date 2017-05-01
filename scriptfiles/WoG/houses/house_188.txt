@@ -1,0 +1,4 @@
+Coords=-2455.899902,-135.899993,26.100000
+Owner=Unknown
+Name=Hashbury 5
+Cost=250000

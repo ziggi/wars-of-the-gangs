@@ -1,0 +1,4 @@
+Coords=-2057.902587,-2464.937500,31.179700
+Owner=Unknown
+Name=Angel Pine 4
+Cost=25000

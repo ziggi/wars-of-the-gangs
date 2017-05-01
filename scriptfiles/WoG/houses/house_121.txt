@@ -1,0 +1,4 @@
+Coords=2147.940429,-1434.110717,25.539100
+Owner=Unknown
+Name=Jefferson 3
+Cost=125000

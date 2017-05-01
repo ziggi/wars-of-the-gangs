@@ -1,0 +1,4 @@
+Coords=2434.899902,-1320.800048,24.799999
+Owner=Unknown
+Name=East Los Santos 2
+Cost=125000

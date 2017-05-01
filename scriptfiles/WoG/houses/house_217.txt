@@ -1,0 +1,4 @@
+Coords=2373.500000,1643.599975,11.000000
+Owner=Unknown
+Name=Caligula's Palace 4
+Cost=125000

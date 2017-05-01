@@ -1,0 +1,4 @@
+Coords=263.401885,2895.914306,10.531394
+Owner=Unknown
+Name=Bone County 3
+Cost=25000

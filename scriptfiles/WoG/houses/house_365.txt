@@ -1,0 +1,4 @@
+Coords=2395.803222,-1134.137084,30.718799
+Owner=Unknown
+Name=Las Colinas 6
+Cost=25000

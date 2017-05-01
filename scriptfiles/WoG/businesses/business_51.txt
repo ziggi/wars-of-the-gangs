@@ -1,0 +1,5 @@
+Coords=1876.147460,2070.057128,10.820300
+Owner=Unknown
+Name=Burger Shot - (LV)Redsands East
+Cost=50000
+Income=15

@@ -1,0 +1,4 @@
+Coords=-2625.330078,2283.449951,8.300003
+Owner=Unknown
+Name=Bayside 6
+Cost=100000

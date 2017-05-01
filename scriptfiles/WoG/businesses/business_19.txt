@@ -1,0 +1,5 @@
+Coords=-2493.593994,-31.473699,25.765600
+Owner=Unknown
+Name=Clothes - Suburban - (SF)Hashburry
+Cost=50000
+Income=400

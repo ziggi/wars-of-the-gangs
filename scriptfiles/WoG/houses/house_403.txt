@@ -1,0 +1,4 @@
+Coords=-206.363403,1087.291870,19.742200
+Owner=Unknown
+Name=Fort Carson 4
+Cost=250000

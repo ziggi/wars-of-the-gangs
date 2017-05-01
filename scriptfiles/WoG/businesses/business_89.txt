@@ -1,0 +1,5 @@
+Coords=-2712.024414,212.783493,4.321199
+Owner=Unknown
+Name=Mine Shop - (SF)Ocean Flats
+Cost=100000
+Income=250

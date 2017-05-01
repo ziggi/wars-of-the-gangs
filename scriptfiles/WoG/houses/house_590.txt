@@ -1,0 +1,4 @@
+Coords=-2223.803955,795.782287,49.434700
+Owner=Unknown
+Name=Calton Heights 28
+Cost=125000

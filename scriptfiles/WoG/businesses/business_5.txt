@@ -1,0 +1,5 @@
+Coords=723.314025,-466.257385,16.335899
+Owner=Unknown
+Name=PayNSpray - Dillimore
+Cost=100000
+Income=100

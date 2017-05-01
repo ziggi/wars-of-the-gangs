@@ -1,0 +1,4 @@
+Coords=-2686.361816,722.669128,32.204101
+Owner=Unknown
+Name=Santa Flora 6
+Cost=125000

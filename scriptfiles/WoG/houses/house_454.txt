@@ -1,0 +1,4 @@
+Coords=-1930.229125,1190.010253,45.445301
+Owner=Unknown
+Name=Downtown 8
+Cost=1000000

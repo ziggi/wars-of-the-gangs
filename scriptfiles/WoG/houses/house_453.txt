@@ -1,0 +1,4 @@
+Coords=-2018.378051,1193.978881,45.457000
+Owner=Unknown
+Name=Calton Heights 11
+Cost=1000000

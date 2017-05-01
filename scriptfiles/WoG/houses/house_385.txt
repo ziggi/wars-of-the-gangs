@@ -1,0 +1,4 @@
+Coords=-624.803527,2714.717529,72.375000
+Owner=Unknown
+Name=Tierra Robada 3
+Cost=25000

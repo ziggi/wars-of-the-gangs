@@ -1,0 +1,5 @@
+Coords=925.768615,-1356.428955,13.379300
+Owner=Unknown
+Name=Cluckin Bell - (LS)Market
+Cost=50000
+Income=15

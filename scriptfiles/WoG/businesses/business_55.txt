@@ -1,0 +1,5 @@
+Coords=2172.495361,2794.280273,10.820300
+Owner=Unknown
+Name=Burger Shot - (LV)Spinybed
+Cost=50000
+Income=15

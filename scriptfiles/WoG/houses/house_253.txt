@@ -1,0 +1,4 @@
+Coords=1233.500000,-1439.000000,13.600000
+Owner=Unknown
+Name=Market 3
+Cost=125000

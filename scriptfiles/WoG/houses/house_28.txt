@@ -1,0 +1,4 @@
+Coords=1051.099975,-1056.599975,34.799999
+Owner=Unknown
+Name=Temple 3
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=-1670.242431,2545.872558,85.234298
+Owner=Unknown
+Name=Tierra Robada 1
+Cost=25000

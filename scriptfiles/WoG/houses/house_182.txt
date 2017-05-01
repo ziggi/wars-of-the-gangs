@@ -1,0 +1,4 @@
+Coords=-2081.800048,71.599998,35.200000
+Owner=Unknown
+Name=Doherty 3
+Cost=125000

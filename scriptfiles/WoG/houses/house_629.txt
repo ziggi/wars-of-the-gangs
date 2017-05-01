@@ -1,0 +1,4 @@
+Coords=-2228.002197,1079.991943,80.007797
+Owner=Unknown
+Name=Calton Heights 56
+Cost=1000000

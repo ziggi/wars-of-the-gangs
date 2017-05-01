@@ -1,0 +1,4 @@
+Coords=-2382.656250,1299.846435,19.587444
+Owner=Unknown
+Name=Juniper Hollow 10
+Cost=125000

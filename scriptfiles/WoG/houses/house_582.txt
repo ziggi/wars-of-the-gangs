@@ -1,0 +1,4 @@
+Coords=-1970.317382,1273.130004,7.566699
+Owner=Unknown
+Name=Downtown 13
+Cost=25000

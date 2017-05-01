@@ -1,0 +1,4 @@
+Coords=1867.400024,1444.199951,10.800000
+Owner=Unknown
+Name=The High Roller 3
+Cost=125000

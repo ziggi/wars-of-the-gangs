@@ -1,0 +1,4 @@
+Coords=-2722.270019,923.510009,67.599998
+Owner=Unknown
+Name=Paradiso 6
+Cost=75000

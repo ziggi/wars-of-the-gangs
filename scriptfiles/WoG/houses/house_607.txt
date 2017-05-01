@@ -1,0 +1,4 @@
+Coords=-2515.375976,-170.958206,25.049800
+Owner=Unknown
+Name=Hashbury 9
+Cost=1500000

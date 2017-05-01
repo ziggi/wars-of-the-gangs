@@ -1,0 +1,5 @@
+Coords=2393.829589,-1898.453857,13.546899
+Owner=Unknown
+Name=Cluckin Bell - (LS)Willowfield
+Cost=50000
+Income=15

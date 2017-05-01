@@ -1,0 +1,4 @@
+Coords=2819.000000,-1614.800048,11.000000
+Owner=Unknown
+Name=East Beach 2
+Cost=25000

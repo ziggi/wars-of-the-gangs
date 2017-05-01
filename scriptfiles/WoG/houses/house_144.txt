@@ -1,0 +1,4 @@
+Coords=1961.800048,2322.679687,16.468799
+Owner=Unknown
+Name=Redsands East 4
+Cost=50000

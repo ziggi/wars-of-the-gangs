@@ -1,0 +1,5 @@
+Coords=2103.206787,2259.491943,11.023448
+Owner=009
+Name=Clothes - Binco - (LV)T
+Cost=50000
+Income=100

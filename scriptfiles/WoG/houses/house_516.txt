@@ -1,0 +1,4 @@
+Coords=-2657.479492,849.682128,64.007812
+Owner=Unknown
+Name=Paradiso 15
+Cost=1000000

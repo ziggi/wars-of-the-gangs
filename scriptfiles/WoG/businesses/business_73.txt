@@ -1,0 +1,5 @@
+Coords=-1327.539794,2682.977050,49.789600
+Owner=Unknown
+Name=Fuelstation - Tierra Robada 1
+Cost=50000
+Income=2000

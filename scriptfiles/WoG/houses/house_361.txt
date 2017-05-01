@@ -1,0 +1,4 @@
+Coords=936.552795,-1612.716064,14.937500
+Owner=Unknown
+Name=Verona Beach 9
+Cost=250000

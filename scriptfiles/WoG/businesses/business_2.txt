@@ -1,0 +1,5 @@
+Coords=484.200012,-1731.859985,11.090000
+Owner=Unknown
+Name=PayNSpray - (LS) Santa Maria Beach
+Cost=100000
+Income=100

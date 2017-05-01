@@ -1,0 +1,4 @@
+Coords=2129.688720,-1362.103515,25.805799
+Owner=Unknown
+Name=Jefferson 8
+Cost=25000

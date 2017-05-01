@@ -1,0 +1,4 @@
+Coords=-2447.399902,820.700012,35.099998
+Owner=Unknown
+Name=Juniper Hill 9
+Cost=50000

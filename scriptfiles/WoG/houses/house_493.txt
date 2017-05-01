@@ -1,0 +1,4 @@
+Coords=-1982.465576,1189.970458,45.445312
+Owner=Unknown
+Name=Calton Heights 13
+Cost=250000

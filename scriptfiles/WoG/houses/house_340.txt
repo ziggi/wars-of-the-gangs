@@ -1,0 +1,4 @@
+Coords=1981.497558,-1682.813232,17.053699
+Owner=Unknown
+Name=Idlewood 10
+Cost=125000

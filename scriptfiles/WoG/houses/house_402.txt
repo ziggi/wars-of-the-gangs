@@ -1,0 +1,4 @@
+Coords=-260.905212,1120.123413,20.939899
+Owner=Unknown
+Name=Fort Carson 3
+Cost=125000

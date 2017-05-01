@@ -1,0 +1,4 @@
+Coords=1855.687011,950.807373,10.820302
+Owner=Unknown
+Name=The Four Dragons Casino 3
+Cost=75000

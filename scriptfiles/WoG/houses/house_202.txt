@@ -1,0 +1,4 @@
+Coords=1289.500000,-1599.699951,13.500000
+Owner=Unknown
+Name=Verona Beach 2
+Cost=25000

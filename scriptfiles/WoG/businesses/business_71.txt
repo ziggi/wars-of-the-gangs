@@ -1,0 +1,5 @@
+Coords=2640.183105,1103.922363,10.820300
+Owner=Unknown
+Name=Fuelstation - LV 2
+Cost=50000
+Income=2000

@@ -1,0 +1,4 @@
+Coords=-2126.437500,1032.732421,80.007797
+Owner=Unknown
+Name=Calton Heights 38
+Cost=500000

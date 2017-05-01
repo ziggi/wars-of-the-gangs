@@ -1,0 +1,4 @@
+Coords=2496.600097,1214.800048,10.800000
+Owner=Unknown
+Name=The Camel's Toe 3
+Cost=25000

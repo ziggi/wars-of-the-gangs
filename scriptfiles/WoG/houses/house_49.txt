@@ -1,0 +1,4 @@
+Coords=2037.182006,2723.034179,10.820300
+Owner=Unknown
+Name=Prickle Pine 3
+Cost=125000

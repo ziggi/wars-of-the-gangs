@@ -1,0 +1,5 @@
+Coords=1028.890014,-1032.339965,31.920000
+Owner=Unknown
+Name=PayNSpray - (LS) Temple
+Cost=100000
+Income=100

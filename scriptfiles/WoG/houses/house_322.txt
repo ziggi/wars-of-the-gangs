@@ -1,0 +1,4 @@
+Coords=-2017.099975,969.900024,45.400001
+Owner=Unknown
+Name=Calton Heights 5
+Cost=250000

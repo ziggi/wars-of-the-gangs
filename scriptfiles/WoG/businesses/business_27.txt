@@ -1,0 +1,5 @@
+Coords=2549.138183,1970.479980,10.820300
+Owner=Unknown
+Name=24-7 - (LV)Starfish Casino 1
+Cost=100000
+Income=50

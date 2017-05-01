@@ -1,0 +1,5 @@
+Coords=-1425.740234,2593.437744,55.769298
+Owner=Unknown
+Name=PayNSpray - El Quebrados
+Cost=100000
+Income=100

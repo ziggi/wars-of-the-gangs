@@ -1,0 +1,4 @@
+Coords=2459.399902,-1690.900024,13.500000
+Owner=Unknown
+Name=Ganton 4
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=818.299499,-509.339202,18.012899
+Owner=Unknown
+Name=Dillimore 5
+Cost=125000

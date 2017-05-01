@@ -1,0 +1,5 @@
+Coords=2391.612792,1041.058349,10.820300
+Owner=Unknown
+Name=Mine Shop - (LV)Come-A-Lot
+Cost=100000
+Income=250

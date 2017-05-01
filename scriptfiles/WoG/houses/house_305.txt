@@ -1,0 +1,4 @@
+Coords=2467.600097,-1199.900024,36.799999
+Owner=Unknown
+Name=East Los Santos 5
+Cost=25000

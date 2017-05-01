@@ -1,0 +1,4 @@
+Coords=2798.000976,-1245.773925,47.211299
+Owner=Unknown
+Name=East Beach 8
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=-2239.057617,943.937316,66.652183
+Owner=Unknown
+Name=Calton Heights 17
+Cost=250000

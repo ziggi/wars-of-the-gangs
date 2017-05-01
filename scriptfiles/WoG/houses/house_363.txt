@@ -1,0 +1,4 @@
+Coords=1182.532226,-1099.275390,28.257799
+Owner=Unknown
+Name=Temple 7
+Cost=500000

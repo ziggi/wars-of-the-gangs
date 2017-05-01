@@ -1,0 +1,4 @@
+Coords=-1881.199951,823.099975,35.099998
+Owner=Unknown
+Name=Downtown 4
+Cost=125000

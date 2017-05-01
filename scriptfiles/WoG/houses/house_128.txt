@@ -1,0 +1,4 @@
+Coords=2786.676513,-1952.615844,13.546895
+Owner=Unknown
+Name=Playa del Seville 1
+Cost=250000

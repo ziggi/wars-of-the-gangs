@@ -1,0 +1,4 @@
+Coords=1093.562866,-804.232727,107.418800
+Owner=Unknown
+Name=Mulholland 8
+Cost=125000

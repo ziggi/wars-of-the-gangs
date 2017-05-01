@@ -1,0 +1,5 @@
+Coords=1381.669921,462.646697,19.854000
+Owner=Unknown
+Name=Fuelstation - Montgomery
+Cost=50000
+Income=2000

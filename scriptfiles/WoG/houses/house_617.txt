@@ -1,0 +1,4 @@
+Coords=-2018.539306,766.512878,45.445301
+Owner=Unknown
+Name=Calton Heights 44
+Cost=125000

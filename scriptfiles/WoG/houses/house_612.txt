@@ -1,0 +1,4 @@
+Coords=-2576.374023,-145.862792,6.648200
+Owner=Unknown
+Name=Hashbury 14
+Cost=75000

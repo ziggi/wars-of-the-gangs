@@ -1,0 +1,5 @@
+Coords=2455.294433,2062.863037,10.820300
+Owner=009
+Name=24-7 - (LV)Old Venturas
+Cost=100000
+Income=50

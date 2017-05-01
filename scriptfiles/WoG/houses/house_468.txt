@@ -1,0 +1,4 @@
+Coords=201.306793,-95.097503,1.554900
+Owner=Unknown
+Name=Red County 2
+Cost=125000

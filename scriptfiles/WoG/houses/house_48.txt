@@ -1,0 +1,4 @@
+Coords=1992.740722,2763.551757,10.820300
+Owner=Unknown
+Name=Prickle Pine 2
+Cost=125000

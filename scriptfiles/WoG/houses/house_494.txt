@@ -1,0 +1,4 @@
+Coords=-2639.334716,1340.393554,8.484517
+Owner=Unknown
+Name=Battery Point 2
+Cost=500000

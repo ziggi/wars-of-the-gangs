@@ -1,0 +1,4 @@
+Coords=2369.100097,734.599975,11.399993
+Owner=Unknown
+Name=Rockshore West 11
+Cost=125000

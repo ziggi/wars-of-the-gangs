@@ -1,0 +1,4 @@
+Coords=2436.399902,1734.599975,10.800000
+Owner=Unknown
+Name=Caligula's Palace 6
+Cost=250000

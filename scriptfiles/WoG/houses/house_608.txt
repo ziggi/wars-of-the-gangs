@@ -1,0 +1,4 @@
+Coords=-2515.376708,-189.268798,25.049800
+Owner=Unknown
+Name=Hashbury 10
+Cost=25000

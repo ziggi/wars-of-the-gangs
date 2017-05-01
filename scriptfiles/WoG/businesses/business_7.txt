@@ -1,0 +1,5 @@
+Coords=-95.581497,1107.921020,19.742200
+Owner=Unknown
+Name=PayNSpray - Fort Carson
+Cost=100000
+Income=100

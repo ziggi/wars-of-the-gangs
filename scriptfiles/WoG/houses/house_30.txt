@@ -1,0 +1,4 @@
+Coords=960.299987,-1825.199951,13.300000
+Owner=Unknown
+Name=Verona Beach 1
+Cost=1000000

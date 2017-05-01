@@ -1,0 +1,4 @@
+Coords=-2895.612792,1017.049865,36.828125
+Owner=Unknown
+Name=Palisades 5
+Cost=75000

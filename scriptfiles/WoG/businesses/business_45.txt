@@ -1,0 +1,5 @@
+Coords=2841.667480,2408.245849,11.069000
+Owner=Unknown
+Name=Cluckin Bell - (LV)Creek
+Cost=50000
+Income=15

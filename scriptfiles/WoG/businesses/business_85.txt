@@ -1,0 +1,5 @@
+Coords=1590.949340,2202.263671,10.524700
+Owner=Unknown
+Name=Fuelstation - (LV)Redsands West
+Cost=50000
+Income=2000

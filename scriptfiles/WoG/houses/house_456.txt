@@ -1,0 +1,4 @@
+Coords=295.182006,-54.993000,2.777199
+Owner=Unknown
+Name=Blueberry 3
+Cost=25000

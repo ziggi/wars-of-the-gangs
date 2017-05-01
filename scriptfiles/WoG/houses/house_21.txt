@@ -1,0 +1,4 @@
+Coords=1243.000000,-1100.900024,27.899999
+Owner=Unknown
+Name=Temple 2
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=2065.948730,2722.186523,10.820300
+Owner=Unknown
+Name=Prickle Pine 9
+Cost=1000000

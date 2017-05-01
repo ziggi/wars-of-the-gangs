@@ -1,0 +1,4 @@
+Coords=-2044.300048,554.599975,35.099998
+Owner=Unknown
+Name=King's 7
+Cost=125000

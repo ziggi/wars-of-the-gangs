@@ -1,0 +1,4 @@
+Coords=1118.262695,-1022.744873,34.992198
+Owner=Unknown
+Name=Temple 6
+Cost=500000

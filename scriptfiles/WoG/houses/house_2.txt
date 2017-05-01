@@ -1,0 +1,4 @@
+Coords=2238.100097,-1905.500000,14.899991
+Owner=Unknown
+Name=Willowfield 1
+Cost=25000

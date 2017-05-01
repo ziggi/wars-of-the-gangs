@@ -1,0 +1,5 @@
+Coords=-1930.666137,234.770797,34.366600
+Owner=Unknown
+Name=Mine Shop - (SF)Dohery
+Cost=100000
+Income=250

@@ -1,0 +1,4 @@
+Coords=2550.399902,-1196.900024,60.799999
+Owner=Unknown
+Name=East Los Santos 6
+Cost=50000

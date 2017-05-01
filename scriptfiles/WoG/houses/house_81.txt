@@ -1,0 +1,4 @@
+Coords=-2102.080078,-2531.689941,31.069999
+Owner=Unknown
+Name=Angel Pine 1
+Cost=25000

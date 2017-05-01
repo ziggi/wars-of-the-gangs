@@ -1,0 +1,4 @@
+Coords=2371.899902,1543.000000,10.800000
+Owner=Unknown
+Name=Royal Casino 4
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=1638.812133,2103.256591,11.312500
+Owner=Unknown
+Name=Redsands West 4
+Cost=250000

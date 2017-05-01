@@ -1,0 +1,4 @@
+Coords=189.638000,-1308.228637,70.249298
+Owner=Unknown
+Name=Richman 2
+Cost=1500000

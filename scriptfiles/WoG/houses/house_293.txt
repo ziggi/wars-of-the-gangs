@@ -1,0 +1,4 @@
+Coords=2011.800048,-1594.800048,13.500000
+Owner=Unknown
+Name=Idlewood 7
+Cost=500000

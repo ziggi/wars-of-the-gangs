@@ -1,0 +1,4 @@
+Coords=-2576.454101,-198.808898,6.634600
+Owner=Unknown
+Name=Hashbury 11
+Cost=25000

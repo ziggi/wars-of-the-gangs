@@ -1,0 +1,4 @@
+Coords=-2573.987548,1151.765869,55.726600
+Owner=Unknown
+Name=Paradiso 13
+Cost=125000

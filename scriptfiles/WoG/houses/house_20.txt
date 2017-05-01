@@ -1,0 +1,4 @@
+Coords=1496.900024,-689.099975,95.099998
+Owner=Unknown
+Name=Mulholland 3
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=2017.899780,2664.611816,11.298892
+Owner=Unknown
+Name=Prickle Pine 13
+Cost=125000

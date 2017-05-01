@@ -1,0 +1,4 @@
+Coords=-2220.790039,100.389999,35.319999
+Owner=Unknown
+Name=Garcia 1
+Cost=25000

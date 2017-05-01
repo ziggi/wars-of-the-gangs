@@ -1,0 +1,4 @@
+Coords=1420.479980,-1623.819946,13.539999
+Owner=Unknown
+Name=Commerce 11
+Cost=100000

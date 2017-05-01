@@ -1,0 +1,4 @@
+Coords=-2099.000000,715.400024,69.500000
+Owner=Unknown
+Name=Chinatown 1
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=652.099975,-1619.900024,15.000000
+Owner=Unknown
+Name=Marina 2
+Cost=125000

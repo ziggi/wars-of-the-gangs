@@ -1,0 +1,4 @@
+Coords=2493.100097,-1958.699951,13.500000
+Owner=Unknown
+Name=Willowfield 6
+Cost=1000000

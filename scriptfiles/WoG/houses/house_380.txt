@@ -1,0 +1,4 @@
+Coords=766.608886,-556.034729,18.012899
+Owner=Unknown
+Name=Dillimore 2
+Cost=25000

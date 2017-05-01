@@ -1,0 +1,4 @@
+Coords=-2791.816162,130.696304,7.859375
+Owner=Unknown
+Name=Ocean Flats 21
+Cost=125000

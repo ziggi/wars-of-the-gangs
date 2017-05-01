@@ -1,0 +1,4 @@
+Coords=2342.300048,1592.699951,10.800000
+Owner=Unknown
+Name=Caligula's Palace 1
+Cost=500000

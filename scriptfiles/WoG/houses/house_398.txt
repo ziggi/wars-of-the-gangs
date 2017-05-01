@@ -1,0 +1,4 @@
+Coords=-413.730102,2229.679199,42.425800
+Owner=Unknown
+Name=El Castillo del Diablo 1
+Cost=125000

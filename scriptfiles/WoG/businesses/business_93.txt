@@ -1,0 +1,5 @@
+Coords=1714.908325,1615.993652,10.112895
+Owner=Unknown
+Name=SkyDive place in (LV)Las Venturas Airport
+Cost=100000
+Income=1000

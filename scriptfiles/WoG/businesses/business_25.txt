@@ -1,0 +1,5 @@
+Coords=498.418090,-1358.213256,16.431900
+Owner=Unknown
+Name=Clothes - ProLaps - (LS)Rodeo
+Cost=50000
+Income=800

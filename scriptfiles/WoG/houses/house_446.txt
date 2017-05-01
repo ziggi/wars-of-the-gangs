@@ -1,0 +1,4 @@
+Coords=-1685.980224,1325.448120,7.187500
+Owner=Unknown
+Name=Esplanade North 3
+Cost=250000

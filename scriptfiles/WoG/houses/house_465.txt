@@ -1,0 +1,4 @@
+Coords=672.644226,-634.865112,16.335899
+Owner=Unknown
+Name=Dillimore 8
+Cost=125000

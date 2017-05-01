@@ -1,0 +1,4 @@
+Coords=0.000000,-1428.300048,30.500000
+Owner=Unknown
+Name=Blueberry Acres 1
+Cost=1500000

@@ -1,0 +1,4 @@
+Coords=1538.599975,-851.200012,64.300003
+Owner=Unknown
+Name=Mulholland Intersection 2
+Cost=1500000

@@ -1,0 +1,4 @@
+Coords=1558.099975,1007.299987,10.800000
+Owner=Unknown
+Name=LVA Freight Depot 2
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=1365.174316,2003.669921,11.460900
+Owner=Unknown
+Name=Redsands West 6
+Cost=25000

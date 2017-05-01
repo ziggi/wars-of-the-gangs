@@ -1,0 +1,4 @@
+Coords=2437.899902,-2020.099975,13.899993
+Owner=Unknown
+Name=Willowfield 7
+Cost=1000000

@@ -1,0 +1,5 @@
+Coords=1936.049682,2305.127929,10.820300
+Owner=Unknown
+Name=24-7 - (LV)Redsands East
+Cost=100000
+Income=50

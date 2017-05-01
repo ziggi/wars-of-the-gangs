@@ -1,0 +1,4 @@
+Coords=-2553.600097,992.599975,78.199996
+Owner=Unknown
+Name=Paradiso 11
+Cost=75000

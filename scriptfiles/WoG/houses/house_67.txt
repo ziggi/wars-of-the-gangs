@@ -1,0 +1,4 @@
+Coords=2581.084472,1060.892944,11.659790
+Owner=Unknown
+Name=Come-A-Lot 1
+Cost=1500000

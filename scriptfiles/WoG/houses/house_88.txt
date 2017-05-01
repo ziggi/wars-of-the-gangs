@@ -1,0 +1,4 @@
+Coords=-2739.820068,771.569946,54.380001
+Owner=Unknown
+Name=Santa Flora 1
+Cost=75000

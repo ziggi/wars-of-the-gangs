@@ -1,0 +1,4 @@
+Coords=794.992309,1687.345336,5.281300
+Owner=Unknown
+Name=Bone County 2
+Cost=100000

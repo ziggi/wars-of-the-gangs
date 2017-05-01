@@ -1,0 +1,4 @@
+Coords=1445.099975,-1426.699951,13.500000
+Owner=Unknown
+Name=Commerce 5
+Cost=125000

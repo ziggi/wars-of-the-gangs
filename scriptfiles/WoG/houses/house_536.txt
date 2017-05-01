@@ -1,0 +1,4 @@
+Coords=-2548.873046,1145.694091,55.726562
+Owner=Unknown
+Name=Paradiso 16
+Cost=75000

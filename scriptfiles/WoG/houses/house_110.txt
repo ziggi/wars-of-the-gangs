@@ -1,0 +1,4 @@
+Coords=1821.627075,-1995.858276,13.554400
+Owner=Unknown
+Name=El Corona 1
+Cost=25000

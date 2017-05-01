@@ -1,0 +1,4 @@
+Coords=-2542.275634,942.887023,64.000000
+Owner=Unknown
+Name=Paradiso 17
+Cost=75000

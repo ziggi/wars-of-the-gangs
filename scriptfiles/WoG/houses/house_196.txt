@@ -1,0 +1,4 @@
+Coords=1967.599975,1622.599975,12.800000
+Owner=Unknown
+Name=Pirates in Men's Pants 1
+Cost=1000000

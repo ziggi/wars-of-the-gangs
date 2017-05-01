@@ -1,0 +1,4 @@
+Coords=-376.183593,2260.450683,43.061901
+Owner=Unknown
+Name=El Castillo del Diablo 2
+Cost=125000

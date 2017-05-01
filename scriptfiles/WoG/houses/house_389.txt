@@ -1,0 +1,4 @@
+Coords=-636.630981,1446.431884,13.996500
+Owner=Unknown
+Name=Tierra Robada 4
+Cost=25000

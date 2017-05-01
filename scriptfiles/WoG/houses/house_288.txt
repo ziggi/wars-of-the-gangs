@@ -1,0 +1,4 @@
+Coords=1579.000000,-1822.000000,13.300000
+Owner=Unknown
+Name=Commerce 8
+Cost=250000

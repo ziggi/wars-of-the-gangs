@@ -1,0 +1,5 @@
+Coords=-1603.016601,-2709.358886,48.241901
+Owner=Unknown
+Name=Fuelstation - Whetstone
+Cost=50000
+Income=2000

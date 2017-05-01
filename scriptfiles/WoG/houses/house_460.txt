@@ -1,0 +1,4 @@
+Coords=745.104003,-556.783874,18.012899
+Owner=Unknown
+Name=Dillimore 3
+Cost=75000

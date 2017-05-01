@@ -1,0 +1,5 @@
+Coords=2636.166259,1851.760742,11.023400
+Owner=Unknown
+Name=Well Stacked Pizza - (LV)Starfish Casino
+Cost=50000
+Income=15

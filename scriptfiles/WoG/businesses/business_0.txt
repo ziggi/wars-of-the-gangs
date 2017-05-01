@@ -1,0 +1,5 @@
+Coords=2074.780029,-1827.479980,13.550000
+Owner=Unknown
+Name=PayNSpray - (LS) Idlewood
+Cost=100000
+Income=100

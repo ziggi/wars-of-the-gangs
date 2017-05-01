@@ -1,0 +1,4 @@
+Coords=2597.500000,1363.900024,10.800000
+Owner=ZiGGi
+Name=The Camel's Toe 5
+Cost=25000

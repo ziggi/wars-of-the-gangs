@@ -1,0 +1,5 @@
+Coords=2057.000000,2434.000000,166.000000
+Owner=Unknown
+Name=SkyDive place in (LV)The Emerald Isle
+Cost=100000
+Income=1000

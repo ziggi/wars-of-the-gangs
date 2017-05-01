@@ -1,0 +1,5 @@
+Coords=2574.804443,1902.502685,11.023400
+Owner=Unknown
+Name=Clothes - ZIP - (LV)Starfish Casino
+Cost=50000
+Income=200

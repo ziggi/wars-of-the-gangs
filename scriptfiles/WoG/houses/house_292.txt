@@ -1,0 +1,4 @@
+Coords=1863.699951,-1598.300048,14.300000
+Owner=Unknown
+Name=Idlewood 6
+Cost=500000

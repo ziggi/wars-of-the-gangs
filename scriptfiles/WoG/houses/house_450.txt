@@ -1,0 +1,4 @@
+Coords=-2722.992675,-16.934900,7.203100
+Owner=Unknown
+Name=Ocean Flats 17
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=166.238693,-117.605903,4.896500
+Owner=Unknown
+Name=Blueberry 10
+Cost=250000

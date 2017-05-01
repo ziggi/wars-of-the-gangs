@@ -1,0 +1,5 @@
+Coords=-2350.000000,-1586.000000,485.000000
+Owner=Unknown
+Name=SkyDive place in Mount Chilliad
+Cost=100000
+Income=1000

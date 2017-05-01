@@ -1,0 +1,4 @@
+Coords=-227.346298,2711.376708,62.976600
+Owner=Unknown
+Name=Las Payasadas 5
+Cost=1500000

@@ -1,0 +1,5 @@
+Coords=-2330.765625,-165.043899,35.554698
+Owner=Unknown
+Name=Burger Shot - (SF)Garcia
+Cost=50000
+Income=15

@@ -1,0 +1,4 @@
+Coords=1325.426025,2568.437011,10.820300
+Owner=Unknown
+Name=Prickle Pine 25
+Cost=125000

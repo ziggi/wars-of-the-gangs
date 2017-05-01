@@ -1,0 +1,4 @@
+Coords=-258.011596,2782.208251,62.687500
+Owner=Unknown
+Name=Las Payasadas 1
+Cost=25000

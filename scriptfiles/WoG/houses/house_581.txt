@@ -1,0 +1,4 @@
+Coords=-2438.359863,1140.588378,55.726600
+Owner=Unknown
+Name=Juniper Hollow 13
+Cost=1500000

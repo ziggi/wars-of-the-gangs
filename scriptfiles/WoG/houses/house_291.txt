@@ -1,0 +1,4 @@
+Coords=1778.000000,-1663.599975,14.399993
+Owner=Unknown
+Name=Little Mexico 2
+Cost=500000

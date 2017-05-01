@@ -1,0 +1,4 @@
+Coords=-7634.380859,-456.118896,58.733772
+Owner=Unknown
+Name=Havent address
+Cost=1000000

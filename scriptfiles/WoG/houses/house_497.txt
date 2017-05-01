@@ -1,0 +1,4 @@
+Coords=-2881.038574,989.666076,40.718750
+Owner=Unknown
+Name=Palisades 6
+Cost=1000000

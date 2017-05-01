@@ -1,0 +1,4 @@
+Coords=-2031.920288,161.503906,29.046100
+Owner=Unknown
+Name=Doherty 4
+Cost=25000

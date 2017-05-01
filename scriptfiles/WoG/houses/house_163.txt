@@ -1,0 +1,4 @@
+Coords=986.211914,1901.007080,11.460900
+Owner=Unknown
+Name=Whitewood Estates 5
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=1032.827636,2315.392578,11.468297
+Owner=Unknown
+Name=Whitewood Estates 1
+Cost=25000

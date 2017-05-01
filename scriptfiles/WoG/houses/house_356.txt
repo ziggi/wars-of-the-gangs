@@ -1,0 +1,4 @@
+Coords=-2792.000976,-35.939098,7.859395
+Owner=Unknown
+Name=Ocean Flats 12
+Cost=75000

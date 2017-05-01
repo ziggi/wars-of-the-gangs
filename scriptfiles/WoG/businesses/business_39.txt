@@ -1,0 +1,5 @@
+Coords=2421.214843,-1506.113281,23.992200
+Owner=Unknown
+Name=Cluckin Bell - (LS)East Los Santos
+Cost=50000
+Income=15

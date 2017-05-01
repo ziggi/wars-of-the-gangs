@@ -1,0 +1,4 @@
+Coords=2541.179931,1224.583984,10.958620
+Owner=ZiGGi
+Name=The Camel's Toe 9
+Cost=125000

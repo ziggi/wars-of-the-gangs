@@ -1,0 +1,5 @@
+Coords=1939.327514,-1767.681274,13.278699
+Owner=Unknown
+Name=Fuelstation - (LS)Idlewood
+Cost=50000
+Income=2000

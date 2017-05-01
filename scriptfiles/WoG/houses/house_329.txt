@@ -1,0 +1,4 @@
+Coords=-2624.100097,1410.800048,7.000000
+Owner=Unknown
+Name=Battery Point 1
+Cost=1000000

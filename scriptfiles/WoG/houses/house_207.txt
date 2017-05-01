@@ -1,0 +1,4 @@
+Coords=1280.699951,-1860.900024,13.500000
+Owner=Unknown
+Name=Verdant Bluffs 3
+Cost=50000

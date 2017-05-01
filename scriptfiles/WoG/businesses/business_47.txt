@@ -1,0 +1,5 @@
+Coords=2103.370117,2231.017578,11.023400
+Owner=009
+Name=Cluckin Bell - (LV)The 
+Cost=50000
+Income=15

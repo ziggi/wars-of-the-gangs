@@ -1,0 +1,4 @@
+Coords=-2899.409912,1056.849975,32.130004
+Owner=Unknown
+Name=Palisades 2
+Cost=1500000

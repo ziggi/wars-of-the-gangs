@@ -1,0 +1,4 @@
+Coords=-2111.337158,157.836669,35.092697
+Owner=Unknown
+Name=Doherty 9
+Cost=25000

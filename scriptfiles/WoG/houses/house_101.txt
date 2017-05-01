@@ -1,0 +1,4 @@
+Coords=-2540.459960,768.020019,40.000000
+Owner=Unknown
+Name=Santa Flora 2
+Cost=500000

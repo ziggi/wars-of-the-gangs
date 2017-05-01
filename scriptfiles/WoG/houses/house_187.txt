@@ -1,0 +1,4 @@
+Coords=-2492.100097,-109.099998,25.600000
+Owner=Unknown
+Name=Hashbury 4
+Cost=125000

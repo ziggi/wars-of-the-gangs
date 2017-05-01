@@ -1,0 +1,4 @@
+Coords=-2243.100097,-118.500000,35.299999
+Owner=Unknown
+Name=Garcia 4
+Cost=250000

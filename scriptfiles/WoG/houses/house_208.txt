@@ -1,0 +1,4 @@
+Coords=1026.900024,-1582.599975,13.500000
+Owner=Unknown
+Name=Verona Beach 6
+Cost=75000

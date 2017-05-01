@@ -1,0 +1,4 @@
+Coords=2000.038818,-1117.656616,26.781299
+Owner=Unknown
+Name=Glen Park 3
+Cost=1000000

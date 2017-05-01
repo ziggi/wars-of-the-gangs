@@ -1,0 +1,4 @@
+Coords=-2111.058837,-43.886486,35.320312
+Owner=Unknown
+Name=Doherty 10
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=2632.844482,1716.765991,11.023400
+Owner=Unknown
+Name=Pilgrim 1
+Cost=500000

@@ -1,0 +1,4 @@
+Coords=1611.068969,2648.117187,10.820300
+Owner=Unknown
+Name=Prickle Pine 17
+Cost=250000

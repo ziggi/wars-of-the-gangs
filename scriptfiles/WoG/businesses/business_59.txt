@@ -1,0 +1,5 @@
+Coords=-1914.484497,830.622070,35.390300
+Owner=Unknown
+Name=Burger Shot - (SF)Downtown
+Cost=50000
+Income=15

@@ -1,0 +1,5 @@
+Coords=-2677.726074,-192.346893,6.851799
+Owner=Unknown
+Name=SkyDive place in (SF)Ocean Flats
+Cost=100000
+Income=1000

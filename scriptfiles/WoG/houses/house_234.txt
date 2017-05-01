@@ -1,0 +1,4 @@
+Coords=1893.099975,1596.400024,10.500000
+Owner=Unknown
+Name=Pirates in Men's Pants 3
+Cost=1500000

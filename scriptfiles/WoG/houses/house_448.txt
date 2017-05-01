@@ -1,0 +1,4 @@
+Coords=-2098.775634,258.047790,36.124698
+Owner=Unknown
+Name=Doherty 5
+Cost=500000

@@ -1,0 +1,5 @@
+Coords=1318.129882,-900.370788,39.578098
+Owner=Unknown
+Name=24-7 - (LS)Temple
+Cost=100000
+Income=50

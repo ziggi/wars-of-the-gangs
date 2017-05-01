@@ -1,0 +1,4 @@
+Coords=-2687.319824,115.350044,7.210000
+Owner=Unknown
+Name=Ocean Flats 6
+Cost=125000

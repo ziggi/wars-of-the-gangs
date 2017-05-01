@@ -1,0 +1,5 @@
+Coords=-2152.140380,-2463.040527,30.843799
+Owner=Unknown
+Name=Cluckin Bell - Angel Pine
+Cost=50000
+Income=15

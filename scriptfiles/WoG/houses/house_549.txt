@@ -1,0 +1,4 @@
+Coords=1285.255615,-1067.826049,31.678899
+Owner=Unknown
+Name=Temple 8
+Cost=125000

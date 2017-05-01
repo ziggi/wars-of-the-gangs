@@ -1,0 +1,4 @@
+Coords=2443.486816,61.074401,28.441600
+Owner=Unknown
+Name=Palomino Creek 5
+Cost=25000

@@ -1,0 +1,5 @@
+Coords=2099.746093,2223.484619,11.023400
+Owner=009
+Name=24-7 - (LV)The Emerald 
+Cost=100000
+Income=50

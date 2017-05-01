@@ -1,0 +1,4 @@
+Coords=219.415893,-1250.349243,78.334503
+Owner=Unknown
+Name=Richman 5
+Cost=1500000

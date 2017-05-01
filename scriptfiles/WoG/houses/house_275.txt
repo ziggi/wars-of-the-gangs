@@ -1,0 +1,4 @@
+Coords=1997.900024,1238.900024,10.800000
+Owner=Unknown
+Name=The Pink Swan 1
+Cost=75000

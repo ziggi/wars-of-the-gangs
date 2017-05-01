@@ -1,0 +1,4 @@
+Coords=717.903686,-1476.885986,5.468800
+Owner=Unknown
+Name=Marina 10
+Cost=125000

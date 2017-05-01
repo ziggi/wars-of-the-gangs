@@ -1,0 +1,5 @@
+Coords=-1211.685913,1832.954223,41.929698
+Owner=Unknown
+Name=Cluckin Bell - Tierra Robada
+Cost=50000
+Income=15

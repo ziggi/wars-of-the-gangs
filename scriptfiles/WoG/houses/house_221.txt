@@ -1,0 +1,4 @@
+Coords=-1462.900024,-267.000000,14.100000
+Owner=Unknown
+Name=Easter Bay Airport 1
+Cost=250000

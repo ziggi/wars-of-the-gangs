@@ -1,0 +1,5 @@
+Coords=811.547607,-1614.016357,13.546899
+Owner=Unknown
+Name=Burger Shot - (LS)Marina
+Cost=50000
+Income=15

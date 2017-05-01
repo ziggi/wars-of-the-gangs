@@ -1,0 +1,4 @@
+Coords=1570.174560,2712.158691,10.820300
+Owner=Unknown
+Name=Prickle Pine 5
+Cost=125000

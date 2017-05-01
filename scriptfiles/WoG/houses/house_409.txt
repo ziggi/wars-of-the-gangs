@@ -1,0 +1,4 @@
+Coords=676.619018,1838.490966,5.195300
+Owner=Unknown
+Name=Bone County 9
+Cost=100000

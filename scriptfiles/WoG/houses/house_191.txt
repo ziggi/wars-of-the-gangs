@@ -1,0 +1,4 @@
+Coords=2233.199951,1476.800048,11.000000
+Owner=Unknown
+Name=Royal Casino 1
+Cost=250000

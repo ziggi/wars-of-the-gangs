@@ -1,0 +1,5 @@
+Coords=2391.613037,2044.853759,10.820300
+Owner=Unknown
+Name=Cluckin Bell - (LV)Old Venturas Strip
+Cost=50000
+Income=15

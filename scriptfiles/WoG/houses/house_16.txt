@@ -1,0 +1,4 @@
+Coords=2847.800048,-1309.599975,14.699995
+Owner=Unknown
+Name=East Beach 1
+Cost=125000

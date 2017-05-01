@@ -1,0 +1,4 @@
+Coords=1498.500000,-1581.599975,13.500000
+Owner=Unknown
+Name=Pershing Square 1
+Cost=125000

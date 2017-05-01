@@ -1,0 +1,4 @@
+Coords=2269.205810,111.096702,28.441600
+Owner=Unknown
+Name=Palomino Creek 1
+Cost=25000

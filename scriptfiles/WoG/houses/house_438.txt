@@ -1,0 +1,4 @@
+Coords=-2313.273437,-11.917200,35.320301
+Owner=Unknown
+Name=Garcia 10
+Cost=75000

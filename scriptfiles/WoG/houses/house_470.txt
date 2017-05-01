@@ -1,0 +1,4 @@
+Coords=160.881301,-102.511199,4.896500
+Owner=Unknown
+Name=Blueberry 8
+Cost=125000

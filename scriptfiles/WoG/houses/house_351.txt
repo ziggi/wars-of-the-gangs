@@ -1,0 +1,4 @@
+Coords=-2227.986083,1106.784423,80.007797
+Owner=Unknown
+Name=Calton Heights 9
+Cost=50000

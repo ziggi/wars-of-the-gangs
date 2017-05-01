@@ -1,0 +1,4 @@
+Coords=-329.558990,1536.461059,76.611701
+Owner=Unknown
+Name=The Big Ear 1
+Cost=125000

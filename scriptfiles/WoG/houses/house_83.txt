@@ -1,0 +1,4 @@
+Coords=-2074.910156,-2526.889892,31.079990
+Owner=Unknown
+Name=Angel Pine 2
+Cost=25000

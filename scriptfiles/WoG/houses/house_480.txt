@@ -1,0 +1,4 @@
+Coords=1667.343627,-2107.182373,14.072273
+Owner=Unknown
+Name=Verdant Bluffs 5
+Cost=1000000

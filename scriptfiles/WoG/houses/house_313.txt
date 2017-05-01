@@ -1,0 +1,4 @@
+Coords=-2352.399902,487.000000,30.899999
+Owner=Unknown
+Name=Queens 1
+Cost=125000

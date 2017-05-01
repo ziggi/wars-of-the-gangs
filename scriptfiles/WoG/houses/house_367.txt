@@ -1,0 +1,4 @@
+Coords=2439.954833,-1011.026672,54.343799
+Owner=Unknown
+Name=Las Colinas 8
+Cost=25000

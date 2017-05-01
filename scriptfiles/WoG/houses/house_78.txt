@@ -1,0 +1,4 @@
+Coords=-2234.689697,888.874511,66.653099
+Owner=Unknown
+Name=Calton Heights 1
+Cost=1000000

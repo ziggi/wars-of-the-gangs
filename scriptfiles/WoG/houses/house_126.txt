@@ -1,0 +1,4 @@
+Coords=1969.324218,-1707.253784,15.968791
+Owner=Unknown
+Name=Idlewood 4
+Cost=125000

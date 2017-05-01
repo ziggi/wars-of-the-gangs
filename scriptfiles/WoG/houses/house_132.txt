@@ -1,0 +1,4 @@
+Coords=651.475524,-1694.270019,14.611495
+Owner=Unknown
+Name=Marina 7
+Cost=500000

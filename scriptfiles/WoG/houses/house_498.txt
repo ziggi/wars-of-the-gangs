@@ -1,0 +1,4 @@
+Coords=-2857.625732,956.943054,44.054687
+Owner=Unknown
+Name=Palisades 7
+Cost=1000000

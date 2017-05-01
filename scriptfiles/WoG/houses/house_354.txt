@@ -1,0 +1,4 @@
+Coords=-2691.618408,64.487098,4.335896
+Owner=Unknown
+Name=Ocean Flats 10
+Cost=75000

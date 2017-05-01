@@ -1,0 +1,5 @@
+Coords=2241.237792,-1662.685546,15.476650
+Owner=Unknown
+Name=Clothes - Binco - (LS)Ganton
+Cost=50000
+Income=100

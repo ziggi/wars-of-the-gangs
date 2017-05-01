@@ -1,0 +1,4 @@
+Coords=-2211.878906,1057.460083,80.013061
+Owner=Unknown
+Name=Calton Heights 20
+Cost=250000

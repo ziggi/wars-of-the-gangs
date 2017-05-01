@@ -1,0 +1,4 @@
+Coords=2486.600097,-2020.500000,13.500000
+Owner=Unknown
+Name=Willowfield 2
+Cost=25000

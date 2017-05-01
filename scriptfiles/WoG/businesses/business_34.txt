@@ -1,0 +1,5 @@
+Coords=1832.091430,-1846.594970,13.578100
+Owner=Unknown
+Name=24-7 - (LS)Idlewood
+Cost=100000
+Income=50

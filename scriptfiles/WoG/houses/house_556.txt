@@ -1,0 +1,4 @@
+Coords=1397.530029,-1571.280029,14.260000
+Owner=Unknown
+Name=Commerce 14
+Cost=500000

@@ -1,0 +1,5 @@
+Coords=-1881.518920,862.406127,35.171901
+Owner=Unknown
+Name=Clothes - ZIP - (SF)Downtown
+Cost=50000
+Income=200

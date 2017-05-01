@@ -1,0 +1,5 @@
+Coords=-225.675796,1394.255981,172.014297
+Owner=Unknown
+Name=SkyDive place in Big Ear
+Cost=100000
+Income=1000

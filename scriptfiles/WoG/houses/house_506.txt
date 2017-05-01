@@ -1,0 +1,4 @@
+Coords=-2790.887695,7.183329,7.195312
+Owner=Unknown
+Name=Ocean Flats 23
+Cost=125000

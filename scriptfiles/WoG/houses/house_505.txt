@@ -1,0 +1,4 @@
+Coords=-2791.131103,69.749794,7.201951
+Owner=Unknown
+Name=Ocean Flats 22
+Cost=125000

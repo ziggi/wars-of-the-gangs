@@ -1,0 +1,4 @@
+Coords=2317.199951,691.099975,11.399993
+Owner=Unknown
+Name=Rockshore West 10
+Cost=125000

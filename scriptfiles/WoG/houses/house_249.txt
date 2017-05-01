@@ -1,0 +1,4 @@
+Coords=1474.599975,-1360.500000,11.800000
+Owner=Unknown
+Name=Downtown Los Santos 2
+Cost=125000

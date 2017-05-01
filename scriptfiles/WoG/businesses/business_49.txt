@@ -1,0 +1,5 @@
+Coords=-2668.265625,261.349700,4.632800
+Owner=Unknown
+Name=Cluckin Bell - (SF)Ocean Flats
+Cost=50000
+Income=15

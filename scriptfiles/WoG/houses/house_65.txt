@@ -1,0 +1,4 @@
+Coords=2066.036376,2171.055664,10.820300
+Owner=009
+Name=Redsands East 3
+Cost=1000000

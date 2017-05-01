@@ -1,0 +1,4 @@
+Coords=-2158.109863,830.719970,69.540000
+Owner=Unknown
+Name=Calton Heights 2
+Cost=125000

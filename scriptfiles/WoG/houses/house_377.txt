@@ -1,0 +1,4 @@
+Coords=2363.175292,187.218902,28.441600
+Owner=Unknown
+Name=Palomino Creek 4
+Cost=25000

@@ -1,0 +1,4 @@
+Coords=2851.199951,-1532.500000,11.000000
+Owner=Unknown
+Name=East Beach 3
+Cost=25000

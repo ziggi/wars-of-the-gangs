@@ -1,0 +1,4 @@
+Coords=-2687.141845,-187.850509,7.203125
+Owner=Unknown
+Name=Ocean Flats 27
+Cost=125000

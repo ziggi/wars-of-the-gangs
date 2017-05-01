@@ -1,0 +1,4 @@
+Coords=2512.686035,-1027.893554,70.085899
+Owner=Unknown
+Name=Las Colinas 7
+Cost=25000

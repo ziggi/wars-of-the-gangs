@@ -1,0 +1,4 @@
+Coords=2412.091064,1021.445007,14.272480
+Owner=Unknown
+Name=Come-A-Lot 10
+Cost=75000

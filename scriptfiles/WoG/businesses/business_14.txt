@@ -1,0 +1,5 @@
+Coords=2092.872314,2224.190429,11.023400
+Owner=009
+Name=Clothes - ZIP - (LV)The
+Cost=50000
+Income=200

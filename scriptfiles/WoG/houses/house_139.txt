@@ -1,0 +1,4 @@
+Coords=-1466.265502,2692.996826,56.269901
+Owner=Unknown
+Name=El Quebrados 1
+Cost=25000

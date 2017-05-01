@@ -1,0 +1,4 @@
+Coords=764.882812,2087.572998,6.710898
+Owner=Unknown
+Name=Bone County 10
+Cost=1000000

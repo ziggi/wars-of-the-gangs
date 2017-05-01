@@ -1,0 +1,4 @@
+Coords=-360.585296,1141.683105,20.939899
+Owner=Unknown
+Name=Fort Carson 6
+Cost=250000

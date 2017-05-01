@@ -1,0 +1,4 @@
+Coords=1496.509155,2027.113647,14.739600
+Owner=Unknown
+Name=Redsands West 3
+Cost=250000

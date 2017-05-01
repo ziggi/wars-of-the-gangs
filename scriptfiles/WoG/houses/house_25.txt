@@ -1,0 +1,4 @@
+Coords=251.600006,-1220.900024,75.800003
+Owner=Unknown
+Name=Richman 1
+Cost=500000

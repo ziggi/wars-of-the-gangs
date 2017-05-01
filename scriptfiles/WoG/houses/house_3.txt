@@ -1,0 +1,4 @@
+Coords=1111.500000,-974.700012,42.700000
+Owner=Unknown
+Name=Temple 1
+Cost=25000

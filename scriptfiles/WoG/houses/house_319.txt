@@ -1,0 +1,4 @@
+Coords=-1805.699951,1018.900024,24.799999
+Owner=Unknown
+Name=Financial 2
+Cost=125000

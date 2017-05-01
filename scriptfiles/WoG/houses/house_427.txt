@@ -1,0 +1,4 @@
+Coords=2451.131103,1299.421020,10.998785
+Owner=Unknown
+Name=The Camel's Toe 12
+Cost=125000

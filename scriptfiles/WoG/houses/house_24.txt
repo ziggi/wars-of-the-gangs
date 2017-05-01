@@ -1,0 +1,4 @@
+Coords=1111.500000,-741.900024,100.099998
+Owner=Unknown
+Name=Mulholland 5
+Cost=500000

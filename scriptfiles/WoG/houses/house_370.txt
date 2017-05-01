@@ -1,0 +1,4 @@
+Coords=767.254516,1989.600463,5.335896
+Owner=Unknown
+Name=Bone County 4
+Cost=25000

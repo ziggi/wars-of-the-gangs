@@ -1,0 +1,4 @@
+Coords=206.609497,-102.662696,4.896500
+Owner=Unknown
+Name=Blueberry 7
+Cost=125000

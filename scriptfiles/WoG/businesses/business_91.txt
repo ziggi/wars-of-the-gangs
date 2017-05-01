@@ -1,0 +1,5 @@
+Coords=1954.099975,-2177.699951,13.500000
+Owner=Unknown
+Name=SkyDive place in (LS)El Corona
+Cost=100000
+Income=1000

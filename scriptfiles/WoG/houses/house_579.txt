@@ -1,0 +1,4 @@
+Coords=-2152.565917,1248.515991,25.735500
+Owner=Unknown
+Name=Calton Heights 23
+Cost=250000

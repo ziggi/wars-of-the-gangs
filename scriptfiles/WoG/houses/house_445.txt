@@ -1,0 +1,4 @@
+Coords=-1706.654174,1352.966430,7.179697
+Owner=Unknown
+Name=Esplanade North 2
+Cost=250000

@@ -1,0 +1,4 @@
+Coords=1446.199951,-1342.699951,13.500000
+Owner=Unknown
+Name=Downtown Los Santos 3
+Cost=125000

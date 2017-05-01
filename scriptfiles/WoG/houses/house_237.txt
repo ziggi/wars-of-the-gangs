@@ -1,0 +1,4 @@
+Coords=-2213.600097,722.299987,49.400001
+Owner=Unknown
+Name=Chinatown 2
+Cost=25000

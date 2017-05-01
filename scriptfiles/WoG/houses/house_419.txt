@@ -1,0 +1,4 @@
+Coords=2071.718994,776.581787,11.460474
+Owner=Unknown
+Name=Rockshore West 14
+Cost=25000

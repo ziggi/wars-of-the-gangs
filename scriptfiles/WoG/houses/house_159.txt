@@ -1,0 +1,4 @@
+Coords=1499.466918,2535.389892,10.820300
+Owner=Unknown
+Name=Prickle Pine 18
+Cost=500000

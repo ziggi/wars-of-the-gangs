@@ -1,0 +1,5 @@
+Coords=-2376.406250,906.551208,45.445350
+Owner=Unknown
+Name=Clothes - Binco - (SF)Jupiter Hill
+Cost=50000
+Income=100

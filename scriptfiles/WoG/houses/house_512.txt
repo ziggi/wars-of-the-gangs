@@ -1,0 +1,4 @@
+Coords=-2116.889892,927.438598,86.079063
+Owner=Unknown
+Name=Calton Heights 16
+Cost=250000

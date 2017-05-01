@@ -1,0 +1,4 @@
+Coords=2094.399902,-1145.199951,26.500000
+Owner=Unknown
+Name=Jefferson 1
+Cost=1000000

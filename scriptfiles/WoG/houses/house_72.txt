@@ -1,0 +1,4 @@
+Coords=-2655.336425,986.743225,64.991302
+Owner=Unknown
+Name=Paradiso 4
+Cost=125000

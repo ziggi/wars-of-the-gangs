@@ -1,0 +1,4 @@
+Coords=-1726.699951,1049.400024,45.200000
+Owner=Unknown
+Name=Financial 4
+Cost=500000

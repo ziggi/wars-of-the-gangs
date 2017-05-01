@@ -1,0 +1,4 @@
+Coords=-2223.630371,821.036926,49.439098
+Owner=Unknown
+Name=Calton Heights 25
+Cost=75000

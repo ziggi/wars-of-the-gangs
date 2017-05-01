@@ -1,0 +1,4 @@
+Coords=1412.647949,1952.616577,11.453100
+Owner=Unknown
+Name=Redsands West 5
+Cost=25000

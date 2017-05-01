@@ -1,0 +1,4 @@
+Coords=-2347.199951,-26.399999,35.299999
+Owner=Unknown
+Name=Garcia 7
+Cost=75000

@@ -1,0 +1,4 @@
+Coords=-2460.800048,655.700012,33.799999
+Owner=Unknown
+Name=Juniper Hill 6
+Cost=1000000

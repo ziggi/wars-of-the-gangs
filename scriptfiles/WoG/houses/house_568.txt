@@ -1,0 +1,4 @@
+Coords=768.079711,-1655.912963,5.609395
+Owner=Unknown
+Name=Marina 11
+Cost=1000000

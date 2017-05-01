@@ -1,0 +1,5 @@
+Coords=-2413.742675,975.931701,45.003101
+Owner=Unknown
+Name=Fuelstation - (SF)Juniper Hollow
+Cost=50000
+Income=2000

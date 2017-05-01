@@ -1,0 +1,4 @@
+Coords=-2621.600097,71.699996,4.300000
+Owner=Unknown
+Name=Ocean Flats 9
+Cost=125000

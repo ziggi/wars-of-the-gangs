@@ -1,0 +1,4 @@
+Coords=271.662414,-49.271099,2.777199
+Owner=Unknown
+Name=Blueberry 4
+Cost=25000

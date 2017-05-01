@@ -1,0 +1,4 @@
+Coords=1285.599975,-1308.400024,13.500000
+Owner=Unknown
+Name=Market 2
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=-2506.321777,1141.898437,55.726600
+Owner=Unknown
+Name=Juniper Hollow 4
+Cost=125000

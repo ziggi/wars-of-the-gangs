@@ -1,0 +1,4 @@
+Coords=-788.409790,1519.265869,26.922300
+Owner=Unknown
+Name=Las Barrancas 1
+Cost=25000

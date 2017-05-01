@@ -1,0 +1,4 @@
+Coords=2384.600097,-1674.000000,14.699995
+Owner=Unknown
+Name=Ganton 5
+Cost=25000

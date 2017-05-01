@@ -1,0 +1,4 @@
+Coords=945.859985,-709.979492,122.619903
+Owner=Unknown
+Name=Red County 4
+Cost=125000

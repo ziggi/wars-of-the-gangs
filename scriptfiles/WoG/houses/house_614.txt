@@ -1,0 +1,4 @@
+Coords=-2724.287353,-191.203903,4.335896
+Owner=Unknown
+Name=Ocean Flats 35
+Cost=250000

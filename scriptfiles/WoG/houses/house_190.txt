@@ -1,0 +1,4 @@
+Coords=1931.199951,1345.099975,9.899991
+Owner=Unknown
+Name=The High Roller 2
+Cost=250000

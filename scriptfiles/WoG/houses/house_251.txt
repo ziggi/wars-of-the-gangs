@@ -1,0 +1,4 @@
+Coords=1289.099975,-1272.300048,13.500000
+Owner=Unknown
+Name=Market 1
+Cost=125000

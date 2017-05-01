@@ -1,0 +1,4 @@
+Coords=-2479.139892,2509.020019,17.799999
+Owner=Unknown
+Name=Bayside 7
+Cost=1000000

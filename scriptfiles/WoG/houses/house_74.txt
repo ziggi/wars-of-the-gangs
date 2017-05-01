@@ -1,0 +1,4 @@
+Coords=-2710.635742,968.619384,54.460899
+Owner=Unknown
+Name=Paradiso 5
+Cost=250000

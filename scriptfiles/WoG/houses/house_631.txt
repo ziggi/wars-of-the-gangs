@@ -1,0 +1,4 @@
+Coords=-2900.557861,1080.950439,32.132801
+Owner=Unknown
+Name=Palisades 14
+Cost=125000

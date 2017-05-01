@@ -1,0 +1,4 @@
+Coords=2065.959472,2721.990234,10.820300
+Owner=Unknown
+Name=Prickle Pine 8
+Cost=100000

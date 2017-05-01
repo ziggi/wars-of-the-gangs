@@ -1,0 +1,4 @@
+Coords=672.233215,-627.340270,16.335899
+Owner=Unknown
+Name=Dillimore 9
+Cost=125000

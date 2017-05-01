@@ -1,0 +1,4 @@
+Coords=2385.300048,-1712.500000,14.199995
+Owner=Unknown
+Name=Ganton 7
+Cost=25000

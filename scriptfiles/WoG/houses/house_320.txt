@@ -1,0 +1,4 @@
+Coords=-1820.599975,1116.400024,46.000000
+Owner=Unknown
+Name=Financial 3
+Cost=250000

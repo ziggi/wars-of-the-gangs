@@ -1,0 +1,4 @@
+Coords=-2722.041259,923.907775,67.593803
+Owner=Unknown
+Name=Paradiso 2
+Cost=75000

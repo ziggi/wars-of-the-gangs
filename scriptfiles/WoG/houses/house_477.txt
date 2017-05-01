@@ -1,0 +1,4 @@
+Coords=1536.006103,-885.199218,57.657482
+Owner=Unknown
+Name=Mulholland Intersection 3
+Cost=1000000

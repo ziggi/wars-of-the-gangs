@@ -1,0 +1,4 @@
+Coords=-2551.500000,552.900024,14.600000
+Owner=Unknown
+Name=Santa Flora 3
+Cost=1000000

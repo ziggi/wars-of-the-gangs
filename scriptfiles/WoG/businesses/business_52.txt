@@ -1,0 +1,5 @@
+Coords=-2354.380859,1002.128784,50.898399
+Owner=Unknown
+Name=Burger Shot - (SF)Juniper Hollow
+Cost=50000
+Income=15

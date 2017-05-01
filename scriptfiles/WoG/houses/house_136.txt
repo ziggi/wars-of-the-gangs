@@ -1,0 +1,4 @@
+Coords=2492.408935,-1409.344726,28.838699
+Owner=Unknown
+Name=East Los Santos 3
+Cost=1000000

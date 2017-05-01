@@ -1,0 +1,5 @@
+Coords=1044.680664,-1028.373901,32.101600
+Owner=Unknown
+Name=Mine Shop - (LS)Temple
+Cost=100000
+Income=250

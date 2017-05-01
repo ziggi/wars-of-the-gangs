@@ -1,0 +1,4 @@
+Coords=2085.404296,2154.403564,10.820300
+Owner=Unknown
+Name=Redsands East 1
+Cost=25000

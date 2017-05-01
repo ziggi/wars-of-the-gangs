@@ -1,0 +1,4 @@
+Coords=-2685.239990,819.789978,49.979999
+Owner=Unknown
+Name=Paradiso 9
+Cost=500000

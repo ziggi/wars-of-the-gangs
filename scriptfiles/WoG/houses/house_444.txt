@@ -1,0 +1,4 @@
+Coords=-2667.781494,909.310913,79.661499
+Owner=Unknown
+Name=Paradiso 14
+Cost=125000

@@ -1,0 +1,4 @@
+Coords=-383.808410,2206.365966,42.423500
+Owner=Unknown
+Name=Bone County 8
+Cost=500000

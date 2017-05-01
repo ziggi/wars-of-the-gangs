@@ -1,0 +1,5 @@
+Coords=2802.947998,2427.209472,11.062500
+Owner=Unknown
+Name=Clothes - Victim - (LV)Creek
+Cost=50000
+Income=500

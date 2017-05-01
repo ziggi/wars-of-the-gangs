@@ -1,0 +1,4 @@
+Coords=2449.891113,742.664916,11.460900
+Owner=Unknown
+Name=Rockshore West 9
+Cost=125000

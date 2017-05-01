@@ -1,0 +1,4 @@
+Coords=313.036987,-121.097503,3.535398
+Owner=Unknown
+Name=Blueberry 6
+Cost=25000

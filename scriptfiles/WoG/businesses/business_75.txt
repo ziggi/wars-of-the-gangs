@@ -1,0 +1,5 @@
+Coords=-1672.359741,414.295013,6.886600
+Owner=Unknown
+Name=Fuelstation - (SF)Easter Basin
+Cost=50000
+Income=2000

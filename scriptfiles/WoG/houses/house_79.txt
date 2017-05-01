@@ -1,0 +1,4 @@
+Coords=-2524.408691,-144.885604,21.764200
+Owner=Unknown
+Name=Hashbury 1
+Cost=1000000

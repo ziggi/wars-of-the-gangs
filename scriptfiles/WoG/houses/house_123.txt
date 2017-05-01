@@ -1,0 +1,4 @@
+Coords=2256.572509,-1394.919311,24.000000
+Owner=Unknown
+Name=Jefferson 5
+Cost=125000

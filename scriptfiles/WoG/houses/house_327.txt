@@ -1,0 +1,4 @@
+Coords=-2381.399902,1336.400024,12.699995
+Owner=Unknown
+Name=Juniper Hollow 2
+Cost=100000

@@ -1,0 +1,4 @@
+Coords=2486.399902,-1645.400024,14.000000
+Owner=Unknown
+Name=Ganton 1
+Cost=125000

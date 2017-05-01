@@ -1,0 +1,5 @@
+Coords=2756.802490,2474.064941,11.062500
+Owner=Unknown
+Name=Well Stacked Pizza - (LV)Creek
+Cost=50000
+Income=15

@@ -1,0 +1,4 @@
+Coords=1880.099975,2290.399902,10.899991
+Owner=Unknown
+Name=Redsands East 5
+Cost=250000

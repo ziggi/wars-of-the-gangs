@@ -1,0 +1,4 @@
+Coords=2237.000000,1285.500000,10.800000
+Owner=Unknown
+Name=The Camel's Toe 6
+Cost=50000

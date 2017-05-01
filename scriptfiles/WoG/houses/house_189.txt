@@ -1,0 +1,4 @@
+Coords=1907.400024,1444.400024,10.800000
+Owner=Unknown
+Name=The High Roller 1
+Cost=250000

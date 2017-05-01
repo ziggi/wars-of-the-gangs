@@ -1,0 +1,4 @@
+Coords=1315.909179,2524.448974,10.820300
+Owner=Unknown
+Name=Prickle Pine 6
+Cost=500000

@@ -1,0 +1,4 @@
+Coords=-1968.800048,619.700012,35.099998
+Owner=Unknown
+Name=Downtown 3
+Cost=75000

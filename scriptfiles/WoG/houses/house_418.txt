@@ -1,0 +1,4 @@
+Coords=2093.977050,774.844116,11.453125
+Owner=Unknown
+Name=Rockshore West 13
+Cost=25000

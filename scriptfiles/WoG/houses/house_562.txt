@@ -1,0 +1,4 @@
+Coords=899.172790,-677.930480,116.890403
+Owner=Unknown
+Name=Red County 5
+Cost=250000

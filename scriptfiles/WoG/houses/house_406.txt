@@ -1,0 +1,4 @@
+Coords=77.362297,1162.316406,20.940200
+Owner=Unknown
+Name=Fort Carson 7
+Cost=250000

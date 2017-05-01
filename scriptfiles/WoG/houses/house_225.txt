@@ -1,0 +1,4 @@
+Coords=-2154.600097,413.100006,35.099998
+Owner=Unknown
+Name=King's 3
+Cost=500000

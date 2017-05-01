@@ -1,0 +1,4 @@
+Coords=2282.254150,-1641.214233,15.889800
+Owner=Unknown
+Name=Ganton 12
+Cost=75000

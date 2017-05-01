@@ -1,0 +1,4 @@
+Coords=-1927.684814,1253.481933,19.375200
+Owner=Unknown
+Name=Downtown 11
+Cost=25000

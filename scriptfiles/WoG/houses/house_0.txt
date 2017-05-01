@@ -1,0 +1,4 @@
+Coords=2351.100097,-1041.000000,54.000000
+Owner=Unknown
+Name=Las Colinas 1
+Cost=25000

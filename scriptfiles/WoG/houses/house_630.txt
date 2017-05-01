@@ -1,0 +1,4 @@
+Coords=-2905.097412,1178.875488,13.664093
+Owner=Unknown
+Name=Palisades 13
+Cost=75000

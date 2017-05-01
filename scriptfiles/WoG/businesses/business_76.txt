@@ -1,0 +1,5 @@
+Coords=-2244.136474,-2560.629394,31.627599
+Owner=Unknown
+Name=Fuelstation - Angel Pine
+Cost=50000
+Income=2000

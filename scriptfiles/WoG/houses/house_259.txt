@@ -1,0 +1,4 @@
+Coords=2545.600097,1846.800048,11.000000
+Owner=Unknown
+Name=Starfish Casino 1
+Cost=500000

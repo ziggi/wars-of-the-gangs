@@ -1,0 +1,5 @@
+Coords=1460.611206,-1137.731201,24.067199
+Owner=Unknown
+Name=Clothes - ZIP - (LS)Downtown
+Cost=50000
+Income=200

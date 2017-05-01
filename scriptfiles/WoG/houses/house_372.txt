@@ -1,0 +1,4 @@
+Coords=782.690429,1937.848754,5.489600
+Owner=Unknown
+Name=Bone County 6
+Cost=25000

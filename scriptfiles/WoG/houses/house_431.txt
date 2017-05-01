@@ -1,0 +1,4 @@
+Coords=2193.212890,2792.788085,10.820302
+Owner=Unknown
+Name=Spinybed 3
+Cost=125000

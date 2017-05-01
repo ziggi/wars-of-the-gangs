@@ -1,0 +1,4 @@
+Coords=2018.592651,1919.579467,12.341600
+Owner=Unknown
+Name=The Visage 1
+Cost=1000000

@@ -1,0 +1,4 @@
+Coords=-2340.100097,797.299987,41.900001
+Owner=Unknown
+Name=Juniper Hill 8
+Cost=25000

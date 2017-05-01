@@ -1,0 +1,4 @@
+Coords=2045.000000,2291.199951,10.800000
+Owner=Unknown
+Name=The Emerald Isle 1
+Cost=125000

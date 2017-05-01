@@ -1,0 +1,4 @@
+Coords=901.299987,-1447.300048,13.899991
+Owner=Unknown
+Name=Marina 4
+Cost=1000000

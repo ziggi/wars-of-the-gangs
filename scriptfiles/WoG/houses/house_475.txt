@@ -1,0 +1,4 @@
+Coords=-2424.372070,2448.096191,13.184800
+Owner=Unknown
+Name=Bayside 10
+Cost=125000

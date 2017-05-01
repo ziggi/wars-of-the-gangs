@@ -1,0 +1,4 @@
+Coords=2363.208007,1005.130004,14.272500
+Owner=Unknown
+Name=Come-A-Lot 9
+Cost=25000

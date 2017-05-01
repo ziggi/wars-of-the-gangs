@@ -1,0 +1,5 @@
+Coords=2085.372070,2223.846923,11.023400
+Owner=009
+Name=Well Stacked Pizza - (L
+Cost=50000
+Income=15

@@ -1,0 +1,9 @@
+ls_airport.txt,1
+skroad.txt,1
+big_ramp.txt,1
+big_jump.txt,1
+ls_roller.txt,1
+big_race.txt,1
+sf_race.txt,1
+burda.txt,1
+descent.txt,1

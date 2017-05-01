@@ -18,11 +18,12 @@
 #define PLAYERS_DIR				"players/"
 #define PLAYERS_FILE_TYPE		".ini"
 #define START_HELP_FILE			"start_help.txt"
+#define START_HELP_COLOR		0xFFFFFFAA
 #define REGENERATION_TIME		5
 #define TIME_FOR_SAVE			1800_000
 #define HELP_TIME				10_000
-#define XP_RATE					150
-
+#define XP_RATE					40
+#define MAX_LEVEL				500
 // --------------------------------------------------
 // enums
 // --------------------------------------------------
@@ -32,7 +33,12 @@ enum
 	PLAYER_HELP_CMD,
 	PLAYER_SAVECHAR_CMD,
 	PLAYER_CHANGEPASS_CMD,
-	PLAYER_KILL_CMD
+	PLAYER_KILL_CMD,
+	PLAYER_CREDITS_CMD,
+	PLAYER_GIVECASH_CMD,
+	PLAYER_FLIP_CMD,
+	PLAYER_UPGRADE_CMD,
+	PLAYER_PM_CMD
 };
 enum
 {
@@ -44,13 +50,24 @@ enum
 	SAVE_REASON_SAVECHAR,
 	SAVE_REASON_AUTOSAVE,
 	SAVE_REASON_DISCONNECT
-}
-
+};
+enum
+{
+	STARTHELP_ACTION_TITLE,
+	STARTHELP_ACTION_TEXT,
+	STARTHELP_ACTION_INTERIOR,
+	STARTHELP_ACTION_CAMERA_POS
+};
+// --------------------------------------------------
+// news
+// --------------------------------------------------
+new 
+	IsPlayerSpawned[MAX_PLAYERS char];
 // --------------------------------------------------
 // forwards
 // --------------------------------------------------
-forward NextHelpStep(playerid,step);
-forward P_Autosave();
+forward Autosave();
+forward StartHelpNextStep(playerid);
 // global
 forward OnSavePlayerData(playerid,File:datafile,reason);
 forward OnLoadPlayerData(playerid,datastr[],separatorpos);
@@ -58,51 +75,7 @@ forward OnLoadPlayerData(playerid,datastr[],separatorpos);
 // --------------------------------------------------
 // publics
 // --------------------------------------------------
-public NextHelpStep(playerid,step)
-{
-	switch(step)
-	{
-		case 1:
-		{
-			for(new i = 0;i < 15;i++) SendClientMessage(playerid,0xFFFFFFFF,"  ");
-			
-			SetPlayerCameraPos(playerid,-1743.5432,-567.9924,36.4844);
-			SetPlayerCameraLookAt(playerid,-1787.6360,-612.7075,17.2989);
-			return SetTimerEx("NextHelpStep",HELP_TIME,0,"dd",playerid,2);
-		}
-		case 2:
-		{
-			for(new i = 0;i < 15;i++) SendClientMessage(playerid,0xFFFFFFFF,"  ");
-			
-			SetPlayerCameraPos(playerid,-1551.5392,513.3345,27.0313);
-			SetPlayerCameraLookAt(playerid,-1535.4336,486.8857,7.1797);
-			return SetTimerEx("NextHelpStep",HELP_TIME,0,"dd",playerid,3);
-		}
-		case 3:
-		{
-			for(new i = 0;i < 15;i++) SendClientMessage(playerid,0xFFFFFFFF,"  ");
-			
-			SetPlayerCameraPos(playerid,-2627.9685,-202.0271,24.3359);
-			SetPlayerCameraLookAt(playerid,-2657.6631,-227.9266,4.6831);
-			return SetTimerEx("NextHelpStep",HELP_TIME,0,"dd",playerid,4);
-		}
-		case 4:
-		{
-			for(new i = 0;i < 15;i++) SendClientMessage(playerid,0xFFFFFFFF,"  ");
-			
-			SetPlayerCameraPos(playerid,-2705.7559,-71.3518,24.2969);
-			SetPlayerCameraLookAt(playerid,-2705.9399,39.1872,4.2969);
-			return SetTimerEx("NextHelpStep",HELP_TIME,0,"dd",playerid,5);
-		}
-		case 5:
-		{
-			return TogglePlayerSpectating(playerid,false);
-		}
-	}
-	return 0;
-}
-
-public P_Autosave()
+public Autosave()
 {
 	// autosave
 	for(new i = 0;i <= GetPlayersCount();i++)
@@ -114,6 +87,14 @@ public P_Autosave()
 		// save
 		SavePlayer(i,SAVE_REASON_AUTOSAVE);
 	}
+}
+
+public StartHelpNextStep(playerid)
+{
+	itmp[0] = GetPVarInt(playerid,"StartHelpStep") + 1;
+	SetPVarInt(playerid,"StartHelpStep",itmp[0]);
+	itmp[0] = ChangeStartHelpStep(playerid,itmp[0]);
+	if(itmp[0] != -1) SetTimerEx("StartHelpNextStep",itmp[0],0,"d",playerid);
 }
 
 // --------------------------------------------------
@@ -150,21 +131,7 @@ stock SavePlayer(playerid,reason)
 	fwrite(pfile,stmp);
 	format(stmp,sizeof(stmp),"MaxHealth=%.1f\r\n",GetPVarFloat(playerid,"MaxHealth"));
 	fwrite(pfile,stmp);
-	for(new i = 0;i <= 10;i++)
-	{
-		format(stmp,sizeof(stmp),"Skill_%d",i);
-		format(stmp,sizeof(stmp),"%s=%d\r\n",stmp,GetPVarInt(playerid,stmp));
-		fwrite(pfile,stmp);
-	}
-	for(new i = 0;i <= 11;i++)
-	{
-		format(stmp,sizeof(stmp),"SlotWeapon_%d",i);
-		format(stmp,sizeof(stmp),"%s=%d\r\n",stmp,GetPVarInt(playerid,stmp));
-		fwrite(pfile,stmp);
-		format(stmp,sizeof(stmp),"SlotAmmo_%d",i);
-		format(stmp,sizeof(stmp),"%s=%d\r\n",stmp,GetPVarInt(playerid,stmp));
-		fwrite(pfile,stmp);
-	}
+	
 	// other systems
 	OnSavePlayerData(playerid,pfile,reason);
 	
@@ -178,8 +145,7 @@ stock LoadPlayer(playerid,pass[])
 	
 	format(stmp,sizeof(stmp),MODE_DIR PLAYERS_DIR "%s" PLAYERS_FILE_TYPE,name);
 	
-	new File:pfile = fopen(stmp,io_read),
-		tmp[20];
+	new File:pfile = fopen(stmp,io_read);
 	if(!pfile) return 0;
 	
 	while(fread(pfile,stmp))
@@ -239,30 +205,6 @@ stock LoadPlayer(playerid,pass[])
 			SetPVarFloat(playerid,"MaxHealth",floatstr(stmp[itmp[0] + 1]));
 			continue;
 		}
-		for(new i = 0;i <= 10;i++)
-		{
-			format(tmp,sizeof(tmp),"Skill_%d",i);
-			if(!strcmp(stmp,tmp,true,itmp[0])) 
-			{
-				SetPVarInt(playerid,tmp,strval(stmp[itmp[0] + 1]));
-				break;
-			}
-		}
-		for(new i = 0;i <= 11;i++)
-		{
-			format(tmp,sizeof(tmp),"SlotWeapon_%d",i);
-			if(!strcmp(stmp,tmp,true,itmp[0])) 
-			{
-				SetPVarInt(playerid,tmp,strval(stmp[itmp[0] + 1]));
-				break;
-			}
-			format(tmp,sizeof(tmp),"SlotAmmo_%d",i);
-			if(!strcmp(stmp,tmp,true,itmp[0])) 
-			{
-				SetPVarInt(playerid,tmp,strval(stmp[itmp[0] + 1]));
-				break;
-			}
-		}
 		// other systems
 		OnLoadPlayerData(playerid,stmp,itmp[0]);
 	}
@@ -296,8 +238,7 @@ stock ChangeStatByNameInt(name[],stat[],data,type)
 				if(!strcmp(stat,"Money")) GivePlayerMoney(pid,data);
 				else if(!strcmp(stat,"XP"))
 				{
-					SetPVarInt(pid,"Level",CalculateLevelForXP(data));
-					SetPlayerScore(pid,GetPVarInt(pid,"Level"));
+					GivePlayerXP(pid,data);
 				}
 			}
 			case CHANGE_STAT_SET: 
@@ -309,8 +250,7 @@ stock ChangeStatByNameInt(name[],stat[],data,type)
 				}
 				else if(!strcmp(stat,"XP"))
 				{
-					SetPVarInt(pid,"Level",CalculateLevelForXP(data));
-					SetPlayerScore(pid,GetPVarInt(pid,"Level"));
+					SetPlayerXP(pid,data);
 				}
 			}
 		}		
@@ -352,33 +292,171 @@ stock ChangeStatByNameInt(name[],stat[],data,type)
 	}
 }
 
-stock SetPlayerXP(playerid,xp)
+stock SetPlayerLevel(playerid,level_set) // Устанавливает игроку уровень
 {
-	SetPVarInt(playerid,"XP",xp);
-	SetPVarInt(playerid,"Level",CalculateLevelForXP(xp));
+	if(level_set > MAX_LEVEL) return 0;
+	SetPVarInt(playerid,"XP",0);
+	SetPVarInt(playerid,"Level",level_set);
 	SetPlayerScore(playerid,GetPVarInt(playerid,"Level"));
+	return 1;
 }
 
-stock GivePlayerXP(playerid,xp)
+stock GivePlayerLevel(playerid,level_give) // Даёт игроку уровень
 {
-	SetPVarInt(playerid,"XP",GetPVarInt(playerid,"XP") + xp);
-	SetPVarInt(playerid,"Level",CalculateLevelForXP(GetPVarInt(playerid,"XP")));
+	if(GetPVarInt(playerid,"Level") >= MAX_LEVEL) return 0;
+	if(GetPVarInt(playerid,"Level") + level_give > MAX_LEVEL)
+	{
+		level_give = MAX_LEVEL - GetPVarInt(playerid,"Level");
+		SendClientMessage(playerid,COLOR_BLUE,"Вы достигли максимального уровня!");
+	}
+	SetPVarInt(playerid,"XP",0);
+	SetPVarInt(playerid,"Level",GetPVarInt(playerid,"Level")+level_give);
 	SetPlayerScore(playerid,GetPVarInt(playerid,"Level"));
+	OnPlayerLevelChange(playerid,GetPVarInt(playerid,"Level")-level_give,GetPVarInt(playerid,"Level"));
+	return 1;
+}
+
+stock SetPlayerXP(playerid,xp_set) // Устанавливает опыт игроку
+{
+	new xp_all = (xp_set+GetPVarInt(playerid,"XP")); // помещаем весь опыт в переменную
+	new xp_tolvl = PlayerXPToLevel(playerid); // помещаем кол-во опыта до уровня в переменную
+	if(xp_all == xp_tolvl)
+	{
+		SetPVarInt(playerid,"XP",0);
+		GivePlayerLevel(playerid,1);
+	}
+	else if(xp_all > xp_tolvl)
+	{
+		GivePlayerLevel(playerid,1);
+		SetPlayerXP(playerid, (xp_set - xp_tolvl) ); // устанавливаем нужный опыт
+	}
+	else if(xp_all < 0)
+	{
+		new xp_temp = GetPVarInt(playerid,"XP"); // старый опыт игрока
+		GivePlayerLevel(playerid,-1);
+		SetPVarInt(playerid,"XP", PlayerXPToLevel(playerid) + (xp_temp + xp_set) ); // вычисляем кол-во опыта для уровня пониженного уровня
+	}
+	else if(xp_all < xp_tolvl)
+	{
+		SetPVarInt(playerid,"XP",xp_set);
+	}
+}
+
+stock GivePlayerXP(playerid,xp_give)
+{
+	if(xp_give == 0) return 1;
+	if(GetPVarInt(playerid,"Level") >= MAX_LEVEL) return 1;
+	new xp_all = (xp_give+GetPVarInt(playerid,"XP")); // помещаем весь опыт в переменную
+	new xp_tolvl = PlayerXPToLevel(playerid); // помещаем кол-во опыта до уровня в переменную
+	if(xp_all == xp_tolvl)
+	{
+		SetPVarInt(playerid,"XP",0);
+		GivePlayerLevel(playerid,1);
+	}
+	else if(xp_all > xp_tolvl)
+	{
+		GivePlayerLevel(playerid,1);
+		SetPlayerXP(playerid, (xp_give - xp_tolvl) ); // устанавливаем нужный опыт
+	}
+	else if(xp_all < 0)
+	{
+		new xp_temp = GetPVarInt(playerid,"XP"); // старый опыт игрока
+		GivePlayerLevel(playerid,-1);
+		SetPVarInt(playerid,"XP", PlayerXPToLevel(playerid) + (xp_temp + xp_give) ); // вычисляем кол-во опыта для пониженного уровня
+	}
+	else if(xp_all < xp_tolvl)
+	{
+		SetPVarInt(playerid,"XP",GetPVarInt(playerid,"XP")+xp_give);
+	}
+	return 1;
+}
+
+stock OnPlayerLevelChange(playerid,old_level,new_level)
+{
+	if(new_level >= MAX_LEVEL) SendClientMessage(playerid,COLOR_BLUE,"УРА! Вы достигли максимального уровня!");
+	SetPVarInt(playerid,"UpgradesPoints",GetPVarInt(playerid,"UpgradesPoints") + (new_level-old_level));
+	return 1;
+}
+
+stock PlayerXPToLevel(playerid)// Узнаёт сколько осталось игроку набрать опыта до следующего уровня
+{
+	return (CalculateXPForLevel(GetPVarInt(playerid,"Level")) - GetPVarInt(playerid,"XP"));
 }
 
 stock CalculateXPForLevel(level)
 {
 	return floatround((level * level) * XP_RATE);
 }
-
+/*
 stock CalculateLevelForXP(xp)
 {
 	return floatround(floatsqroot((xp / XP_RATE)));
-}
+}*/
 
 stock ChangeStartHelpStep(playerid,step)
 {
-	
+	static line[256];
+	new File:datafile = fopen(MODE_DIR START_HELP_FILE,io_read);
+	if(datafile)
+	{
+		// find line by step
+		for(new i = 0;i <= step;i++) 
+		{
+			if(!fread(datafile,line))
+			{
+				// file end - complete help show
+				fclose(datafile);
+				TogglePlayerSpectating(playerid,false);
+				return -1;
+			}
+			else if(!CheckFileLine(line)) i--;
+		}
+		// check
+		if(!CheckFileLine(line)) return -1;
+		// parse
+		static idx;
+		idx = 0;
+		// time of action 
+		itmp[0] = strval(strtok(line,idx,','));
+		// type of action
+		itmp[1] = strval(strtok(line,idx,','));
+		// next by type
+		switch(itmp[1])
+		{
+			case STARTHELP_ACTION_TITLE:
+			{
+				GameTextForPlayer(playerid,line[idx],5000,1);
+			}
+			case STARTHELP_ACTION_TEXT: 
+			{
+				SendClientMessage(playerid,START_HELP_COLOR,line[idx]);
+			}
+			case STARTHELP_ACTION_INTERIOR:
+			{
+				itmp[2] = strval(strtok(line,idx,','));
+				SetPlayerInterior(playerid,itmp[2]);
+			}
+			case STARTHELP_ACTION_CAMERA_POS:
+			{
+				ftmp[0] = floatstr(strtok(line,idx,','));
+				ftmp[1] = floatstr(strtok(line,idx,','));
+				ftmp[2] = floatstr(strtok(line,idx,','));
+				ftmp[3] = floatstr(strtok(line,idx,','));
+				ftmp[4] = floatstr(strtok(line,idx,','));
+				ftmp[5] = floatstr(strtok(line,idx,','));
+				SetPlayerCameraPos(playerid,ftmp[0],ftmp[1],ftmp[2]);
+				SetPlayerCameraLookAt(playerid,ftmp[3],ftmp[4],ftmp[5]);
+			}
+		}		
+		// file end
+		fclose(datafile);		
+		return itmp[0];
+	}
+	else 
+	{
+		printf("[ERROR] start help file not found (%s)",MODE_DIR START_HELP_FILE);
+		return -1;
+	}
 }
 
 // --------------------------------------------------
@@ -386,7 +464,7 @@ stock ChangeStartHelpStep(playerid,step)
 // --------------------------------------------------
 Player_OnGameModeInit()
 {
-	SetTimer("P_Autosave",TIME_FOR_SAVE,1);
+	SetTimer("Autosave",TIME_FOR_SAVE,1);
 	print("Players manager loaded.");
 }
 
@@ -399,6 +477,7 @@ Player_OnPlayerConnect(playerid)
 		SendClientMessage(playerid,SYSTEM_COLOR,"Использование ника Unknown недопустимо");
 		return Kick(playerid);
 	}
+	TogglePlayerSpectating(playerid,true);
 	SetPVarString(playerid,"Account",name);
 	format(stmp,sizeof(stmp),MODE_DIR PLAYERS_DIR "%s" PLAYERS_FILE_TYPE,name);
 	if(fexist(stmp))
@@ -411,6 +490,8 @@ Player_OnPlayerConnect(playerid)
 		format(stmp,sizeof(stmp),"Здравствуйте, %s!\nВведите свой пароль чтобы зарегистрироваться",name);
 		ShowPlayerDialog(playerid,DIALOG_REGISTER,DIALOG_STYLE_INPUT,MODE_NAME,stmp,"Готово","Выход");	
 	}
+	format(stmp,sizeof(stmp),".:: Игрок %s подключился к серверу ::.",oGetPlayerName(playerid));
+	SendClientMessageToAll(COLOR_YELLOW,stmp);
 	return 1;
 }
 
@@ -419,6 +500,8 @@ Player_OnPlayerDisconnect(playerid,reason)
 	#pragma unused reason
 	
 	SavePlayer(playerid,SAVE_REASON_DISCONNECT);
+	format(stmp,sizeof(stmp),".:: Игрок %s отключился от сервера ::.",oGetPlayerName(playerid));
+	SendClientMessageToAll(COLOR_YELLOW,stmp);
 }
 
 Player_OnPlayerDeath(playerid,killerid,reason)
@@ -451,6 +534,44 @@ Player_OnPlayerSpawn(playerid)
 		format(stmp,sizeof(stmp),"Skill_%d",i);
 		SetPlayerSkillLevel(playerid,i,GetPVarInt(playerid,stmp));
 	}
+	// preloading animations
+	ApplyAnimation(playerid,"AIRPORT","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"Attractors","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BAR","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BASEBALL","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BD_FIRE","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"benchpress","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BF_injection","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKED","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKEH","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKELEAP","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKES","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKEV","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BIKE_DBZ","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BLOWJOBZ","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BMX","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BOMBER","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BOX","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BSKTBALL","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BUDDY","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"BUS","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CAMERA","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CAR","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CARRY","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CAR_CHAT","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CASINO","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CHAINSAW","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CHOPPA","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CLOTHES","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"COACH","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"COLT45","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"COP_AMBIENT","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"COP_DVBYZ","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CRACK","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"CRIB","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"DAM_JUMP","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"DANCING","null",0.0,0,0,0,0,0);
+	ApplyAnimation(playerid,"DEALER","null",0.0,0,0,0,0,0);
 }
 
 Player_Update()
@@ -460,6 +581,9 @@ Player_Update()
 	{
 		if(!IsPlayerConnected(i)) continue;
 		if(IsPlayerNPC(i)) continue;
+		if(GetPlayerState(i) == PLAYER_STATE_NONE) continue;
+		if(GetPlayerState(i) == PLAYER_STATE_WASTED) continue;
+		if(GetPlayerState(i) == PLAYER_STATE_SPECTATING) continue;
 		
 		itmp[0] = GetPVarInt(i,"RegenerationTicks") + 1;
 		if(itmp[0] >= REGENERATION_TIME)
@@ -487,6 +611,8 @@ Player_Dialog(playerid,dialogid,response,listitem,inputtext[])
 			if(!strlen(inputtext)) return ShowPlayerDialog(playerid,DIALOG_LOGIN,DIALOG_STYLE_INPUT,MODE_NAME,"Введите свой пароль чтобы приступить к игре","Готово","Выход");
 			// load
 			if(!LoadPlayer(playerid,inputtext)) return ShowPlayerDialog(playerid,DIALOG_LOGIN,DIALOG_STYLE_INPUT,MODE_NAME,"Введите свой пароль чтобы приступить к игре","Готово","Выход");
+			// selecting
+			TogglePlayerSpectating(playerid,false);
 			return 1;
 		}
 		case DIALOG_REGISTER:
@@ -514,10 +640,152 @@ Player_Dialog(playerid,dialogid,response,listitem,inputtext[])
 			}
 			SavePlayer(playerid,SAVE_REASON_AUTOSAVE);
 			// start show help
-			for(new i = 0;i < 15;i++) SendClientMessage(playerid,SYSTEM_COLOR,"  ");
-			SetPlayerCameraPos(playerid,-2705.7559,-71.3518,24.2969);
-			SetPlayerCameraLookAt(playerid,-2705.9399,39.1872,4.2969);
-			SetTimerEx("NextHelpStep",HELP_TIME * 2,0,"dd",playerid,1);
+			SetPVarInt(playerid,"StartHelpStep",0);
+			itmp[0] = ChangeStartHelpStep(playerid,0);
+			if(itmp[0] != -1) SetTimerEx("StartHelpNextStep",itmp[0],0,"d",playerid);
+			return 1;
+		}
+		case DIALOG_UPGRADE:
+		{
+			if(!response) return 1;
+			
+			if((itmp[0] = GetPVarInt(playerid,"UpgradesPoints")) < 1)
+			return
+			ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Меню апгрейдов","У вас нету upgrade point'ов!","Ок","Ок");
+			switch(listitem)
+			{
+				case 0: // health
+				{
+					if((ftmp[0] = GetPVarFloat(playerid,"Health")) < 100.0)
+					{
+						SetPVarFloat(playerid,"Health",ftmp[0] + 5.0);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 1: // regeneration
+				{
+					if((ftmp[0] = GetPVarFloat(playerid,"Regeneration")) < 25.0)
+					{
+						SetPVarFloat(playerid,"Regeneration",ftmp[0] + 5.0);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 2: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_PISTOL,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 3: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_PISTOL_SILENCED,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 4: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_DESERT_EAGLE,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 5: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_SHOTGUN,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 6: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_SAWNOFF_SHOTGUN,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 7: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_SPAS12_SHOTGUN,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 8: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_MICRO_UZI,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 9: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_MP5,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 10: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_AK47,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 11: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_M4,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+				case 12: // skill
+				{
+					if((itmp[1] = GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE)) < 999)
+					{
+						itmp[1] += 100;
+						SetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE,itmp[1]);
+						SetPlayerSkillLevel(playerid,WEAPONSKILL_SNIPERRIFLE,itmp[1]);
+						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
+					}
+				}
+			}
+			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"Health"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
+			format(stmp,sizeof(stmp),"%sSilenced skill (%d)\nDesert eagle skill (%d)\nShotgun skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN));
+			format(stmp,sizeof(stmp),"%sSawnoff skill (%d)\nS.P.A.S. skill (%d)\nMicro UZI skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI));
+			format(stmp,sizeof(stmp),"%sMP5 skill (%d)\nAK47 skill (%d)\nM4 skill (%d)\nSniper rifle skill (%d)",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE));
+			ShowPlayerDialog(playerid,DIALOG_UPGRADE,DIALOG_STYLE_LIST,"Меню апгрейдов",stmp,"Улучшить","Отмена");
 			return 1;
 		}
 	}
@@ -536,6 +804,7 @@ Player_Command(playerid,cmdid,params[])
 				Банда:						%s\n\
 				Уровень:					%d\n\
 				Опыт:						%d\n\
+				До следующего уровня:			%d\n\
 				Деньги:					%d\n\
 				Доход от бизнесов:				%d\n\
 				Убийства:					%d\n\
@@ -548,6 +817,7 @@ Player_Command(playerid,cmdid,params[])
 				oGetPlayerGangName(playerid),
 				GetPVarInt(playerid,"Level"),
 				GetPVarInt(playerid,"XP"),
+				PlayerXPToLevel(playerid),
 				oGetPlayerMoney(playerid),
 				GetPVarInt(playerid,"BusinessIncome"),
 				GetPVarInt(playerid,"Kills"),
@@ -561,8 +831,8 @@ Player_Command(playerid,cmdid,params[])
 				Скилл пистолета с глушителем:		%d\n\
 				Скилл \"Пустынного орла\"			%d\n\
 				Скилл дробовика:				%d\n\
-				Скилл обреза:					%d\n\
-				Скилл S.P.A.S.:					%d\n\
+				Скилл обреза:				%d\n\
+				Скилл S.P.A.S.:				%d\n\
 				Скилл Микро узи:				%d\n\
 				Скилл MP5:					%d\n\
 				Скилл АК47:					%d\n\
@@ -589,8 +859,10 @@ Player_Command(playerid,cmdid,params[])
 		{
 			stmp[0] = 0;
 			strcat(stmp,MODE_NAME " - TDM-RPG мод, здесь вы можете улучшать своего персонажа, вступать в банды, учавствовать в гонках,\nдезматчах, мини-миссиях, командных миссиях и даже проходить настоящие миссии.\n");
+			strcat(stmp,"/stats - ваша статистика\n/savechar - сохранить персонажа(автоматически сохраняется при выходе из игры)\n/changepass - изменить пароль от аккаунта\n/kill - убить себя\n/credits - узнать список разработчиков\n");
+			strcat(stmp,"/tp - список телепортов\n/flip - перевернуть транспорт с крыши(только в стант мире)\n/upgrade - меню модификации персонажа\n/pm [id] [сообщение] - послать личное сообщение игроку\n/car [id] - создает транспорт(только в стант мире)\n/givecash [id] [кол-во] - передать игроку денег");
 			strcat(stmp,"Для подробной помощи используйте команды:\n/b help - помощь по бизнесам\n/h help - помощь по домам\n/g help - помощь по бандам\n/dm help - помощь по дезматчам\n/race help - помощь по гонкам\n");
-			strcat(stmp,"/bank help - помощь по банкам\n/gz help - помощь по зонам банд\n/gw help - помощь по войнам банд\n/tq help - помощь по командным миссиям");			
+			strcat(stmp,"/bank help - помощь по банкам\n/gz help - помощь по зонам банд\n/gw help - помощь по войнам банд\n/tq help - помощь по командным миссиям\n/w help - помощь по вечному оружию");			
 			ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Помощь",stmp,"Ок","Ок");
 			return 1;
 		}
@@ -612,6 +884,77 @@ Player_Command(playerid,cmdid,params[])
 		case PLAYER_KILL_CMD:
 		{
 			oSetPlayerHealth(playerid,0.0);
+			return 1;
+		}
+		case PLAYER_CREDITS_CMD:
+		{
+			ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Создатели",
+				"Главный разработчик: 009\n\
+				Второй разработчик: ZiGGi\n\
+				Спасибо: MadCat(за координаты домов, бизнесов, гонок, десматчей)"
+				,"Ок","Ок");
+			return 1;
+		}
+		case PLAYER_GIVECASH_CMD:
+		{
+			new idx;
+			new id = strval(strtok(params,idx)),
+				amount = strval(strtok(params,idx));
+			
+			if(!IsPlayerConnected(id))
+			{
+				format(stmp,sizeof(stmp),"Этот игрок(%d) оффлайн",id);
+				SendClientMessage(playerid,COLOR_WHITE,stmp);
+				return 1;
+			}
+			if(amount <= 0)
+			{
+				return SendClientMessage(playerid,COLOR_WHITE,"Вы ввели неверное количество денег!");
+			}
+			
+			oGivePlayerMoney(playerid,-amount);
+			oGivePlayerMoney(id,amount);
+
+			format(stmp,sizeof(stmp),"Игрок %s(%d) передал вам %d$",oGetPlayerName(playerid),playerid,amount);
+			SendClientMessage(id,COLOR_GREEN,stmp);
+			format(stmp,sizeof(stmp),"Вы передали %d$ Игроку %s(%d)",amount,oGetPlayerName(id),id);
+			SendClientMessage(playerid,COLOR_GREEN,stmp);
+			return 1;
+		}
+		case PLAYER_FLIP_CMD:
+		{
+			if(GetPlayerVirtualWorld(playerid) != STUNT_VIRTUAL_WORLD)
+				return SendClientMessage(playerid,SYSTEM_COLOR,"Эта команда доступна только в станотовом мире!");
+			itmp[0] = GetPlayerVehicleID(playerid);
+			GetVehicleZAngle(itmp[0], ftmp[0]);
+			SetVehicleZAngle(itmp[0], ftmp[0]);
+			return 1;
+		}
+		case PLAYER_UPGRADE_CMD:
+		{
+			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"Health"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
+			format(stmp,sizeof(stmp),"%sSilenced skill (%d)\nDesert eagle skill (%d)\nShotgun skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN));
+			format(stmp,sizeof(stmp),"%sSawnoff skill (%d)\nS.P.A.S. skill (%d)\nMicro UZI skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI));
+			format(stmp,sizeof(stmp),"%sMP5 skill (%d)\nAK47 skill (%d)\nM4 skill (%d)\nSniper rifle skill (%d)",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE));
+			ShowPlayerDialog(playerid,DIALOG_UPGRADE,DIALOG_STYLE_LIST,"Меню апгрейдов",stmp,"Улучшить","Отмена");
+			return 1;
+		}
+		case PLAYER_PM_CMD:
+		{
+			stmp[0] = 0;
+			new idx=0;
+			stmp = strtok(params,idx);
+			if(strlen(stmp) == 0) return SendClientMessage(playerid,0xFF0000FF,"Применение: /pm [id] [сообщение]");
+			new id = strval(stmp);
+			if(!IsPlayerConnected(id) || id == playerid) return SendClientMessage(playerid,0xFF0000FF,"/pm: Вы ввели неправильный id");
+			
+			if(strlen(params[idx]) == 0) return SendClientMessage(playerid,0xFF0000FF,"Применение: /pm [id] [сообщение]");
+			
+			format(stmp,sizeof(stmp),">> %s(%i): %s",oGetPlayerName(id),id,params[idx]);
+			SendClientMessage(playerid,0xFFD720FF,stmp);
+			
+			format(stmp,sizeof(stmp),"** %s(%i): %s",oGetPlayerName(playerid),playerid,params[idx]);
+			SendClientMessage(id,0xFFD720FF,stmp);
 			return 1;
 		}
 	}

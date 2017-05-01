@@ -22,6 +22,7 @@
 // --------------------------------------------------
 static 
 	ObjectsStatus[MAX_STREAMED_OBJECTS char],
+	ObjectsWorld[MAX_STREAMED_OBJECTS],
 	ObjectsModel[MAX_STREAMED_OBJECTS],
 	Float:ObjectsData[MAX_STREAMED_OBJECTS][6],
 	PlayerObject[MAX_PLAYERS][MAX_STREAMED_OBJECTS],
@@ -31,7 +32,7 @@ static
 // --------------------------------------------------
 // stocks
 // --------------------------------------------------
-stock CreateStreamedObject(model,Float:X,Float:Y,Float:Z,Float:rX,Float:rY,Float:rZ)
+stock CreateStreamedObject(model,Float:X,Float:Y,Float:Z,Float:rX,Float:rY,Float:rZ,VirtualWorld=0)
 {
 	static id;
 	id = MinObjectId;
@@ -48,6 +49,7 @@ stock CreateStreamedObject(model,Float:X,Float:Y,Float:Z,Float:rX,Float:rY,Float
 	ObjectsData[id][3] = rX;
 	ObjectsData[id][4] = rY;
 	ObjectsData[id][5] = rZ;
+	ObjectsWorld[id] = VirtualWorld;
 	// free
 	for(new i = 0;i < MAX_PLAYERS;i++) PlayerObject[i][id] = -1;
 	// min object
@@ -92,12 +94,12 @@ stock PlayerObjectStream(playerid)
 	
 		if(PlayerObject[playerid][i] == -1)
 		{
-			if(IsPlayerInRangeOfPoint(playerid,OBJECTS_STREAMED_DIST,ObjectsData[i][0],ObjectsData[i][1],ObjectsData[i][2]))
+			if(IsPlayerInRangeOfPoint(playerid,OBJECTS_STREAMED_DIST,ObjectsData[i][0],ObjectsData[i][1],ObjectsData[i][2]) && (GetPlayerVirtualWorld(playerid) == ObjectsWorld[i]))
 			{
 				PlayerObject[playerid][i] = CreatePlayerObject(playerid,ObjectsModel[i],ObjectsData[i][0],ObjectsData[i][1],ObjectsData[i][2],ObjectsData[i][3],ObjectsData[i][4],ObjectsData[i][5]);
 			}
 		}
-		else if(!IsPlayerInRangeOfPoint(playerid,OBJECTS_STREAMED_DIST,ObjectsData[i][0],ObjectsData[i][1],ObjectsData[i][2]))
+		else if(!IsPlayerInRangeOfPoint(playerid,OBJECTS_STREAMED_DIST,ObjectsData[i][0],ObjectsData[i][1],ObjectsData[i][2]) || (GetPlayerVirtualWorld(playerid) != ObjectsWorld[i]))
 		{
 			DestroyPlayerObject(playerid,PlayerObject[playerid][i]);
 			PlayerObject[playerid][i] = -1;

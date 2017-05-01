@@ -14,6 +14,7 @@
 // --------------------------------------------------
 // defines
 // --------------------------------------------------
+#define TELEPORT_TICK_TIME		60000
 #define WORLD_DIR				"world/"
 #define OBJECTS_DIR				"objects/"
 #define VEHICLES_DIR			"vehicles/"
@@ -25,6 +26,7 @@
 #define SELECT_CLASS_ANGLE		94.0
 #define SELECT_CLASS_CAMERA		-1640.841674,-2237.676757,33.083084
 #define SELECT_CLASS_LOOK		-1640.059448,-2238.169189,32.701473
+#define USE_SYNC_TIME
 // check functions
 #if !defined StripNL
 		#error StripNL not found in script.
@@ -55,9 +57,27 @@ enum
 // --------------------------------------------------
 
 // --------------------------------------------------
+// forwards
+// --------------------------------------------------
+forward sync_Time();
+
+// --------------------------------------------------
+// publics
+// --------------------------------------------------
+public sync_Time()
+{
+	new Hour,Minut;
+	gettime(Hour,Minut);
+	SetWorldTime(Hour);
+	SetTimer("sync_Time",3650000,0);
+	for(new playerid = 0;playerid <= GetPlayersCount();playerid++)
+		SetPlayerTime(playerid,Hour,Minut);
+}
+
+// --------------------------------------------------
 // stocks
 // --------------------------------------------------
-stock LoadObjectsFromFile(filename[])
+stock LoadObjectsFromFile(filename[],VirtualWorld=0)
 {
 	new File:df = fopen(filename,io_read),
 		k,
@@ -84,7 +104,7 @@ stock LoadObjectsFromFile(filename[])
 			if(!IsValidObjectModel(itmp[0])) continue;
 			// create object
 #if defined _streamer_objects_included
-			CreateStreamedObject(itmp[0],ftmp[0],ftmp[1],ftmp[2],ftmp[3],ftmp[4],ftmp[5]);
+			CreateStreamedObject(itmp[0],ftmp[0],ftmp[1],ftmp[2],ftmp[3],ftmp[4],ftmp[5],VirtualWorld);
 #else
 			if(c < MAX_OBJECTS) CreateObject(itmp[0],ftmp[0],ftmp[1],ftmp[2],ftmp[3],ftmp[4],ftmp[5]);
 #endif
@@ -120,7 +140,7 @@ stock LoadVehiclesFromFile(filename[])
 			// check model
 			if(!IsValidVehicleModel(itmp[0])) continue;
 			// create vehicle
-			AddStaticVehicle(itmp[0],ftmp[0],ftmp[1],ftmp[2],ftmp[3],-1,-1);
+			AddStaticVehicle(itmp[0],ftmp[0],ftmp[1],ftmp[2],ftmp[3],random(128),random(128));
 			// counter
 			c++;
 		}
@@ -143,6 +163,7 @@ stock TeleportTo(playerid,pointid)
 			{
 				c = 0;
 				// coords
+				itmp[1] = strval(strtok(stmp,c,','));
 				ftmp[0] = floatstr(strtok(stmp,c,','));
 				ftmp[1] = floatstr(strtok(stmp,c,','));
 				ftmp[2] = floatstr(strtok(stmp,c,','));
@@ -151,12 +172,15 @@ stock TeleportTo(playerid,pointid)
 				if(IsPlayerInAnyVehicle(playerid))
 				{
 					itmp[0] = GetPlayerVehicleID(playerid);
+					SetVehicleVirtualWorld(itmp[0],((itmp[1] == 1)?STUNT_VIRTUAL_WORLD:0));
+					SetPlayerVirtualWorld(playerid,((itmp[1] == 1)?STUNT_VIRTUAL_WORLD:0));
 					SetVehiclePos(itmp[0],ftmp[0],ftmp[1],ftmp[2]);
 					SetVehicleZAngle(itmp[0],ftmp[3]);
 					PutPlayerInVehicle(playerid,itmp[0],0);
 				}
 				else
 				{
+					SetPlayerVirtualWorld(playerid,((itmp[1] == 1)?STUNT_VIRTUAL_WORLD:0));
 					SetPlayerPos(playerid,ftmp[0],ftmp[1],ftmp[2]);
 					SetPlayerFacingAngle(playerid,ftmp[3]);
 				}
@@ -187,6 +211,9 @@ World_OnGameModeInit()
 	static 
 		i,
 		counter[3];
+	new 
+		k,
+		string[128];
 	// add all worked classes
 	for(i = 0;i < 300;i++)
 	{
@@ -205,8 +232,10 @@ World_OnGameModeInit()
 		{
 			if(!CheckFileLine(stmp)) continue;
 			// load file
-			format(stmp,sizeof(stmp),MODE_DIR WORLD_DIR OBJECTS_DIR "%s",stmp);
-			if(fexist(stmp)) counter[1] += LoadObjectsFromFile(stmp);
+			k=0;
+			string = strtok(stmp,k,',');
+			format(string,sizeof(string),MODE_DIR WORLD_DIR OBJECTS_DIR "%s",string);
+			if(fexist(string)) counter[1] += LoadObjectsFromFile(string,((strval(strtok(stmp,k,',')) == 1)?STUNT_VIRTUAL_WORLD:0));
 		}
 		fclose(df);
 	}
@@ -232,6 +261,12 @@ World_OnGameModeInit()
 		print("Objects streamer used");
 	#else
 		print("Objects streamer not used");
+	#endif
+	#if defined USE_SYNC_TIME
+		sync_Time();
+		print("Sync time used");
+	#else
+		print("Sync time not used");
 	#endif
 #endif
 	print("World loaded.");
@@ -301,10 +336,27 @@ World_Dialog(playerid, dialogid, response, listitem, inputtext[])
 		case DIALOG_TELEPORTS:
 		{
 			if(!response) return 1;
-			
 			TeleportTo(playerid,listitem);
 			return 1;
 		}
 	}
 	return 1;
+}
+
+World_OnPlayerUpdate(playerid)
+{
+	if(GetPlayerVirtualWorld(playerid) == STUNT_VIRTUAL_WORLD)
+	{
+		SetPlayerArmedWeapon(playerid,0);
+		oSetPlayerHealth(playerid,100.0);
+		if(IsPlayerInAnyVehicle(playerid))
+		{
+			static 
+				Float:health,
+				vid;
+			vid = GetPlayerVehicleID(playerid);
+			GetVehicleHealth(vid,health);
+			if(health <= 999.0) RepairVehicle(vid);
+		}
+	}
 }

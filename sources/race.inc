@@ -257,6 +257,13 @@ stock LoadRace(name[])
 	RaceCheckpointsCount{rcid} = cpcount - 1;
 	RacePlayersCount{rcid} = 0;
 	RacePlayersFinish{rcid} = 0;
+
+	format(stmp,sizeof(stmp),"Гонка `%s` начнётся через минуту, для участия введите /race menu и выберите соответствующую гонку",name);
+	for(new i=0;i<GetPlayersCount();i++)
+	{
+		if(!IsPlayerConnected(i) || IsPlayerNPC(i) || GetPlayerQuest(i) != INVALID_QUEST_ID) continue;
+		SendClientMessage(i,SYSTEM_COLOR,stmp);
+	}
 	return rcid;
 }
 

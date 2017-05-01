@@ -9,10 +9,17 @@
 *                       √лавна€ черта мода - создание банд и война между ними.≈сть зоны банд,люба€ банда может захватить зону.≈сли игроков владеющей банды нет на сервере то зона не может быть захвачена.
 *                       ѕри удалении банды зона становитс€ нейтральной.≈сли владельцы банды очень давно не были на сервере то зона может быть захвачена.≈сли вы в зоне то над GPS пишетс€ банда - владелец.
 */
+/*
+
+TODO:
+	доделать сис-му оружи€, /w drop
+
+*/
 
 //standart include
-#include <a_samp>// cmd parser
-#define RegisterCmd(%1,%2,%3,%4,%5)	if(!strcmp(%1,%2,true,%3)) return %4_Command(playerid,%5,%1[%3 + 1])
+#include <a_samp>
+// cmd parser
+#define RegisterCmd(%1,%2,%3,%4,%5) if(!strcmp(%1,%2,true,%3) && ((%1[%3] == ' ') || (%1[%3] == 0))) return %4_Command(playerid,%5,%1[%3 + 1])
 // text parser
 #define RegisterText(%1,%2,%3,%4)	if(%1[0] == %2) if(%3_Text(playerid,%4,%1[1])) return 0
 // dialog caller
@@ -38,14 +45,17 @@ enum
 	DIALOG_TEAM_QUEST_TEAM,
 	DIALOG_GANG_WAR,
 	DIALOG_GANG_WAR_WEAPONS,
-	DIALOG_MISSION_BANK
+	DIALOG_MISSION_BANK,
+	DIALOG_WEAPONS,
+	DIALOG_UPGRADE
 };
 enum (+=10_000)
 {
 	DEATHMATCH_VIRTUAL_WORLD = 10_000,
 	RACE_VIRTUAL_WORLD,
 	TEAM_QUEST_VIRTUAL_WORLD,
-	GANG_WAR_VIRTUAL_WORLD
+	GANG_WAR_VIRTUAL_WORLD,
+	STUNT_VIRTUAL_WORLD
 };
 
 // global core vars
@@ -61,7 +71,7 @@ forward Check();
 
 // mode info
 #define MODE_NAME	            	"Wars of the Gangs"
-#define MODE_VERSION            	"1.0 alpha"
+#define MODE_VERSION            	"1.0 beta 3"
 #define MODE_DIR                	"WoG/"
 // settings
 #define PRINT_STATS_DATA
@@ -79,9 +89,10 @@ forward Check();
 #define PLAYER_SPECIALACTION_CHANGE_SPY
 #define SYSTEM_COLOR                0xFFFFFFFF
 #define MAX_STRING                  128
-#define PLAYERS_COLOR				0x111111AA
+#define PLAYERS_COLOR				0xAAAAAAAA
 
 //gamemode includes
+#tryinclude "colors"
 #tryinclude "utils"
 #tryinclude "zones"
 #tryinclude "markers"
@@ -92,9 +103,9 @@ forward Check();
 #tryinclude "protect"
 #tryinclude "player"
 #tryinclude "world"
+#tryinclude "admin"
 #tryinclude "houses"
 #tryinclude "businesses"
-#tryinclude "admin"
 #tryinclude "minimissions"
 #tryinclude "bank"
 #tryinclude "deathmatch"
@@ -102,6 +113,7 @@ forward Check();
 #tryinclude "gangs"
 #tryinclude "team_quests"
 #tryinclude "missions"
+#tryinclude "weapons"
 // plugins
 #if defined USE_ANTISLEEP_PLUGIN
 	#tryinclude "plugins/antisleep"
@@ -115,7 +127,7 @@ main() {}
 
 public OnGameModeInit()
 {
-
+	AllowAdminTeleport(1);
     format(stmp,sizeof(stmp),"Loading version %s",MODE_VERSION);
     SetGameModeText(stmp);
 	// start load
@@ -189,6 +201,10 @@ public OnGameModeInit()
 #if defined _missions_included
     Missions_OnGameModeInit();
 #endif
+	// weapon init
+#if defined _weapons_included
+	Weapons_OnGameModeInit();
+#endif
 	// timers
 	SetTimer("Update",1000,1);
 	SetTimer("Check",100,1);
@@ -217,6 +233,7 @@ public OnGameModeExit()
 public OnPlayerConnect(playerid)
 {
     if(IsPlayerNPC(playerid)) return 1;
+	IsPlayerSpawned{playerid} = 0; // fix for Player_Update()  (death on spawn)
 	// counter
     if(pcount < playerid) pcount = playerid;
     // pickups
@@ -263,6 +280,7 @@ public OnPlayerConnect(playerid)
 public OnPlayerDisconnect(playerid,reason)
 {
     if(IsPlayerNPC(playerid)) return 1;
+	IsPlayerSpawned{playerid} = 0; // fix for Player_Update()  (death on spawn)
 	// counter
     if(pcount == playerid)
 	{
@@ -285,9 +303,6 @@ public OnPlayerDisconnect(playerid,reason)
 #if defined _player_included
     Player_OnPlayerDisconnect(playerid,reason);
 #endif
-#if defined _quest_included
-    Quest_OnPlayerDisconnect(playerid,reason);
-#endif
 #if defined _minimissions_included
     MiniMissions_OnPlayerDisconnect(playerid,reason);
 #endif
@@ -303,7 +318,9 @@ public OnPlayerDisconnect(playerid,reason)
 #if defined _missions_included
     Missions_OnPlayerDisconnect(playerid,reason);
 #endif
-
+#if defined _quest_included
+    Quest_OnPlayerDisconnect(playerid,reason);
+#endif
 	return 1;
 }
 
@@ -328,12 +345,13 @@ public OnPlayerSpawn(playerid)
 #if defined _team_quests_included
     TeamQuest_OnPlayerSpawn(playerid);
 #endif
-
+	IsPlayerSpawned{playerid} = 1; // fix for Player_Update()  (death on spawn)
 	return 1;
 }
 
 public OnPlayerDeath(playerid, killerid, reason)
 {
+	IsPlayerSpawned{playerid} = 0; // fix for Player_Update()  (death on spawn)
 	// kill chat
 #if defined SHOW_KILL_STAT
     SendDeathMessage(killerid,playerid,reason);
@@ -360,7 +378,6 @@ public OnPlayerDeath(playerid, killerid, reason)
 #if defined _missions_included
     Missions_OnPlayerDeath(playerid,killerid,reason);
 #endif
-
 	return 1;
 }
 
@@ -376,6 +393,11 @@ public OnVehicleDeath(vehicleid, killerid)
 
 public OnPlayerText(playerid, text[])
 {
+	if(GetPVarInt(playerid,"Logged") != 1)
+	{
+		SendClientMessage(playerid,COLOR_RED,"¬ы должны войти под своим аккаунтом что-бы писать в чат!");
+		return 0;
+	}
 	// admin
 #if defined _admin_included
     RegisterText(text,'@',Admin,ADMIN_REPORT_TEXT);
@@ -401,6 +423,8 @@ public OnPlayerText(playerid, text[])
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
+	if(GetPVarInt(playerid,"Logged") != 1)
+		return SendClientMessage(playerid,COLOR_RED,"¬ы должны войти под своим аккаунтом что-бы использовать эту команду!");
     // systems
 #if defined _player_included
 	RegisterCmd(cmdtext,"/stats",6,Player,PLAYER_STAT_CMD);
@@ -408,6 +432,11 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	RegisterCmd(cmdtext,"/savechar",9,Player,PLAYER_SAVECHAR_CMD);
 	RegisterCmd(cmdtext,"/changepass",11,Player,PLAYER_CHANGEPASS_CMD);
 	RegisterCmd(cmdtext,"/kill",5,Player,PLAYER_KILL_CMD);
+	RegisterCmd(cmdtext,"/credits",8,Player,PLAYER_CREDITS_CMD);
+	RegisterCmd(cmdtext,"/givecash",9,Player,PLAYER_GIVECASH_CMD);
+	RegisterCmd(cmdtext,"/flip",5,Player,PLAYER_FLIP_CMD);
+	RegisterCmd(cmdtext,"/upgrade",8,Player,PLAYER_UPGRADE_CMD);
+	RegisterCmd(cmdtext,"/pm",3,Player,PLAYER_PM_CMD);
 #endif
 #if defined _world_included
     RegisterCmd(cmdtext,"/tp",3,World,WORLD_TELEPORT_CMD);
@@ -418,6 +447,7 @@ public OnPlayerCommandText(playerid, cmdtext[])
     RegisterCmd(cmdtext,"/h buy",6,Houses,HOUSES_BUY_CMD);
     RegisterCmd(cmdtext,"/h sell",7,Houses,HOUSES_SELL_CMD);
     RegisterCmd(cmdtext,"/h spawn",8,Houses,HOUSES_SPAWNSEL_CMD);
+	RegisterCmd(cmdtext,"/h free",7,Houses,ADMIN_FREEHOUSE_CMD);
 #endif
 #if defined _admin_included
 	RegisterCmd(cmdtext,"/cmdlist",8,Admin,ADMIN_CMDLIST_CMD);
@@ -442,6 +472,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	RegisterCmd(cmdtext,"/unmute",7,Admin,ADMIN_UNMUTE_CMD);
 	RegisterCmd(cmdtext,"/tele-to",8,Admin,ADMIN_TELETO_CMD);
 	RegisterCmd(cmdtext,"/tele-here",10,Admin,ADMIN_TELEHERE_CMD);
+	RegisterCmd(cmdtext,"/teleport",9,Admin,ADMIN_TELEPORT_CMD);
+	RegisterCmd(cmdtext,"/upoint",7,Admin,ADMIN_UPGRADEPOINT_CMD);
 #endif
 #if defined _businesses_included
     RegisterCmd(cmdtext,"/b help",7,Businesses,BUSINESS_HELP_CMD);
@@ -494,8 +526,12 @@ public OnPlayerCommandText(playerid, cmdtext[])
 	RegisterCmd(cmdtext,"/dset",5,Missions,MISSIONS_DSET_CMD);
 	RegisterCmd(cmdtext,"/dboom",6,Missions,MISSIONS_DBOOM_CMD);
 #endif
-
-	return 0;
+#if defined _weapons_included
+	RegisterCmd(cmdtext,"/w help",7,Weapons,WEAPONS_HELP_CMD);
+	RegisterCmd(cmdtext,"/w menu",7,Weapons,WEAPONS_MENU_CMD);
+	RegisterCmd(cmdtext,"/w drop",7,Weapons,WEAPONS_DROP_CMD);
+#endif
+	return SendClientMessage(playerid,COLOR_WHITE,"SERVER: Ќеизвестна€ команда");
 }
 
 public OnPlayerEnterVehicle(playerid, vehicleid, ispassenger)
@@ -600,7 +636,9 @@ public OnPlayerPickUpPickup(playerid, pickupid)
 #if defined _missions_included
     Missions_OnPlayerPickUpPickup(playerid,pickupid);
 #endif
-    
+#if defined _missions_included
+	Weapons_OnPlayerPickUpPickup(playerid,pickupid);
+#endif
 	return 1;
 }
 
@@ -646,9 +684,15 @@ public OnRconLoginAttempt(ip[], password[], success)
 
 public OnPlayerUpdate(playerid)
 {
+	if(GetPlayerVirtualWorld(playerid) == STUNT_VIRTUAL_WORLD)
+	{
+		SetPlayerArmedWeapon(playerid,0);
+		oSetPlayerHealth(playerid,100.0);
+		if(IsPlayerInAnyVehicle(playerid)) RepairVehicle(GetPlayerVehicleID(playerid));
+	}
 	// protect
 #if defined _protect_included
-    if(!Protect_OnPlayerUpdate(playerid)) return 0;
+	if(IsPlayerSpawned{playerid} == 1) if(!Protect_OnPlayerUpdate(playerid)) return 0;
 #endif
 	// streamers
 #if defined ON_PLAYER_UPDATE_STREAMERS
@@ -671,7 +715,9 @@ public OnPlayerUpdate(playerid)
 #if defined _deathmatch_included
     Deathmatch_OnPlayerUpdate(playerid);
 #endif
-
+#if defined _world_included
+    World_OnPlayerUpdate(playerid);
+#endif
 	// fix glases
 	if((GetPlayerWeapon(playerid) == WEAPON_CAMERA) || (GetPlayerWeapon(playerid) == 44) || (GetPlayerWeapon(playerid) == 45))
 	{
@@ -787,6 +833,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 #if defined _player_included
 	    RegisterDialog(playerid,response,listitem,inputtext,Player,DIALOG_LOGIN);
 	    RegisterDialog(playerid,response,listitem,inputtext,Player,DIALOG_REGISTER);
+		RegisterDialog(playerid,response,listitem,inputtext,Player,DIALOG_UPGRADE);
 #endif
 #if defined _world_included
 	    RegisterDialog(playerid,response,listitem,inputtext,World,DIALOG_TELEPORTS);
@@ -809,6 +856,9 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 #if defined _missions_included
 	    RegisterDialog(playerid,response,listitem,inputtext,Missions,DIALOG_MISSION_BANK);
 #endif
+#if defined _weapons_included
+		RegisterDialog(playerid,response,listitem,inputtext,Weapons,DIALOG_WEAPONS);
+#endif
 	}
 	return 1;
 }
@@ -825,7 +875,7 @@ public Update()
 {
 	// systems callbacks
 #if defined _player_included
-    Player_Update();
+	Player_Update();
 #endif
 #if defined _businesses_included
     Business_Update();
@@ -924,6 +974,9 @@ public OnSavePlayerData(playerid,File:datafile,reason)
 #if defined _gangs_included
     Gangs_OnSavePlayerData(playerid,datafile,reason);
 #endif
+#if defined _weapons_included
+	Weapons_OnSavePlayerData(playerid,datafile,reason);
+#endif
 }
 
 public OnLoadPlayerData(playerid,datastr[],separatorpos)
@@ -942,6 +995,9 @@ public OnLoadPlayerData(playerid,datastr[],separatorpos)
 #endif
 #if defined _gangs_included
     Gangs_OnLoadPlayerData(playerid,datastr,separatorpos);
+#endif
+#if defined _weapons_included
+	Weapons_OnLoadPlayerData(playerid,datastr,separatorpos);
 #endif
 }
 #endif

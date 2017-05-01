@@ -21,7 +21,7 @@
 #define MAX_GANG_NAME			24
 #define MAX_GANG_WELCOME		128
 #define MAX_GANGS				MAX_PLAYERS
-#define MAX_GANG_MEMBERS		10
+#define MAX_GANG_MEMBERS		16
 #define MAX_GANG_COLOR_NAME		15
 #define INVALID_GANG_ID			-1
 #define GANG_COST				100000
@@ -339,12 +339,13 @@ stock GangCharCheck(string[])
 {
 	for(new i = 0;i < strlen(string);i++)
 	{
-		if((string[i] >= 'a') && (string[i] <= 'z')) continue;
-		if((string[i] >= 'A') && (string[i] <= 'Z')) continue;
-		if(string[i] == '_') continue;
-		if(string[i] == '[') continue;
-		if(string[i] == ']') continue;
-		
+		switch(string[i])
+		{
+			case 'a'..'z': continue;
+			case 'A'..'Z': continue;
+			case '0'..'9': continue;
+			case '_','[',']': continue;
+		}
 		return 0;
 	}
 	return 1;
@@ -759,7 +760,7 @@ Gangs_Command(playerid,cmdid,params[])
 			// check name
 			itmp[1] = strlen(strtoktmp);
 			if((itmp[1] < 3) || (itmp[1] > MAX_GANG_NAME)) return SendClientMessage(playerid,SYSTEM_COLOR,"Не верная длинна названия банды, должна быть от 3 до " #MAX_GANG_NAME);
-			if(!GangCharCheck(strtoktmp)) return SendClientMessage(playerid,SYSTEM_COLOR,"Используйте в названии банды только a-z , A-Z ,   , _ , [ , ]");
+			if(!GangCharCheck(strtoktmp)) return SendClientMessage(playerid,SYSTEM_COLOR,"Используйте в названии банды только a-z , A-Z , 0-9 , _ , [ , ]");
 			if(!strcmp("Unknown",strtoktmp)) return SendClientMessage(playerid,SYSTEM_COLOR,"Название банды Unknown недопустимо");
 			// check exist
 			format(stmp,sizeof(stmp),MODE_DIR GANGS_DIR GANGS_MASK_FILE,strtoktmp);

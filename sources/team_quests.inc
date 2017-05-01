@@ -1142,14 +1142,16 @@ stock PlayerLeaveTeamQuest(playerid,tqid,reason)
 		{
 			if((team == 0) && (TeamQuestTeamCount[tqid]{team} == 0)) // robers
 			{
-				if((tqid == TEAM_QUEST_RK) || (tqid == TEAM_QUEST_MI)) return TeamQuestComplete(tqid,TEAM_QUEST_REASON_WIN_TEAM_2);
+				if((tqid == TEAM_QUEST_RK) || (tqid == TEAM_QUEST_MI))
+					return TeamQuestComplete(tqid,TEAM_QUEST_REASON_WIN_TEAM_2);
 			}
 		}
 		case TEAM_QUEST_LEAVE_REASON_OFF,TEAM_QUEST_LEAVE_REASON_CMD:
 		{
 			if(TeamQuestTeamCount[tqid]{team} == 0) 
 			{
-				if(TeamQuestStatus{tqid} != TEAM_QUEST_STATUS_LINEUP) return TeamQuestComplete(tqid,TEAM_QUEST_REASON_NOT_PLAYERS);
+				if(TeamQuestStatus{tqid} != TEAM_QUEST_STATUS_LINEUP)
+					return TeamQuestComplete(tqid,TEAM_QUEST_REASON_NOT_PLAYERS);
 			}
 		}
 	}
@@ -1239,24 +1241,27 @@ TeamQuest_OnPlayerDisconnect(playerid,reason)
 	if(GetPlayerQuest(playerid) != INVALID_QUEST_ID)
 	{
 		tqid = TeamQuestPlayerCurrent{playerid};
-		if((tqid != INVALID_TEAM_QUEST_ID) && (GetPlayerQuest(playerid) == TeamQuestQuest[tqid])) return PlayerLeaveTeamQuest(playerid,tqid,TEAM_QUEST_LEAVE_REASON_OFF);
+		if((tqid != INVALID_TEAM_QUEST_ID) && (GetPlayerQuest(playerid) == TeamQuestQuest[tqid]))
+			return PlayerLeaveTeamQuest(playerid,tqid,TEAM_QUEST_LEAVE_REASON_OFF);
 	}
 	return 1;
 }
 
 TeamQuest_OnPlayerDeath(playerid,killerid,reason)
 {
-	#pragma unused killerid
-	#pragma unused reason
+	#pragma unused killerid,reason
 	static tqid;
 	if(GetPlayerQuest(playerid) != INVALID_QUEST_ID)
 	{
 		tqid = TeamQuestPlayerCurrent{playerid};
 		if((tqid != INVALID_TEAM_QUEST_ID) && (GetPlayerQuest(playerid) == TeamQuestQuest[tqid])) 
 		{
-			if(TeamQuestStatus{tqid} != TEAM_QUEST_STATUS_ACTION) return 1;
-			if(tqid == TEAM_QUEST_TN) return 1;
-			if(tqid == TEAM_QUEST_MK) return 1;
+			if(
+				TeamQuestStatus{tqid} != TEAM_QUEST_STATUS_ACTION
+				|| tqid == TEAM_QUEST_TN
+				|| tqid == TEAM_QUEST_MK
+			) return 1;
+
 			return PlayerLeaveTeamQuest(playerid,tqid,TEAM_QUEST_LEAVE_REASON_DEATH);
 		}
 	}
@@ -1475,9 +1480,7 @@ TeamQuest_Command(playerid,cmdid,params[])
 			{
 				tqid = TeamQuestPlayerCurrent{playerid};
 				if((tqid != INVALID_TEAM_QUEST_ID) && (GetPlayerQuest(playerid) == TeamQuestQuest[tqid]))
-		
-				PlayerLeaveTeamQuest(playerid,tqid,TEAM_QUEST_LEAVE_REASON_CMD);
-				SendClientMessage(playerid,SYSTEM_COLOR,"Вы покинули Team Quest");
+					PlayerLeaveTeamQuest(playerid,tqid,TEAM_QUEST_LEAVE_REASON_CMD);
 				return 1;
 			}
 			SendClientMessage(playerid,SYSTEM_COLOR,"Вы не учавствуете соревновании");

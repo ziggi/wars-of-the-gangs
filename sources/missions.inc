@@ -276,6 +276,7 @@ stock ShowCutscene(playerid,mboss,mtype,mrand,step)
 				ChangePlayerMissionStep(playerid,0);				
 				return -1;
 			}
+			else if(!CheckFileLine(line)) i--;
 		}
 		// check
 		if(!CheckFileLine(line)) return -1;
@@ -2272,13 +2273,14 @@ Missions_Command(playerid,cmdid,params[])
 
 Missions_Dialog(playerid,dialogid,response,listitem,inputtext[])
 {
-	#pragma unused listitem
-	#pragma unused response
+	#pragma unused listitem,response
 	
 	switch(dialogid)
 	{
 		case DIALOG_MISSION_BANK:
 		{
+			if(!strlen(inputtext))
+				return ShowPlayerDialog(playerid,DIALOG_MISSION_BANK,DIALOG_STYLE_INPUT,"Охранная система","Введите код","Ок","Ок");
 			itmp[0] = GetPVarInt(playerid,"MissionBoss");
 			if(GetPlayerQuest(playerid) != BossQuest[ itmp[0] ]) return 1;
 			if(GetPVarInt(playerid,"MissionStage") != MISSION_STAGE_ACTION) return 1;

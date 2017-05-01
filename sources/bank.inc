@@ -198,12 +198,13 @@ Banks_Command(playerid,cmdid,params[])
 				if(!IsPlayerInRangeOfPoint(playerid,2.5,bcoords[0],bcoords[1],bcoords[2])) goto no_in_range;
 				// get count
 				itmp[0] = strval(strtok(params,idx));
+				if(strlen(params) == 0) itmp[0] = 0;
 				// check bug
 				if(itmp[0] < 0) itmp[0] *= -1;
 				// check
 				if(itmp[0] > GetPVarInt(playerid,"BankMoney"))
 				{
-					format(stmp,sizeof(stmp),"Вы не имеете такой суммы на счету.У вас на счету %d$",GetPVarInt(playerid,"BankMoney"));
+					format(stmp,sizeof(stmp),"Вы не имеете такой суммы на счету. У вас на счету %d$",GetPVarInt(playerid,"BankMoney"));
 					SendClientMessage(playerid,SYSTEM_COLOR,stmp);
 					return 1;
 				}
@@ -211,7 +212,7 @@ Banks_Command(playerid,cmdid,params[])
 				oGivePlayerMoney(playerid,itmp[0]);
 				SetPVarInt(playerid,"BankMoney",(GetPVarInt(playerid,"BankMoney") - itmp[0]));
 				// result
-				format(stmp,sizeof(stmp),"Вы сняли %d$.У вас на счету %d$",itmp[0],GetPVarInt(playerid,"BankMoney"));
+				format(stmp,sizeof(stmp),"Вы сняли %d$. У вас на счету %d$",itmp[0],GetPVarInt(playerid,"BankMoney"));
 				SendClientMessage(playerid,SYSTEM_COLOR,stmp);
 				return 1;
 			}
@@ -228,6 +229,7 @@ Banks_Command(playerid,cmdid,params[])
 				if(!IsPlayerInRangeOfPoint(playerid,2.5,bcoords[0],bcoords[1],bcoords[2])) goto no_in_range;
 				// get count
 				itmp[0] = strval(strtok(params,idx));
+				if(strlen(params) == 0) itmp[0] = 0;
 				// check bug
 				if(itmp[0] < 0) itmp[0] *= -1;
 				// check
@@ -240,7 +242,7 @@ Banks_Command(playerid,cmdid,params[])
 				oGivePlayerMoney(playerid,-itmp[0]);
 				SetPVarInt(playerid,"BankMoney",(GetPVarInt(playerid,"BankMoney") + itmp[0]));
 				// result
-				format(stmp,sizeof(stmp),"Вы положили %d$.У вас на счету %d$",itmp[0],GetPVarInt(playerid,"BankMoney"));
+				format(stmp,sizeof(stmp),"Вы положили %d$. У вас на счету %d$",itmp[0],GetPVarInt(playerid,"BankMoney"));
 				SendClientMessage(playerid,SYSTEM_COLOR,stmp);
 				return 1;
 			}

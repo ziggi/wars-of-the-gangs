@@ -78,7 +78,9 @@ enum
 	ADMIN_MUTE_CMD,
 	ADMIN_UNMUTE_CMD,
 	ADMIN_TELETO_CMD,
-	ADMIN_TELEHERE_CMD
+	ADMIN_TELEHERE_CMD,
+	ADMIN_TELEPORT_CMD,
+	ADMIN_UPGRADEPOINT_CMD
 };
 enum
 {
@@ -276,7 +278,7 @@ Admin_Command(playerid,cmdid,params[])
 			}
 			SendClientMessage(playerid, COLOR_LIGHTRED, "M: '/say <text>', '/setskin <ID> <skin>', '/kick <ID> <reason>', '/akill <ID> <reason>'");
 			SendClientMessage(playerid, COLOR_LIGHTRED, "M: '/jail <ID> <reason>', '/unjail <ID>', '/paralyze <ID> <reason>', '/deparalyze <ID>'");
-			SendClientMessage(playerid, COLOR_LIGHTRED, "M: '/tele-to <ID>', '/tele-here <ID>', '/mute <ID> <reason>', '/unmute <ID>'");
+			SendClientMessage(playerid, COLOR_LIGHTRED, "M: '/tele-to <ID>', '/tele-here <ID>', '/mute <ID> <reason>', '/unmute <ID>', '/upoint <ID> <count>', '/freehouse'");
 			return 1;
 		}
 		case ADMIN_SSAY_CMD:
@@ -338,7 +340,7 @@ Admin_Command(playerid,cmdid,params[])
 			format(stmp,sizeof(stmp),"Вы установили %s %d уровень",oGetPlayerName(id),lvl);
 			SendClientMessage(playerid,COLOR_GREEN,stmp);
 			
-			SetPlayerXP(id,CalculateXPForLevel(lvl));
+			SetPlayerLevel(id,lvl);
 			return 1;
 		}
 		case ADMIN_DISARM_CMD:
@@ -761,6 +763,35 @@ Admin_Command(playerid,cmdid,params[])
 			GetPlayerPos(playerid,X,Y,Z);
 			if(!IsPlayerInAnyVehicle(id)) SetPlayerPos(id,(X + random(3) - random(3)),(Y + random(3) - random(3)),Z);
 			else SetVehiclePos(GetPlayerVehicleID(id),(X + random(3) - random(3)),(Y + random(3) - random(3)),Z);
+			return 1;
+		}
+		case ADMIN_TELEPORT_CMD:
+		{
+			// admin log
+			AdminLog("[CMD] %s - teleport %s",oGetPlayerName(playerid),params);
+			// cmd
+			new Float:X = floatstr(strtok(params,idx,',')),
+				Float:Y = floatstr(strtok(params,idx,',')),
+				Float:Z = floatstr(strtok(params,idx,','));
+			
+			if(!IsPlayerInAnyVehicle(playerid)) SetPlayerPos(playerid,X,Y,Z);
+			else SetVehiclePos(GetPlayerVehicleID(playerid),X,Y,Z);
+			return 1;
+		}
+		case ADMIN_UPGRADEPOINT_CMD:
+		{
+			new id = strval(strtok(params,idx)),
+				count = strval(strtok(params,idx));
+			
+			if(!IsPlayerConnected(id))
+				return SendClientMessage(playerid,COLOR_RED,"Этот игрок оффлайн");
+			
+			if(count < 0)
+				return SendClientMessage(playerid,COLOR_RED,"Не корректное количество очков");
+			
+			SetPVarInt(id,"UpgradesPoints",GetPVarInt(id,"UpgradesPoints") + count);
+			SendClientMessage(id,COLOR_GREEN,"Администрация дала вам несколько UpgradePoint");
+			SendClientMessage(playerid,COLOR_RED,"Всё прошло успешно.");
 			return 1;
 		}
 	}

@@ -54,7 +54,8 @@ enum
 	HOUSES_INFO_CMD,
 	HOUSES_BUY_CMD,
 	HOUSES_SELL_CMD,
-	HOUSES_SPAWNSEL_CMD
+	HOUSES_SPAWNSEL_CMD,
+	ADMIN_FREEHOUSE_CMD
 };
 
 // --------------------------------------------------
@@ -303,8 +304,12 @@ Houses_Command(playerid,cmdid,params[])
 				// check owner
 				if(!strcmp(howner,oGetPlayerName(playerid)))
 				{
-					ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Недвижимость","Это ваш дом","Ок","Ок");
-					return 1;
+					return ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Недвижимость","Это ваш дом","Ок","Ок");
+				}
+				else if(strcmp(howner,"Unknown"))
+				{
+					format(stmp,sizeof(stmp),"Этот дом принадлежит %s, его нельзя перекупить.",howner);
+					return ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Недвижимость",stmp,"Ок","Ок");
 				}
 				// check cost
 				if(strcmp(howner,"Unknown")) itmp[0] = floatround(hcost * HOUSE_REBUY_COST);
@@ -411,6 +416,42 @@ Houses_Command(playerid,cmdid,params[])
 			}
 			no_in_range:
 			SendClientMessage(playerid,SYSTEM_COLOR,"Вы не у дома");
+			return 1;
+		}
+		case ADMIN_FREEHOUSE_CMD:
+		{
+			if((GetPVarInt(playerid,"AdminLevel") == ADMIN_LEVEL_NONE) && (!IsPlayerAdmin(playerid))) return 0;
+			new hcost,
+				hname[24],
+				howner[24],
+				Float:hcoords[3];
+			
+			for(new oid=0;oid<=GetPlayersCount();oid++)
+			{
+				if(GetHouseInfo(PlayerHouse[oid],hcost,howner,hname,hcoords[0],hcoords[1],hcoords[2]))
+				{
+					if(!IsPlayerInRangeOfPoint(playerid,2.5,hcoords[0],hcoords[1],hcoords[2])) goto no_in_range;
+					// set new data
+					format(stmp,sizeof(stmp),MODE_DIR HOUSES_DIR HOUSES_MASK_FILE,PlayerHouse[oid]);
+					new File:df = fopen(stmp,io_write);
+					if(df)
+					{
+						format(stmp,sizeof(stmp),"Coords=%f,%f,%f\r\n",hcoords[0],hcoords[1],hcoords[2]);
+						fwrite(df,stmp);
+						fwrite(df,"Owner=Unknown\r\n");
+						format(stmp,sizeof(stmp),"Name=%s\r\n",hname);
+						fwrite(df,stmp);
+						format(stmp,sizeof(stmp),"Cost=%d\r\n",hcost);
+						fwrite(df,stmp);
+						fclose(df);
+					}
+					// grac
+					format(stmp,sizeof(stmp),"Вы продали %s",hname);
+					SendClientMessage(oid,COLOR_RED,stmp);
+					return 1;
+				}
+				no_in_range:
+			}
 			return 1;
 		}
 	}

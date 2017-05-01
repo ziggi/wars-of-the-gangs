@@ -63,7 +63,8 @@ stock PlayerIconStream(playerid)
 {
 	for(new i = 0; i < IconsCount; i++)
 	{
-		if(IsPlayerInRangeOfPoint(playerid,ICONS_STREAMED_DIST,IconsData[i][0],IconsData[i][1],IconsData[i][2]))
+		if(IsPlayerInRangeOfPoint(playerid,ICONS_STREAMED_DIST,IconsData[i][0],IconsData[i][1],IconsData[i][2])
+			&& GetPlayerVirtualWorld(playerid) == 0)
 		{
 			if(PlayerShowed[playerid]{i} != INVALID_ICON_ID) continue;
 			

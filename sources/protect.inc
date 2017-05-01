@@ -18,7 +18,7 @@
 #define MAX_WEAPON_SLOTS		12
 #define MAX_CHEAT_MONEY			500
 #define MAX_NOOB_KILL_REASONS	2
-
+#define MAX_MONEY				2_000_000_000
 // check functions
 #if !defined GetWeaponSlot
 	#error GetWeaponSlot not found in script.
@@ -28,7 +28,7 @@
 // statics
 // --------------------------------------------------
 static 
-	Float:old_coord[MAX_PLAYERS][3],
+	/*Float:old_coord[MAX_PLAYERS][3],*/
 	NoobKillReasons[MAX_PLAYERS char];
 
 // --------------------------------------------------
@@ -164,6 +164,17 @@ stock oResetPlayerWeapons(playerid)
 	}
 	ResetPlayerWeapons(playerid);
 }
+
+stock GivePlayerOwnedWeapons(playerid)
+{
+	static str[20],str2[20];
+	for(new i=0;i<MAX_WEAPON_SLOTS;i++)
+	{
+		format(str,sizeof(str),"AC_SlotWeapon_%d",i);
+		format(str2,sizeof(str2),"AC_SlotAmmo_%d",i);
+		GivePlayerWeapon(playerid,GetPVarInt(playerid,str),GetPVarInt(playerid,str2));
+	}
+}
 // money
 stock oResetPlayerMoney(playerid)
 {
@@ -173,15 +184,24 @@ stock oResetPlayerMoney(playerid)
 
 stock oGivePlayerMoney(playerid,money)
 {
+	if(GetPVarInt(playerid,"AC_Money") >= MAX_MONEY) return 0;
+	if(GetPVarInt(playerid,"AC_Money") + money > MAX_MONEY)
+	{
+		money = MAX_MONEY - GetPVarInt(playerid,"AC_Money");
+		SendClientMessage(playerid,COLOR_BLUE,"” вас максимальное количество денег!");
+	}
 	SetPVarInt(playerid,"AC_Money",GetPVarInt(playerid,"AC_Money") + money);
 	GivePlayerMoney(playerid,money);
+	return 1;
 }
 
 stock oSetPlayerMoney(playerid,money)
 {
+	if(money > MAX_MONEY) return 0;
 	SetPVarInt(playerid,"AC_Money",money);
 	ResetPlayerMoney(playerid);
 	GivePlayerMoney(playerid,money);
+	return 1;
 }
 
 stock oGetPlayerMoney(playerid)
@@ -235,7 +255,7 @@ Protect_OnPlayerUpdate(playerid)
 	static tmp[5];
 	static Float:float_tmp[2];
 	// anti weapon cheat
-	if((tmp[0] = GetPlayerWeapon(playerid)) != 0)
+	/*if((tmp[0] = GetPlayerWeapon(playerid)) != 0)
 	{
 		if(GetPlayerQuest(playerid) == INVALID_QUEST_ID)
 		{
@@ -318,6 +338,21 @@ Protect_OnPlayerUpdate(playerid)
 		return 0;
 	}
 	if(float_tmp[0] < float_tmp[1]) oSetPlayerArmour(playerid,float_tmp[0]);
+	*/
+	tmp[0] = oGetPlayerMoney(playerid);
+	tmp[1] = GetPlayerMoney(playerid);
+	if(tmp[1] > tmp[0]) oSetPlayerMoney(playerid,tmp[0]);
+	else if(tmp[1] < tmp[0]) oSetPlayerMoney(playerid,tmp[1]);
+	
+	GetPlayerHealth(playerid,float_tmp[0]);
+	float_tmp[1] = oGetPlayerHealth(playerid);
+	if(float_tmp[0] > float_tmp[1]) oSetPlayerHealth(playerid,float_tmp[1]);
+	else if(float_tmp[0] < float_tmp[1]) oSetPlayerHealth(playerid,float_tmp[0]);
+	
+	GetPlayerArmour(playerid,float_tmp[0]);
+	float_tmp[1] = oGetPlayerArmour(playerid);
+	if(float_tmp[0] > float_tmp[1]) oSetPlayerArmour(playerid,float_tmp[1]);
+	else if(float_tmp[0] < float_tmp[1]) oSetPlayerArmour(playerid,float_tmp[0]);
 	return 1;
 }
 

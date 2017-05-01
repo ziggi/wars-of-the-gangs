@@ -127,7 +127,7 @@ stock PlayerCPStream(playerid)
 		}
 	}
 	// show range checkpoint
-	if((c_id == -1) && (PlayerCurrentCheckpoint[playerid] != -1))
+	if((c_id == -1) && (PlayerCurrentCheckpoint[playerid] != -1) || GetPlayerVirtualWorld(playerid) == STUNT_VIRTUAL_WORLD)
 	{
 		DisablePlayerCheckpoint(playerid);
 		PlayerCurrentCheckpoint[playerid] = -1;

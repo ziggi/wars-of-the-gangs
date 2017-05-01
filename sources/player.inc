@@ -654,11 +654,11 @@ Player_Dialog(playerid,dialogid,response,listitem,inputtext[])
 			ShowPlayerDialog(playerid,DIALOG_NONE_ACTION,DIALOG_STYLE_MSGBOX,"Меню апгрейдов","У вас нету upgrade point'ов!","Ок","Ок");
 			switch(listitem)
 			{
-				case 0: // health
+				case 0: // max health
 				{
-					if((ftmp[0] = GetPVarFloat(playerid,"Health")) < 100.0)
+					if((ftmp[0] = GetPVarFloat(playerid,"MaxHealth")) < 150.0)
 					{
-						SetPVarFloat(playerid,"Health",ftmp[0] + 5.0);
+						SetPVarFloat(playerid,"MaxHealth",ftmp[0] + 10.0);
 						SetPVarInt(playerid,"UpgradesPoints",itmp[0] - 1);
 					}
 				}
@@ -781,7 +781,7 @@ Player_Dialog(playerid,dialogid,response,listitem,inputtext[])
 					}
 				}
 			}
-			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"Health"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
+			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"MaxHealth"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
 			format(stmp,sizeof(stmp),"%sSilenced skill (%d)\nDesert eagle skill (%d)\nShotgun skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN));
 			format(stmp,sizeof(stmp),"%sSawnoff skill (%d)\nS.P.A.S. skill (%d)\nMicro UZI skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI));
 			format(stmp,sizeof(stmp),"%sMP5 skill (%d)\nAK47 skill (%d)\nM4 skill (%d)\nSniper rifle skill (%d)",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE));
@@ -932,7 +932,7 @@ Player_Command(playerid,cmdid,params[])
 		}
 		case PLAYER_UPGRADE_CMD:
 		{
-			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"Health"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
+			format(stmp,sizeof(stmp),"Max health (%.0f)\nRegeneration (%.0f)\nColt skill (%d)\n",GetPVarFloat(playerid,"MaxHealth"),GetPVarFloat(playerid,"Regeneration"),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL));
 			format(stmp,sizeof(stmp),"%sSilenced skill (%d)\nDesert eagle skill (%d)\nShotgun skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_PISTOL_SILENCED),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_DESERT_EAGLE),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SHOTGUN));
 			format(stmp,sizeof(stmp),"%sSawnoff skill (%d)\nS.P.A.S. skill (%d)\nMicro UZI skill (%d)\n",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SAWNOFF_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SPAS12_SHOTGUN),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MICRO_UZI));
 			format(stmp,sizeof(stmp),"%sMP5 skill (%d)\nAK47 skill (%d)\nM4 skill (%d)\nSniper rifle skill (%d)",stmp,GetPVarInt(playerid,"Skill_" #WEAPONSKILL_MP5),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_AK47),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_M4),GetPVarInt(playerid,"Skill_" #WEAPONSKILL_SNIPERRIFLE));

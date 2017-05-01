@@ -71,7 +71,7 @@ forward Check();
 
 // mode info
 #define MODE_NAME	            	"Wars of the Gangs"
-#define MODE_VERSION            	"1.0 beta 3"
+#define MODE_VERSION            	"1.0 beta 4"
 #define MODE_DIR                	"WoG/"
 // settings
 #define PRINT_STATS_DATA
